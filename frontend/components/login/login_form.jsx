@@ -39,24 +39,32 @@ class LoginForm extends React.Component {
     render () {
         return (
             <div className='session_form_container'>
-                <form onSubmit={this.handleSubmit}>
-                    <h1>Log In</h1>
-                    <label>Username
-                        <input 
-                            type="text" 
-                            value={this.state.username} 
-                            onChange={this.update('username')}
-                        />
-                    </label>
-                    <label>Password
-                        <input 
-                            type="password" 
-                            value={this.state.password} 
-                            onChange={this.update('password')}
-                        />
-                    </label>
-                    <button>Log In</button>
-                </form>
+                <div className='session_form_image'>
+                    <img src="assets/airm.png" alt=""/>
+                </div>
+                <div className='session_field_container'>
+                    <form onSubmit={this.handleSubmit}>
+                        <h1 className='session_header'>Log In</h1>
+                        <div className='session_field'>
+                            <label>Username
+                                <input 
+                                    type="text" 
+                                    value={this.state.username} 
+                                    onChange={this.update('username')}
+                                />
+                            </label>
+                            <br/>
+                            <label className='session_field'>Password
+                                <input 
+                                    type="password" 
+                                    value={this.state.password} 
+                                    onChange={this.update('password')}
+                                />
+                            </label>
+                        </div>
+                        <button className='session_button'>Log In</button>
+                    </form>
+                </div>
             </div>
         )
     }

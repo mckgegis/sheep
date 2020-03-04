@@ -1,0 +1,21 @@
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.navbar-links-container {
+    display: flex;
+
+}
+
+.navbar-link {
+    letter-spacing: 2px;
+    padding-left: 20px;
+    padding-top: 8px
+}
+
+.fas fa-search {
+    padding-left: 20px;
+}

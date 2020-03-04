@@ -1,3 +1,168 @@
 // Place all the styles related to the api/sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//  .session_form_container {
+//   max-width: 1200px;
+//   margin: auto;
+//   margin-bottom: 90px;
+//   display: flex;
+//   border: solid black;
+//   border-width: thin;
+//   height: 650px;
+//   justify-content: center;
+// }
+
+// .session_form_image {
+//   display: block;
+//   width: 50%;
+//   justify-content: center;
+//   object-fit: contain
+
+// }
+
+// .session_image {
+//   display: block;
+//   margin: auto 0px;
+//   overflow: hidden;
+//   width: 100%;
+//   height: auto;
+//   max-width: 100%;
+//   box-sizing: inherit;
+  
+ 
+// }
+
+// .session_field_container {
+//   display: flex;
+//   position: relative;
+//   flex-direction: column;
+//   width: 50%;
+//   border-left: 1px solid black;
+//   text-transform: uppercase;
+//   padding: 20px;
+//   box-sizing: border-box;
+// }
+
+// .sesion_field {
+//     box-sizing: border-box;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+    
+// }
+
+// .session_header {
+//   display: flex;
+//   justify-content: center;
+//   margin: 100px 0px;
+//   font-size: 24px;
+//   font-weight: 900;
+//   text-shadow: 0.75px 0 black;
+//   letter-spacing: 5px;
+// }
+
+// .session_button {
+//   cursor: pointer;
+//   border-top: 1px solid black;
+//   position: absolute;
+//   bottom: 0;
+//   right: 0;
+//   width: 50%;
+//   text-align: center; 
+//   text-transform: uppercase;
+//   font-size: 11px;
+//   font-weight: 500;
+//   letter-spacing: 2px;
+//   padding: 15px 0px;
+//   justify-content: center;
+// }
+
+.signup-image {
+    width:100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    // -webkit-box-pack: center;
+    justify-content: center;
+    // -webkit-box-align: center;
+    align-items: center;
+    flex: 1 1 0%;
+    overflow: auto;
+    padding: 24px;
+    object-fit: contain;
+}
+
+.signup-header {
+    padding-top: 100px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.signup-container {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 180px);
+    max-height: 800px;
+    min-height: 500px;
+    padding: 0px 90px;
+    position: absolute;
+    width: 1000px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border: 1px solid black;
+
+}
+
+.signup-image-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    align-items: center;
+    flex: 1 1 0%;
+    overflow: auto;
+    padding: 24px;
+    border-right: 1px solid black;
+    padding-right: inherit;;
+
+}
+
+.sign-up-fields {
+    box-sizing: border-box;
+    width: 50%;
+    padding: inherit;
+    padding-right: 0px ;
+    display: flex;
+    justify-content: center;
+
+   
+    
+}
+
+.signup-label {
+    padding: 20px;
+}
+
+.signup-container form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+// input[type=text] {
+//     // border: 1px solid red;
+//     border-top: none;
+// }
+
+.signup-input {
+    border-bottom: 1px solid black;
+    border-top: none ;
+    border-left: none ;
+    border-right: none ;
+    width: 400px;
+}
