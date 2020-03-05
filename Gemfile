@@ -5,6 +5,7 @@ ruby '2.5.1'
 
 gem 'rails_12factor'
 gem 'jquery-rails'
+gem 'bcrypt'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.1'
 # Use postgresql as the database for Active Record
@@ -52,7 +53,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'annotate'
-  gem 'bcrypt'
+
 
   
 end
