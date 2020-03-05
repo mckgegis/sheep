@@ -1,6 +1,4 @@
 
-<main id="root"></main>
-
 <% if current_user %>
 <script type="text/javascript">
     window.currentUser = <%= render(
@@ -9,3 +7,10 @@
     ).html_safe %>
 </script>
 <% end %>
+
+<script type="text/javascript">
+    window.airmonarchURL = "<%= image_url('airm.png') %>";
+</script>
+<main id="root"></main>
+
+

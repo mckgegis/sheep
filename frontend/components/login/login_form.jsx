@@ -46,7 +46,7 @@ class LoginForm extends React.Component {
         return (
             <div className='session-container'>
                 <div className='session-image-container'>
-                    <img src="assets/airm.png" className='session-image'/>
+                    <img src={window.airmonarchURL} className='session-image'/>
                 </div>
                 <div className='session-fields'>
                     <form onSubmit={this.handleSubmit}>
