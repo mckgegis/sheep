@@ -2,90 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-//  .session_form_container {
-//   max-width: 1200px;
-//   margin: auto;
-//   margin-bottom: 90px;
-//   display: flex;
-//   border: solid black;
-//   border-width: thin;
-//   height: 650px;
-//   justify-content: center;
-// }
 
-// .session_form_image {
-//   display: block;
-//   width: 50%;
-//   justify-content: center;
-//   object-fit: contain
-
-// }
-
-// .session_image {
-//   display: block;
-//   margin: auto 0px;
-//   overflow: hidden;
-//   width: 100%;
-//   height: auto;
-//   max-width: 100%;
-//   box-sizing: inherit;
-  
- 
-// }
-
-// .session_field_container {
-//   display: flex;
-//   position: relative;
-//   flex-direction: column;
-//   width: 50%;
-//   border-left: 1px solid black;
-//   text-transform: uppercase;
-//   padding: 20px;
-//   box-sizing: border-box;
-// }
-
-// .sesion_field {
-//     box-sizing: border-box;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-    
-// }
-
-// .session_header {
-//   display: flex;
-//   justify-content: center;
-//   margin: 100px 0px;
-//   font-size: 24px;
-//   font-weight: 900;
-//   text-shadow: 0.75px 0 black;
-//   letter-spacing: 5px;
-// }
-
-// .session_button {
-//   cursor: pointer;
-//   border-top: 1px solid black;
-//   position: absolute;
-//   bottom: 0;
-//   right: 0;
-//   width: 50%;
-//   text-align: center; 
-//   text-transform: uppercase;
-//   font-size: 11px;
-//   font-weight: 500;
-//   letter-spacing: 2px;
-//   padding: 15px 0px;
-//   justify-content: center;
-// }
-
-.signup-image {
+.session-image {
     width:100%;
     height: auto;
     display: flex;
     flex-direction: column;
-    // -webkit-box-pack: center;
     justify-content: center;
-    // -webkit-box-align: center;
     align-items: center;
     flex: 1 1 0%;
     overflow: auto;
@@ -93,19 +16,29 @@
     object-fit: contain;
 }
 
-.signup-header {
-    padding-top: 100px;
-    padding-bottom: 60px;
+.login-header {
+    padding-top: 80px;
+    padding-bottom: 50px;
     display: flex;
     justify-content: center;
+    padding-left: 80px
+
 }
 
-.signup-container {
+.signup-header {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    padding-left: 80px
+
+}
+
+.session-container {
     display: flex;
     flex-direction: row;
-    height: calc(100vh - 180px);
-    max-height: 800px;
-    min-height: 500px;
+    max-height: 900px;
+    min-height: 600px;
     padding: 0px 90px;
     position: absolute;
     width: 1000px;
@@ -116,13 +49,11 @@
 
 }
 
-.signup-image-container {
+.session-image-container {
     width: 100%;
     display: flex;
     flex-direction: column;
-    -webkit-box-pack: center;
     justify-content: flex-start;
-    -webkit-box-align: center;
     align-items: center;
     flex: 1 1 0%;
     overflow: auto;
@@ -135,34 +66,82 @@
 .sign-up-fields {
     box-sizing: border-box;
     width: 50%;
-    padding: inherit;
-    padding-right: 0px ;
+    padding: 24px;
     display: flex;
     justify-content: center;
-
+    padding-left: 10px;
+    overflow: hidden;
    
     
 }
 
-.signup-label {
+.session-label {
     padding: 20px;
+
 }
 
-.signup-container form {
+.session-container form {
     display: flex;
     flex-direction: column;
     align-content: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
-// input[type=text] {
-//     // border: 1px solid red;
-//     border-top: none;
-// }
 
-.signup-input {
+.session-input {
     border-bottom: 1px solid black;
     border-top: none ;
     border-left: none ;
     border-right: none ;
     width: 400px;
+}
+
+.demo-button {
+    cursor: pointer;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    bottom: 0;
+    width: 50%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding:0px;
+    box-sizing: inherit;
+}
+
+.session-button {
+    cursor: pointer;
+    border-top: 1px solid black;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 15px 0px;
+    box-sizing: inherit;
+
+}
+
+.session-submit-container {
+    display: flex;
+    bottom: 0;
+    position: absolute;
+    width: 45.1%;
+}
+
+.session-errors {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    padding-left: 10px;
+    padding-right: none;
+    padding-top: none;
+    color: red;
+    padding-bottom: none;
 }

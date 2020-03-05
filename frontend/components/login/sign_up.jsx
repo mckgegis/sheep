@@ -17,6 +17,10 @@ class SignUpForm extends React.Component {
             username: 'ryanisdagoat',
             password: 'truuuu'
         };
+
+        this.handleDemo = this.handleDemo.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+
     };
 
     update(field) {
@@ -29,73 +33,80 @@ class SignUpForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.signup(this.state)
+        this.props.signup(this.state).then(() => this.props.history.push("/"))
     }
 
     handleDemo(e) {
         e.preventDefault()
-        this.props.login(this.demoUser)
+        this.props.login(this.demoUser).then(() => this.props.history.push("/"))
     }
 
+    componentWillUnmount(){
+        this.props.clearErrors()
+    }
 
     render () {
+        const {errors} = this.props
         return(
-            <div className='signup-container'>
-                <div className='signup-image-container'>
-                    <img src="assets/airm.png" className='signup-image'/>
+            <div className='session-container'>
+                <div className='session-image-container'>
+                    <img src="assets/airm.png" className='session-image'/>
                 </div>
-                <div className='sign-up-fields'>
+                <div className='session-fields'>
                     <form onSubmit={this.handleSubmit}>
                         <h1 className='signup-header'>Create An Account</h1>
-                        <label className='signup-label'>
+                        {!errors.length ? "" : <p className='session-errors'>{errors.join(" ")}</p>}
+                        <label className='session-label'>
                             <input
-                                className='signup-input'
+                                className='session-input'
                                 type="text"
                                 placeholder="First Name"
                                 value={this.state.first_name}
                                 onChange={this.update('first_name')}
                             />
                         </label>
-                        <label className='signup-label'>
+                        <label className='session-label'>
                             <input
-                                className='signup-input'
+                                className='session-input'
                                 type="text"
                                 placeholder="Last Name"
                                 value={this.state.last_name}
                                 onChange={this.update('last_name')}
                             />
                         </label>
-                        <label className='signup-label'>
+                        <label className='session-label'>
                             <input
-                                className='signup-input'
+                                className='session-input'
                                 type="text"
                                 placeholder="Username"
                                 value={this.state.username}
                                 onChange={this.update('username')}
                             />
                         </label>
-                        <label className='signup-label'>
+                        <label className='session-label'>
                             <input
-                                className='signup-input'
+                                className='session-input'
                                 type="text"
                                 placeholder="Email"
                                 value={this.state.email}
                                 onChange={this.update('email')}
                             />
                         </label>
-                        <label className='signup-label'>
+                        <label className='session-label'>
                             <input
-                                className='signup-input'
+                                className='session-input'
                                 type="password"
                                 placeholder="Password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
                             />
                         </label>
-                        <button className="demo-button" onClick={this.handleDemo}>
-                            Demo User
-                        </button>
-                        <button className='signup-button'>Create User</button>
+                        <div className='session-submit-container'>
+                            <button className="demo-button" onClick={this.handleDemo}>
+                                Demo User
+                            </button>
+                            <button className='session-button'>Create User</button>
+                        </div>
                     </form>
                 </div>
             </div>

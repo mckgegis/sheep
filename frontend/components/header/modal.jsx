@@ -1,23 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { logout } from '../../actions/session_action'
 import { connect } from 'react-redux'
 
 import {closeModal} from '../../actions/modal_action'
 
-const Modal = ({ modal, closeModal, currentUser }) => {
+const Modal = ({ modal, closeModal, currentUser, signout }) => {
     if (!modal) {
         return null;
     }
     let dakine = currentUser ? (
-        <div className='modal-link'>
-            <button>Log Out</button>
+        <div className='modal-link' onClick={closeModal}>
+            <Link to='/' onClick={signout}>Log Out</Link>
         </div>
     ) :  (<>
         <div className='modal-link'>
-            <Link to='/login'>Login</Link>
+            <Link to='/login' onClick={closeModal}>Login</Link>
         </div>
         <div className='modal-link'>
-            <Link to='/signup'>Sign Up</Link>
+            <Link to='/signup' onClick={closeModal}>Sign Up</Link>
         </div>
         </>
     )
@@ -26,32 +27,32 @@ const Modal = ({ modal, closeModal, currentUser }) => {
         <div className="modal-background" onClick={closeModal}>
             <div className="modal-child" onClick={e => e.stopPropagation()}>
                 <ul className='modal-link-container'>
-                    <div className='modal-link'>
-                        <Link to='/sneakers'>Sneakers</Link>
+                    <div >
+                        <Link to='/sneakers' className='modal-link' onClick={closeModal}>Sneakers</Link>
                     </div>
-                    <div className='modal-link'>
-                        <Link to='/sneakers'>Apparel</Link>
+                    <div >
+                        <Link to='/sneakers' className='modal-link' onClick={closeModal}>Apparel</Link>
                     </div>
-                    <div className='modal-link'>
-                        <Link to='/sneakers'>Shop All</Link>
+                    <div >
+                        <Link to='/sneakers' className='modal-link' onClick={closeModal}>Shop All</Link>
                     </div>
-                    <div className='modal-link'>
-                        <Link to='/styles'>Styles</Link>
+                    <div >
+                        <Link to='/styles' className='modal-link' onClick={closeModal}>Styles</Link>
                     </div>
-                    <div className='modal-link'>
-                        <Link to='/sneakers'>Collections</Link>
+                    <div >
+                        <Link to='/sneakers' className='modal-link' onClick={closeModal}>Collections</Link>
                     </div>
-                    <div className='modal-link'>
-                        <Link to='/sneakers'>Brands</Link>
+                    <div >
+                        <Link to='/sneakers' className='modal-link' onClick={closeModal}>Brands</Link>
                     </div>
-                    <div className='modal-link'>
-                        <Link to='/sneakers'>Greatest</Link>
+                    <div >
+                        <Link to='/sneakers' className='modal-link' onClick={closeModal}>Greatest</Link>
                     </div>
-                    <div className='modal-link'>
-                        <Link to='/sneakers'>Under Retail</Link>
+                    <div >
+                        <Link to='/sneakers' className='modal-link' onClick={closeModal}>Under Retail</Link>
                     </div>
-                    <div className='modal-link'>
-                        <Link to='/sneakers'>Size Preference</Link>
+                    <div >
+                        <Link to='/sneakers' className='modal-link'>Size Preference</Link>
                     </div>
                     {dakine}
                 </ul>
@@ -70,6 +71,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
+        signout: () => dispatch(logout()),
         closeModal: () => dispatch(closeModal())
     };
 };

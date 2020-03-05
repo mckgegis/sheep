@@ -1,5 +1,9 @@
+import * as SessionUtils from '../util/session_api_util'
+
 export const OPEN_MODAL = 'OPEN_MODAL';
 export const CLOSE_MODAL = 'CLOSE_MODAL';
+
+
 
 export const openModal = modal => {
     return {
@@ -13,3 +17,4 @@ export const closeModal = () => {
         type: CLOSE_MODAL
     };
 };
+

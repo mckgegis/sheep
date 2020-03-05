@@ -8,24 +8,23 @@ class NavBar extends React.Component {
     }
 
     render (){
-        // debugger
         return (
             <div className='navbar-container'>
-                <Link to='#'>
-                    <h1 className='navbar-logo'>SHEEP</h1>
-                </Link>
+                <h1 >
+                    <Link to='/' className='navbar-logo'>SHEEP</Link>
+                </h1>
                 <ul className='navbar-links-container'>
                     <div className='navbar-link'>
-                        <Link to='/sneakers'>Sneakers</Link>
+                        <Link to='/sneakers' className='navbar-link'>Sneakers</Link>
                     </div>
                     <div className='navbar-link'>
-                        <Link to='/sneakers'>Apparel</Link>
+                        <Link to='/sneakers' className='navbar-link'>Apparel</Link>
                     </div>
                     <div className='navbar-link'>
-                        <Link to='/sneakers'>Shop All</Link>
+                        <Link to='/sneakers' className='navbar-link'>Shop All</Link>
                     </div>
                     <div className='navbar-link'>
-                        <Link to='/styles'>Styles</Link>
+                        <Link to='/styles' className='navbar-link'>Styles</Link>
                     </div>
                     <div className='navbar-link'>
                         <i className="fas fa-search"></i>

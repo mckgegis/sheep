@@ -10,10 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_02_194421) do
+ActiveRecord::Schema.define(version: 2020_03_04_230804) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "sneakers", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "sku", null: false
+    t.string "description", null: false
+    t.string "colorway", null: false
+    t.datetime "release_date", null: false
+    t.string "brand", null: false
+    t.string "silhouette", null: false
+    t.string "designer", null: false
+    t.string "technology", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["brand"], name: "index_sneakers_on_brand"
+    t.index ["name"], name: "index_sneakers_on_name", unique: true
+    t.index ["silhouette"], name: "index_sneakers_on_silhouette"
+    t.index ["sku"], name: "index_sneakers_on_sku", unique: true
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name", null: false

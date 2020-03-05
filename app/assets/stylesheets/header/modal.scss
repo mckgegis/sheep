@@ -14,3 +14,34 @@
   left: 50%;
 }
 
+.modal-link-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 350px;
+    max-width: 70%;
+    transform: none;
+    z-index: 1;
+    opacity: 1;
+    overflow-x: hidden;
+    background: rgb(255, 255, 255);
+    transition: transform 0.3s ease-in-out 0s;
+    transform: translate3d(275%, 0, 0);
+}
+
+.modal-link {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    font-size: 16px;
+    font-family: Plain;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    padding: 8px 24px;
+    border-bottom: 1px solid rgb(222, 222, 222);
+    text-decoration: none;
+    
+}
