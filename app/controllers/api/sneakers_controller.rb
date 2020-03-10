@@ -2,7 +2,16 @@ class Api::SneakersController < ApplicationController
 
     def show
         @sneaker = Sneaker.find_by(id: params[:id])
-        render :show
+        if @sneaker 
+            render :show
+        end 
+    end
+
+    def index
+        # debugger
+        @sneakers = Sneaker.fetch(params[:maxId])
+
+        render :index
     end
 
 end

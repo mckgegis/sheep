@@ -1,0 +1,24 @@
+# == Schema Information
+#
+# Table name: listings
+#
+#  id           :bigint           not null, primary key
+#  sneaker_id   :integer          not null
+#  price        :integer          not null
+#  size         :float            not null
+#  retail_price :integer          not null
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#
+
+one:
+  sneaker_id: 1
+  price: 1
+  size: 1.5
+  retail_price: 1
+
+two:
+  sneaker_id: 1
+  price: 1
+  size: 1.5
+  retail_price: 1

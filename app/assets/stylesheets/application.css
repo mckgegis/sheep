@@ -14,4 +14,9 @@
  *= require_self
  */
 
+.splash-image-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 200px;
 
+}

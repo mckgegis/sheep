@@ -20,6 +20,10 @@ class User < ApplicationRecord
 
     attr_reader :password
 
+    has_many :cart_items,
+        foreign_key: :user_id,
+        class_name: :CartItem
+
     def self.find_by_credentials(user_params)
         user = User.find_by(username: user_params[:username])
         user && user.is_password?(user_params[:password]) ? user : nil

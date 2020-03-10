@@ -1,3 +1,77 @@
 // Place all the styles related to the api/sneakers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.sneaker-index-header {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+    align-items: center;
+}
+
+.sneaker-index-container {
+    display: flex;
+    max-width: 1250px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    flex-flow: wrap row;
+}
+
+.sneaker-index-items-container{
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  margin-top: -1px;
+  margin-left: -1px;
+
+}
+
+.sneaker-item-container {
+    width: 300px;
+    height: 300px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    font-family: 'Overpass', sans-serif;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.sneaker-item-image {
+  width: 80%;
+  height: auto;
+  padding: 20px;
+
+}
+
+.sneaker-item-image-container {
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.load-more-button {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    bottom: 0;
+    width: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding:0px;
+    box-sizing: inherit;
+}
+
+.load-more-container {
+    display: flex;
+    justify-content: center;
+}
