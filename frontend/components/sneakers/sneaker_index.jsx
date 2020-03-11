@@ -22,7 +22,6 @@ class SneakerIndex extends React.Component {
     }
 
     showMore() {
-        // debugger
         this.props.fetchSneakers(this.maxId)
         .then(action => {
             if (Object.values(action.sneakers).length < 8)
@@ -39,7 +38,7 @@ class SneakerIndex extends React.Component {
                 >See More</button>
         ) : (null)
         return (
-            <div>
+            <div className='sneaker-container'>
                 <h1 className="sneaker-index-header">Shop All</h1>
                 <div className="sneaker-index-container">
                     <ul className="sneaker-index-items-container">

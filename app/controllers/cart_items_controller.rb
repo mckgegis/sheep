@@ -1,4 +1,4 @@
-class Api::CartItemsController < ApplicationController
+class CartItemsController < ApplicationController
 
     def index
         @cart_items = current_user.cart_items  
@@ -12,6 +12,7 @@ class Api::CartItemsController < ApplicationController
             render :show 
         else 
             render json: @cart_item.errors.full_messages, status: 422
+        end
     end
 
     def destroy
@@ -20,7 +21,7 @@ class Api::CartItemsController < ApplicationController
     end
 
     def cart_item_params
-        params.require(:cart_item).permit(:user_id, :listing_id)
+        params.require(:item).permit(:user_id, :listing_id)
     end
     
 end

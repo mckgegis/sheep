@@ -7,6 +7,8 @@ import SneakerIndexContainer from '../components/sneakers/sneaker_index_containe
 import Splash from '../components/splash/splash'
 import { AuthRoute, ProtectedRoute } from '../util/route_utils'
 import SneakerShowContainer from "../components/sneakers/sneaker_show_container"
+import CartItemContainer from "../components/cart_item/cart_item_container"
+import SearchContainer from "../components/search/search_container"
 
 const App = () => (
     <div > 
@@ -16,6 +18,8 @@ const App = () => (
         <AuthRoute path="/signup" component={SignupFormContainer} />
         <Route exact path="/sneakers" component={SneakerIndexContainer} />
         <Route path="/sneakers/:sneakerId" component={SneakerShowContainer} />
+        <Route path='/cart' component={CartItemContainer} />
+        <Route path='/search' component={SearchContainer} />
     </div>
 );
 

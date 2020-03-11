@@ -18,5 +18,18 @@
     display: flex;
     justify-content: center;
     padding-top: 200px;
-
+    background: url('bkgrd.jpeg') center no-repeat;
+    min-height: 600px;
+    width: 100%;
+    position: relative;
+    padding: 0;
 }
+
+.splash-text {
+    color: white;
+    position: absolute;
+    left: 300px;
+    top: 125px
+}
+
+textarea { text-transform: uppercase; }

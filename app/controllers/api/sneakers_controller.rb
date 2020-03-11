@@ -8,7 +8,6 @@ class Api::SneakersController < ApplicationController
     end
 
     def index
-        # debugger
         @sneakers = Sneaker.fetch(params[:maxId])
 
         render :index

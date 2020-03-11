@@ -1,3 +1,6 @@
+import React from 'react'
+import CartItemIndexItem from './cart_item_index_item'
+
 class CartItemIndex extends React.Component {
     constructor(props) {
         super(props)
@@ -7,7 +10,7 @@ class CartItemIndex extends React.Component {
         this.props.fetchCartItems()
     }
 
-    cartTotal(items) {
+    cartTotal(cartItems) {
         this.total = 0
 
         cartItems.forEach(item => {
@@ -21,10 +24,9 @@ class CartItemIndex extends React.Component {
 
         this.cartTotal(cartItems);
         
-        let emptyCart = cartItems.length ? (<div></div>) : (<div>Your Sheep cart is empty</div>);
+        let emptyCart = cartItems.length ? null : (<div>Your Sheep cart is empty</div>);
 
         let shippingCost = cartItems.length ? 10 : 0;
-
         let cartDetails = cartItems.length ? (
             <div>
                 <div className="order-detail">
@@ -32,7 +34,7 @@ class CartItemIndex extends React.Component {
                         Ship To
                     </div>
                     <div className="order-detail-value">
-                        825 Battery St.
+                        126 Valparaiso St.
                     </div>
                 </div>
                 <div className="order-detail">
@@ -48,7 +50,7 @@ class CartItemIndex extends React.Component {
                         Subtotal
                     </div>
                     <div className="order-detail-value">
-                        ${this.total}
+                        ${this.props.totalValue + shippingCost}
                     </div>
                 </div>
                 <div className="order-detail">
@@ -60,26 +62,34 @@ class CartItemIndex extends React.Component {
                     </div>
                 </div>
             </div>
-        ) : (<div></div>)
+        ) : null
 
         let disclaimer = cartItems.length ? (
             <div>
-                
+                Fuck Off
             </div>
-        ) : (<div></div>)
+        ) : null
 
 
-        render () {
             return (
+                <div className='cart-container'>
+                    <div className='empty-cart-container'>
+                        {emptyCart}
+                    </div>
+                    <div className='cart-index-container'>
+                        {cartItems.map(cartItem => <CartItemIndexItem cartItem={cartItem} removeItem={this.props.removeItem} key={cartItem.id} />)}
+                    </div>
+                    <div className='cart-details-container'>
+                        {shippingCost}
+                        {cartDetails}
+                        {disclaimer}
+                    </div>
 
-                <div>
-                    
                 </div>
             
             )
         }
 
-    }
 }
 
 export default CartItemIndex

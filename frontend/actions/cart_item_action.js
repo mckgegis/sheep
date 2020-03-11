@@ -2,7 +2,7 @@ import * as CartItemUtil from '../util/cart_item_api_util';
 
 export const RECEIVE_CART_ITEMS = "RECEIVE_CART_ITEMS";
 export const RECEIVE_CART_ITEM = "RECEIVE_CART_ITEM";
-export const REMOVE_CART_ITEMS = "REMOVE_CART_ITEMS";
+export const REMOVE_CART_ITEM = "REMOVE_CART_ITEM";
 export const CLEAR_CART_ITEMS = "CLEAR_CART_ITEMS";
 
 const receiveCartItems = (items) => ({
@@ -25,14 +25,14 @@ export const clearCartItems = () => ({
 });
 
 export const fetchCartItems = () => dispatch => (
-    CartItemUtil.fetchCartItems.then(items => dispatch(receiveCartItems))
+    CartItemUtil.fetchCartItems().then(items => dispatch(receiveCartItems(items)))
 );
 
 export const addItem = (item) => dispatch => (
-    CartItemUtil.addItem.then(item => dispatch(receiveCartItem(item)))
+    CartItemUtil.addItem(item).then(item => dispatch(receiveCartItem(item)))
 );
 
-export const removeItem = (itemId) => dispatch (
+export const removeItem = (itemId) => dispatch => (
     CartItemUtil.removeItem(itemId).then(() => dispatch(removeCartItem(itemId)))
 );
 

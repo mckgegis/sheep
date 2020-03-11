@@ -11,5 +11,5 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
   end
   resources :cart_items, only: [:create, :index, :destroy]
-
+  resource :search, defaults: { format: :json }, only: [:show]
 end

@@ -3,7 +3,27 @@ import { Link } from 'react-router-dom';
 
 const ListingIndexItem = ({ props, sneaker, listings, addItem, removeItem, currentUser }) => {
 
+    const button = currentUser ? (
+       <Link to='/cart' onClick={() => addItem(item)}>
+           <button>
+                Add to Cart
+           </button>
+       </Link>
+    ) : (
+        <Link to='/login'>
+            <button>
+                Log In to Purchase
+            </button>
+        </Link>
+    )
+
     const listing = listings[props.match.params.listingId]
+    const item = currentUser ? ({
+        user_id: currentUser.id,
+        listing_id: listing.id
+    }) : {}
+
+
     return (
         <div className='listing-index-container'>
             <div className='listing-index-header-container'>
@@ -43,6 +63,9 @@ const ListingIndexItem = ({ props, sneaker, listings, addItem, removeItem, curre
                     <div className='listing-index-detail-value'>
                         Good Condition
                     </div>
+                </div>
+                <div className='listing-index-item-button'>
+                    {button}
                 </div>
 
             </div>

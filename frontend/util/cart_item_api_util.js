@@ -16,7 +16,7 @@ export const addItem = (item) => (
 export const removeItem = (itemId) => (
     $.ajax({
         method: 'DELETE',
-        url: `/cart_items/${itemid}`
+        url: `/cart_items/${itemId}`
     })
 )
 

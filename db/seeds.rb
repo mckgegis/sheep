@@ -42,7 +42,7 @@ u25 = User.create({:first_name=>"Nathan", :last_name=>"Mendes", :username=>"uwu"
 
 s1 = Sneaker.create({
     name: "Air Monarch IV 'White Navy'",
-    sku: "415445 102",
+    sku: "415445102",
     description: "Designed to be both a cross-trainer and an everyday shoe, the bulky style of the Air Monarch IV is highlighted by the thick Phylon midsole that holds a full-length Air Sole unit. The white leather upper is accented by hits of navy blue and highlighted by metallic silver Swooshes on the side walls. The shoe also sports flex grooves and a multi-pattern rubber outsole.",
     colorway: "White/Navy",
     release_date: "11/06/2018",
@@ -53,7 +53,7 @@ s1 = Sneaker.create({
     })
 s2 = Sneaker.create({
     name: "Air Monarch IV 'White Black Red'",
-    sku: "415445 101",
+    sku: "415445101",
     description: "Designed to be both a cross-trainer and an everyday shoe, the bulky style of the Air Monarch IV is highlighted by the thick Phylon midsole that holds a full-length Air Sole unit. The white leather upper is accented by hits of navy blue and highlighted by metallic silver Swooshes on the side walls. The shoe also sports flex grooves and a multi-pattern rubber outsole.",
     colorway: "White/Black-Varsity Red",
     release_date: "11/06/2018",
@@ -64,7 +64,7 @@ s2 = Sneaker.create({
     })
 s3 = Sneaker.create({
     name: "Air Monarch IV 'Father's Day'",
-    sku: "AV6676 400",
+    sku: "AV6676400",
     description: "Designed to be both a cross-trainer and an everyday shoe, the bulky style of the Air Monarch IV is highlighted by the thick Phylon midsole that holds a full-length Air Sole unit. The white leather upper is accented by hits of navy blue and highlighted by metallic silver Swooshes on the side walls. The shoe also sports flex grooves and a multi-pattern rubber outsole.",
     colorway: "College Navy/Decenter Sky-Light Gum Brown",
     release_date: "11/06/2018",
@@ -76,7 +76,7 @@ s3 = Sneaker.create({
 
 s4 = Sneaker.create({
     name: "Air Monarch IV 'Weekend Campout'",
-    sku: "AV6676 300",
+    sku: "AV6676300",
     description: "Designed to be both a cross-trainer and an everyday shoe, the bulky style of the Air Monarch IV is highlighted by the thick Phylon midsole that holds a full-length Air Sole unit. The white leather upper is accented by hits of navy blue and highlighted by metallic silver Swooshes on the side walls. The shoe also sports flex grooves and a multi-pattern rubber outsole.",
     colorway: "Legion Green/Deep Royal Blue-Sail-Team Gold",
     release_date: "11/06/2018",
@@ -88,7 +88,7 @@ s4 = Sneaker.create({
 
 s5 = Sneaker.create({
     name: "Air Max 1 OG 'Anniversary' 2017 Rerelease'",
-    sku: "908375 103",
+    sku: "908375103",
     description: "Air Max 1 OG 'Anniversary' 2017 Rerelease was a 2017 re-release of the 1987 OG University Red colorway. The design combines a white and grey upper with a University Red Swoosh and University Red overlays around the base. Initially released in limited quantities in March of 2017, the sneaker re-stocked in October of 2017.",
     colorway: "White/University Red/Neutral Grey/Black",
     release_date: "21/09/2017",
@@ -100,7 +100,7 @@ s5 = Sneaker.create({
 
 s6 = Sneaker.create({
     name: "Air Max 1 OG Anniversary 'Obsidian'",
-    sku: "908375 104",
+    sku: "908375104",
     description: "Nike came out with a series of colorways to celebrate the 30th-anniversary of the iconic Air Max 1. The Air Max 1 OG 'Obsidian' features a white nylon upper with Neutral Grey and Obsidian suede overlays on the mudguard, side panels and Swoosh on the sidewall. The sneaker also boasts a padded collar and University Red accents on the heel branding, toe cap and top eyelets, as well as a partially encapsulated Air Max unit for cushioning.",
     colorway: "White/Dark Obsidian/Natural Grey/Black",
     release_date: "15/12/2017",
@@ -112,7 +112,7 @@ s6 = Sneaker.create({
 
 s7 = Sneaker.create({
     name: "Air Max 1 'Have A Nike Day'",
-    sku: "BQ8929 500",
+    sku: "BQ8929500",
     description: "Inspired by their series of retro advertisements, Nike released their 'Have A Nike Day' pack in March 2019. The playful '70s-themed collection features some of the Swoosh Brand’s most iconic sneakers, including this Air Max 1 'Have A Nike Day' sneaker. This version of the timeless silhouette is decked in a pastel color palette with suede and mesh overlays. Sitting underneath the foot, the classic midsole is injected with its signature visible Nike Air unit.",
     colorway: "Space Purple/Black/Bleached Coral",
     release_date: "01/03/2019",
@@ -124,7 +124,7 @@ s7 = Sneaker.create({
 
 s8 = Sneaker.create({
     name: "Air Max 1 'Photo Blue Total Orange'",
-    sku: "AH8145 112",
+    sku: "AH8145112",
     description: "The Nike Air Max 1 debuted in 1987 as the first sneaker to put the brand's Air cushioning on full display. This rendition from March 2019 combines mesh, smooth leather and suede paneling that follows the classic AM1 blueprint. A primarily black and white construction is broken up by Photo Blue and Total Orange hits for contrast. Below, Max Air cushioning enhances the feel of a foam sole, underscored by Waffle-inspired rubber tread.",
     colorway: "White/Photo Blue/Total Orange",
     release_date: "01/03/2019",
@@ -136,7 +136,7 @@ s8 = Sneaker.create({
 
 s9 = Sneaker.create({
     name: "Atmos x Air Max 1 DLX 'Animal Pack' 2018",
-    sku: "AQ0928 700",
+    sku: "AQ0928700",
     description: "The atmos x Air Max 1 DLX is inspired by the 2006 collaboration between Nike and atmos. For this updated edition of the original design, Nike has reconnected with the Japanese sneaker boutique to once again create a shoe dressed in pony, tiger, zebra, and leopard prints. The 2018 Air Max 1 features black detailing on the upper, replacing the ivory colors of the 2006 model. This design represents one half of Nike’s 2018 'Animal Pack' with atmos, the other being an Air Max 95.",
     colorway: "Wheat/Bison/Classic Green/Sport Red",
     release_date: "17/03/2018",
@@ -148,7 +148,7 @@ s9 = Sneaker.create({
 
 s10 = Sneaker.create({
     name: "Atmos x Air Max 1 Retro 'Elephant' 2017",
-    sku: "908366 001",
+    sku: "908366001",
     description: "The Atmos x Air Max 1 'Elephant' 2017 was a re-release of a 2006 collaboration with Tokyo-based brand Atmos. The winner of the 2016 Vote Back contest, the design combines a black suede upper with a white toe box, elephant print overlays, and clear jade accents. Re-released on Air Max Day, the sneaker also comes with a white midsole and black outsole.",
     colorway: "Black/Clear Jade/White",
     release_date: "18/03/2017",
@@ -160,7 +160,7 @@ s10 = Sneaker.create({
 
 s11 = Sneaker.create({
     name: "Sean Wotherspoon x Air Max 1/97 'Sean Wotherspoon'",
-    sku: "AJ4219 400",
+    sku: "AJ4219400",
     description: "Released for Air Max Day in 2018, this Sean Wotherspoon designed hybrid won the ‘Vote Forward’ campaign. This new creation combines the upper of an Air Max 97 with an Air Max 1 sole. The shoe features a retro-inspired multicolored corduroy upper with corduroy pull tabs, Velcro tongue patches, and an Infrared Air unit.",
     colorway: "Multi-Color",
     release_date: "26/03/2018",
@@ -172,7 +172,7 @@ s11 = Sneaker.create({
 
 s12 = Sneaker.create({
     name: "Air Max 1 Golf NRG 'Grass'",
-    sku: "BQ4804 300",
+    sku: "BQ4804300",
     description: "With the launch of the Air Max 1 Golf NRG ‘Grass,’ Nike injects a strong dose of whimsy into the golf course. Repurposed for the links, the lifestyle runner features a material on the upper that mimics the look of green turf, accented with an embroidered Swoosh in white. A matching white foam midsole, complete with Max Air cushioning, is supported by a high-traction gum rubber outsole.",
     colorway: "Grass/Grass/White",
     release_date: "30/01/2019",
@@ -472,7 +472,7 @@ s36 = Sneaker.create({
 
 s37 = Sneaker.create({
     name: "Nike M2K Tekno SP 'Atmosphere Grey'",
-    sku: "BV0074 001",
+    sku: "BV0074001",
     description: "The Nike M2K Tekno SP ‘Atmosphere Grey’ finishes its bulky retro-inspired silhouette with a neutral color palette. The complementary shades of Atmosphere Grey and Gunsmoke highlight a mixed-material composition made up of mesh, suede and ribbed textile, accented with dual Swooshes and a visible heel counter. A sculpted foam midsole maintains the shoe’s all-grey color scheme.",
     colorway: "Atmosphere Grey/Dark Grey-White-Gunsmoke",
     release_date: "17/01/2019",
@@ -484,7 +484,7 @@ s37 = Sneaker.create({
 
 s38 = Sneaker.create({
     name: "Nike M2K Tekno 'Matte Silver'",
-    sku: "AO3108 100",
+    sku: "AO3108100",
     description: "First introduced in May 2018, the M2K Tekno was released with design details inspired by the Air Monarch sneaker. Later in 2018, Nike added the Wmns M2K Tekno 'Matte Silver' iteration to the collection. This women’s shoe is fitted with a genuine and synthetic leather upper and maintains a similar design aesthetic as the Monarch 2. The TPU heel clip and Phylon foam midsole sit on a rubber outsole inspired by the Monarch 4.",
     colorway: "Phantom/Oil Grey-Matte Silver",
     release_date: "18/05/2018",
@@ -496,7 +496,7 @@ s38 = Sneaker.create({
 
 s39 = Sneaker.create({
     name: "Nike M2K Tekno 'Light Bone'",
-    sku: "CI2969 001",
+    sku: "CI2969001",
     description: "Debuted in Summer 2018, the M2K Tekno draws influence from the retro Nike Air Monarch and updates it with fashion-forward design. Released in February 2019, the M2K Tekno 'Light Bone' sneaker sports a leather and textile upper, composed in similar fashion to the early 2000s original. Supported by a TPU heel clip, the silhouette’s look is finished with a sculpted sole, fitted with Phylon foam and a non-marking outsole.",
     colorway: "Light Bone/Metallic Silver",
     release_date: "23/02/2013",
@@ -508,7 +508,7 @@ s39 = Sneaker.create({
 
 s40 = Sneaker.create({
     name: "Nike Wmns M2K Tekno 'Particle Beige'",
-    sku: "AO3108 202",
+    sku: "AO3108202",
     description: "Part of a duo of colorways designed exclusively for women, the Nike Wmns M2K Tekno 'Particle Beige’ sneaker was released in October 2018. A modern take on the original Nike Monarch design, this women’s take sports a Particle Beige upper that’s constructed from multilayered panels of leather, synthetic and textile. Underfoot, a chunky, two-tone midsole is finished with the Monarch’s signature molded heel cap.",
     colorway: "Particle Beige/Particle Beige",
     release_date: "31/10/2019",
@@ -520,7 +520,7 @@ s40 = Sneaker.create({
 
 s41 = Sneaker.create({
     name: "Nike M2K Tekno 'Pure Platinum'",
-    sku: "AV4789 004",
+    sku: "AV4789004",
     description: "The Nike M2K Tekno sneaker blends throwback-inspired elements with a modern design. ‘Pure Platinum’ is constructed with supportive leather and synthetic materials, dressed in white and grey with neon color blocked accents. The sneaker’s foam midsole cushions your steps while maintaining optimal mobility. The sculpted rubber sole provides traction and promotes long-lasting wear without compromising style.",
     colorway: "Pure Platinum/Black-Sail-White",
     release_date: "30/09/2018",
@@ -532,7 +532,7 @@ s41 = Sneaker.create({
 
 s42 = Sneaker.create({
     name: "Nike M2K Tekno 'White Grey'",
-    sku: "BQ3378 100",
+    sku: "BQ3378100",
     description: "First introduced in May 2018, the M2K Tekno was released with design details inspired by the Air Monarch sneaker. Later in 2018, Nike added the Wmns M2K Tekno 'Matte Silver' iteration to the collection. This women’s shoe is fitted with a genuine and synthetic leather upper and maintains a similar design aesthetic as the Monarch 2. The TPU heel clip and Phylon foam midsole sit on a rubber outsole inspired by the Monarch 4.",
     colorway: "White/Cool Grey-Black",
     release_date: "18/05/2018",
@@ -544,7 +544,7 @@ s42 = Sneaker.create({
 
 s43 = Sneaker.create({
     name: "Nike M2K Tekno 'Black'",
-    sku: "AV4789 002",
+    sku: "AV4789002",
     description: "First introduced in May 2018, the M2K Tekno was released with design details inspired by the Air Monarch sneaker. Later in 2018, Nike added the Wmns M2K Tekno 'Matte Silver' iteration to the collection. This women’s shoe is fitted with a genuine and synthetic leather upper and maintains a similar design aesthetic as the Monarch 2. The TPU heel clip and Phylon foam midsole sit on a rubber outsole inspired by the Monarch 4.",
     colorway: "Black/Off White-Obsidian-Black",
     release_date: "18/05/2018",
@@ -556,7 +556,7 @@ s43 = Sneaker.create({
 
 s44 = Sneaker.create({
     name: "Nike M2K Tekno 'Gunsmoke'",
-    sku: "BV2519 001",
+    sku: "BV2519001",
     description: "The M2K Tekno 'Gunsmoke' sneaker arrived in November 2018 to update its predecessor. The shoe draws inspiration from the Nike Air Monarch sneaker and infuses it with contemporary design elements. The genuine and synthetic leather upper is dressed in a grey, color-blocked palette. The shoe's TPU heel clip adds support, while a foam midsole and rubber outsole deliver cushioning and traction.",
     colorway: "Gunsmoke/Natural Heather-University Red",
     release_date: "30/11/2018",
@@ -566,7 +566,103 @@ s44 = Sneaker.create({
     technology: "Phylon"
     })
 
-    listing1 = Listing.create({:price=>225, :retail_price=>201, :size=>9.5, sneaker_id: s1.id })
+s45 = Sneaker.create({
+    name: "Nike Killshot 2 'Midnight Navy'",
+    sku: "432997107",
+    description: "This Nike Killshot 2 was a 2012 J. Crew exclusive. Demand for this clean off-white, navy and gum-soled colorway spiked in 2015 after a cameo on Aziz Ansari's 'Master of None,' forcing J.Crew to restock the sneaker every few months. By the time of the last full restock in July of 2017, the sneaker had become so hyped it sold out online within a matter of hours.",
+    colorway: "Sail/Midnight Navy-Gum Yellow",
+    release_date: "25/02/2017",
+    brand: "Nike",
+    silhouette: "Killshot",
+    designer: "Aziz Ansari'",
+    technology: "Rubber"
+    })
+
+s46 = Sneaker.create({
+    name: "Nike Killshot 2 Leather 'Hyper Blue'",
+    sku: "432997124",
+    description: "This Nike Killshot 2 was a 2012 J. Crew exclusive. Demand for this clean off-white, navy and gum-soled colorway spiked in 2015 after a cameo on Aziz Ansari's 'Master of None,' forcing J.Crew to restock the sneaker every few months. By the time of the last full restock in July of 2017, the sneaker had become so hyped it sold out online within a matter of hours.",
+    colorway: "Sail/Gum Yellow/Hyper Blue",
+    release_date: "31/12/2018",
+    brand: "Nike",
+    silhouette: "Killshot",
+    designer: "Aziz Ansari'",
+    technology: "Rubber"
+    })
+
+s47 = Sneaker.create({
+    name: "Nike Killshot 2 'Lucid Green'",
+    sku: "432997111",
+    description: "This Nike Killshot 2 was a 2012 J. Crew exclusive. Demand for this clean off-white, navy and gum-soled colorway spiked in 2015 after a cameo on Aziz Ansari's 'Master of None,' forcing J.Crew to restock the sneaker every few months. By the time of the last full restock in July of 2017, the sneaker had become so hyped it sold out online within a matter of hours.",
+    colorway: "Sail/Lucid Green-Gum Yellow",
+    release_date: "21/06/2019",
+    brand: "Nike",
+    silhouette: "Killshot",
+    designer: "Aziz Ansari'",
+    technology: "Rubber"
+    })
+
+s48 = Sneaker.create({
+    name: "Nike Killshot 2 Leather 'Sail'",
+    sku: "432997121",
+    description: "This Nike Killshot 2 was a 2012 J. Crew exclusive. Demand for this clean off-white, navy and gum-soled colorway spiked in 2015 after a cameo on Aziz Ansari's 'Master of None,' forcing J.Crew to restock the sneaker every few months. By the time of the last full restock in July of 2017, the sneaker had become so hyped it sold out online within a matter of hours.",
+    colorway: "Sail/Black/White",
+    release_date: "25/02/2017",
+    brand: "Nike",
+    silhouette: "Killshot",
+    designer: "Aziz Ansari'",
+    technology: "Rubber"
+    })
+
+s49 = Sneaker.create({
+    name: "Nike Killshot 2 'Night Maroon'",
+    sku: "432997112",
+    description: "This Nike Killshot 2 was a 2012 J. Crew exclusive. Demand for this clean off-white, navy and gum-soled colorway spiked in 2015 after a cameo on Aziz Ansari's 'Master of None,' forcing J.Crew to restock the sneaker every few months. By the time of the last full restock in July of 2017, the sneaker had become so hyped it sold out online within a matter of hours.",
+    colorway: "Sail/Gum Yellow/Night Maroon",
+    release_date: "25/02/2017",
+    brand: "Nike",
+    silhouette: "Killshot",
+    designer: "Aziz Ansari'",
+    technology: "Rubber"
+    })
+
+s50 = Sneaker.create({
+    name: "Nike Killshot 2 'White Soar'",
+    sku: "432997116",
+    description: "This Nike Killshot 2 was a 2012 J. Crew exclusive. Demand for this clean off-white, navy and gum-soled colorway spiked in 2015 after a cameo on Aziz Ansari's 'Master of None,' forcing J.Crew to restock the sneaker every few months. By the time of the last full restock in July of 2017, the sneaker had become so hyped it sold out online within a matter of hours.",
+    colorway: "White/Soar/Summit White/Gym Light Brown",
+    release_date: "25/02/2017",
+    brand: "Nike",
+    silhouette: "Killshot",
+    designer: "Aziz Ansari'",
+    technology: "Rubber"
+    })
+
+s51 = Sneaker.create({
+    name: "Killshot Vulc SB 'Wolf Grey Navy'",
+    sku: "AQ4133001",
+    description: "This Nike Killshot 2 was a 2012 J. Crew exclusive. Demand for this clean off-white, navy and gum-soled colorway spiked in 2015 after a cameo on Aziz Ansari's 'Master of None,' forcing J.Crew to restock the sneaker every few months. By the time of the last full restock in July of 2017, the sneaker had become so hyped it sold out online within a matter of hours.",
+    colorway: "Wolf Grey/Navy-Gum Yellow",
+    release_date: "25/02/2017",
+    brand: "Nike",
+    silhouette: "Killshot",
+    designer: "Aziz Ansari'",
+    technology: "Rubber"
+    })
+
+s52 = Sneaker.create({
+    name: "Nike Killshot 2 'Team Red'",
+    sku: "AQ4133100",
+    description: "This Nike Killshot 2 was a 2012 J. Crew exclusive. Demand for this clean off-white, navy and gum-soled colorway spiked in 2015 after a cameo on Aziz Ansari's 'Master of None,' forcing J.Crew to restock the sneaker every few months. By the time of the last full restock in July of 2017, the sneaker had become so hyped it sold out online within a matter of hours.",
+    colorway: "Sail/Team Red-Gum Yellow",
+    release_date: "07/05/2018",
+    brand: "Nike",
+    silhouette: "Killshot",
+    designer: "Aziz Ansari'",
+    technology: "Rubber"
+    })
+
+listing1 = Listing.create({:price=>225, :retail_price=>201, :size=>9.5, sneaker_id: s1.id })
 listing2 = Listing.create({:price=>273, :retail_price=>175, :size=>8, sneaker_id: s1.id })
 listing3 = Listing.create({:price=>220, :retail_price=>210, :size=>8.5, sneaker_id: s1.id })
 listing4 = Listing.create({:price=>238, :retail_price=>206, :size=>14, sneaker_id: s1.id })
@@ -830,3 +926,51 @@ listing261 = Listing.create({:price=>288, :retail_price=>246, :size=>12.5, sneak
 listing262 = Listing.create({:price=>264, :retail_price=>205, :size=>9, sneaker_id: s44.id })
 listing263 = Listing.create({:price=>286, :retail_price=>266, :size=>14, sneaker_id: s44.id })
 listing264 = Listing.create({:price=>248, :retail_price=>184, :size=>8, sneaker_id: s44.id })
+listing265 = Listing.create({:price=>222, :retail_price=>182, :size=>8, sneaker_id: s45.id })
+listing266 = Listing.create({:price=>203, :retail_price=>172, :size=>9, sneaker_id: s45.id })
+listing267 = Listing.create({:price=>213, :retail_price=>156, :size=>10, sneaker_id: s45.id })
+listing268 = Listing.create({:price=>275, :retail_price=>176, :size=>11, sneaker_id: s45.id })
+listing269 = Listing.create({:price=>234, :retail_price=>187, :size=>12, sneaker_id: s45.id })
+listing270 = Listing.create({:price=>244, :retail_price=>123, :size=>14, sneaker_id: s45.id })
+listing271 = Listing.create({:price=>254, :retail_price=>153, :size=>8, sneaker_id: s46.id })
+listing272 = Listing.create({:price=>214, :retail_price=>103, :size=>9, sneaker_id: s46.id })
+listing273 = Listing.create({:price=>224, :retail_price=>113, :size=>10, sneaker_id: s46.id })
+listing274 = Listing.create({:price=>234, :retail_price=>123, :size=>11, sneaker_id: s46.id })
+listing275 = Listing.create({:price=>244, :retail_price=>123, :size=>12, sneaker_id: s46.id })
+listing276 = Listing.create({:price=>254, :retail_price=>143, :size=>14, sneaker_id: s46.id })
+listing277 = Listing.create({:price=>250, :retail_price=>153, :size=>8, sneaker_id: s47.id })
+listing278 = Listing.create({:price=>251, :retail_price=>153, :size=>9, sneaker_id: s47.id })
+listing279 = Listing.create({:price=>252, :retail_price=>153, :size=>10, sneaker_id: s47.id })
+listing280 = Listing.create({:price=>253, :retail_price=>153, :size=>11, sneaker_id: s47.id })
+listing281 = Listing.create({:price=>255, :retail_price=>153, :size=>12, sneaker_id: s47.id })
+listing282 = Listing.create({:price=>256, :retail_price=>153, :size=>14, sneaker_id: s47.id })
+listing283 = Listing.create({:price=>216, :retail_price=>120, :size=>8, sneaker_id: s48.id })
+listing284 = Listing.create({:price=>217, :retail_price=>120, :size=>9, sneaker_id: s48.id })
+listing285 = Listing.create({:price=>218, :retail_price=>120, :size=>10, sneaker_id: s48.id })
+listing286 = Listing.create({:price=>219, :retail_price=>120, :size=>11, sneaker_id: s48.id })
+listing287 = Listing.create({:price=>210, :retail_price=>120, :size=>12, sneaker_id: s48.id })
+listing288 = Listing.create({:price=>211, :retail_price=>120, :size=>14, sneaker_id: s48.id })
+listing289 = Listing.create({:price=>200, :retail_price=>140, :size=>8, sneaker_id: s49.id })
+listing290 = Listing.create({:price=>205, :retail_price=>140, :size=>9, sneaker_id: s49.id })
+listing291 = Listing.create({:price=>210, :retail_price=>140, :size=>10, sneaker_id: s49.id })
+listing292 = Listing.create({:price=>215, :retail_price=>140, :size=>11, sneaker_id: s49.id })
+listing293 = Listing.create({:price=>220, :retail_price=>140, :size=>12, sneaker_id: s49.id })
+listing294 = Listing.create({:price=>225, :retail_price=>140, :size=>14, sneaker_id: s49.id })
+listing295 = Listing.create({:price=>210, :retail_price=>130, :size=>8, sneaker_id: s50.id })
+listing296 = Listing.create({:price=>211, :retail_price=>130, :size=>9, sneaker_id: s50.id })
+listing297 = Listing.create({:price=>213, :retail_price=>130, :size=>10, sneaker_id: s50.id })
+listing298 = Listing.create({:price=>215, :retail_price=>130, :size=>11, sneaker_id: s50.id })
+listing299 = Listing.create({:price=>213, :retail_price=>130, :size=>12, sneaker_id: s50.id })
+listing300 = Listing.create({:price=>218, :retail_price=>130, :size=>14, sneaker_id: s50.id })
+listing301 = Listing.create({:price=>260, :retail_price=>150, :size=>8, sneaker_id: s51.id })
+listing302 = Listing.create({:price=>245, :retail_price=>150, :size=>9, sneaker_id: s51.id })
+listing303 = Listing.create({:price=>285, :retail_price=>150, :size=>10, sneaker_id: s51.id })
+listing304 = Listing.create({:price=>236, :retail_price=>150, :size=>11, sneaker_id: s51.id })
+listing305 = Listing.create({:price=>286, :retail_price=>150, :size=>12, sneaker_id: s51.id })
+listing306 = Listing.create({:price=>222, :retail_price=>150, :size=>14, sneaker_id: s51.id })
+listing307 = Listing.create({:price=>243, :retail_price=>150, :size=>8, sneaker_id: s52.id })
+listing308 = Listing.create({:price=>265, :retail_price=>150, :size=>9, sneaker_id: s52.id })
+listing309 = Listing.create({:price=>342, :retail_price=>150, :size=>10, sneaker_id: s52.id })
+listing310 = Listing.create({:price=>356, :retail_price=>150, :size=>11, sneaker_id: s52.id })
+listing311 = Listing.create({:price=>245, :retail_price=>150, :size=>12, sneaker_id: s52.id })
+listing312 = Listing.create({:price=>268, :retail_price=>150, :size=>14, sneaker_id: s52.id })

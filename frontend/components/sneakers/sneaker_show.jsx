@@ -12,7 +12,6 @@ class SneakerShow extends React.Component {
     }
 
     componentDidMount() {
-        
         this.props.fetchSneaker(this.props.match.params.sneakerId)
 
     };
@@ -24,19 +23,29 @@ class SneakerShow extends React.Component {
     }
 
     render() {
+
         if(!this.props.sneaker) {
             return null
         } 
+
+        
+       
+
+        let { sneaker } = this.props
+
         return(
-            <div className='session-container'>
-                <div className='session-image-container'>
-                    <img src={window.airmonarchURL} className='session-image' />
+            <div className='sneaker-show-container'>
+                <div className='sneaker-show-image-container'>
+                    <img src={window.airmonarchURL} className='sneaker-show-image' />
+                    <h1 className='sneaker-details'>
+                        {sneaker.brand} / {sneaker.silhouette} / {sneaker.name}
+                    </h1>
                 </div>
-                <div className='session-fields'>
+                <div className='sneaker-show-right-container'>
                     <Switch>
                         <Route
                             path="/sneakers/:sneakerId/listings/:listingId"
-                            render={(props) => <ListingIndexItem props={props} sneaker={this.props.sneaker} listings={this.props.listings} currentUser={this.props.currentUser} addItem={this.props.addItem} />}
+                            render={(props) => <ListingIndexItem props={props} sneaker={this.props.sneaker} listings={this.props.listings} currentUser={this.props.user} addItem={this.props.addItem} />}
                         />
                         <Route
                             path="/sneakers/:sneakerId/listings/"

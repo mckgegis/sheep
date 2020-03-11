@@ -32,6 +32,14 @@ class Sneaker < ApplicationRecord
 
       end
 
+      def self.search(name)
+        @sneaks = Sneaker 
+        puts "NAME: #{name}"
+        @sneaks = @sneaks.where('upper(name) LIKE ?', "%#{name}%")
+        @sneaks
+      end
+
+
       has_one_attached :photo
         
 end
