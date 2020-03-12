@@ -661,7 +661,7 @@ s52 = Sneaker.create({
     designer: "Aziz Ansari'",
     technology: "Rubber"
     })
-
+https://sheep-seeds.s3-us-west-1.amazonaws.com/.png
 listing1 = Listing.create({:price=>225, :retail_price=>201, :size=>9.5, sneaker_id: s1.id })
 listing2 = Listing.create({:price=>273, :retail_price=>175, :size=>8, sneaker_id: s1.id })
 listing3 = Listing.create({:price=>220, :retail_price=>210, :size=>8.5, sneaker_id: s1.id })
@@ -974,3 +974,9 @@ listing309 = Listing.create({:price=>342, :retail_price=>150, :size=>10, sneaker
 listing310 = Listing.create({:price=>356, :retail_price=>150, :size=>11, sneaker_id: s52.id })
 listing311 = Listing.create({:price=>245, :retail_price=>150, :size=>12, sneaker_id: s52.id })
 listing312 = Listing.create({:price=>268, :retail_price=>150, :size=>14, sneaker_id: s52.id })
+
+let dakine = Sneaker.all
+
+dakine.each do |sneaker|
+    sneaker.photo.attach(io: open("https://sheep-seeds.s3-us-west-1.amazonaws.com/#{sneaker.sku}.png"), filename: "#{sneaker.sku}.png")
+end

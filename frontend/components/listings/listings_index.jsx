@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ListingIndex = ({ listings }) => (
-    <div>
-        <Link to={`/sneakers/${listings[0].sneaker_id}`} >
+    
+    <div className='listings-index-container'>
+        <Link to={`/sneakers/${listings[0].sneaker_id}`} className='listings-index-x'>
             <button>
                 <div>X</div>
             </button>
@@ -29,8 +30,6 @@ const ListingIndex = ({ listings }) => (
                 )
             })
         }
-
-
     </div>
 )
 

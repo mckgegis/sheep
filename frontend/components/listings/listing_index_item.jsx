@@ -64,11 +64,14 @@ const ListingIndexItem = ({ props, sneaker, listings, addItem, removeItem, curre
                         Good Condition
                     </div>
                 </div>
+            </div>
                 <div className='listing-index-item-button'>
+                    <Link to={`/sneakers/${sneaker.id}`}>
+                        <button className='listing-cancel'>Cancel</button>
+                    </Link>
                     {button}
                 </div>
 
-            </div>
         </div>
     )
 }

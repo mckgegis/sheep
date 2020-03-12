@@ -49,7 +49,7 @@ class SneakerShow extends React.Component {
                         />
                         <Route
                             path="/sneakers/:sneakerId/listings/"
-                            render={() => <ListingIndex listings={Object.values(this.props.listings)} />} 
+                            render={() => <ListingIndex listings={Object.values(this.props.listings).sort(function (a, b) { return (a.size - b.size) })} />} 
                         />
                         <Route
                             path="/sneakers/:sneakerId"

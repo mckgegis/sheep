@@ -38,8 +38,6 @@
 .sneaker-item-container {
     width: 300px;
     height: 300px;
-    // border-top: 1px solid black;
-    // border-left: 1px solid black;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -137,6 +135,10 @@
   font-weight: lighter;
 }
 
+.sneaker-details{
+  color: #777;
+}
+
 .sneaker-right-container-details {
   display: flex;
   flex-direction: column;
@@ -177,6 +179,7 @@
   border-top: 1px solid #000;
   cursor: pointer;
   font-weight: bold;
+  height: 50px;
 }
 
 .sneaker-show-buttons button:first-child {

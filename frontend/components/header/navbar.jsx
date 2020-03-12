@@ -30,6 +30,9 @@ class NavBar extends React.Component {
                         <Link to='/search'><i className="fas fa-search"></i></Link>
                     </div>
                     <div className='navbar-link'>
+                        <Link to='/cart'><i className="fas fa-shopping-cart"></i></Link>
+                    </div>
+                    <div className='navbar-link'>
                         <i className="fas fa-bars" onClick={() => this.props.openModal("LOG IN")}></i>
                     </div>
                     <Modal />

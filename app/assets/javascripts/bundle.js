@@ -439,7 +439,7 @@ var App = function App() {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/sneakers/:sneakerId",
     component: _components_sneakers_sneaker_show_container__WEBPACK_IMPORTED_MODULE_8__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_utils__WEBPACK_IMPORTED_MODULE_7__["ProtectedRoute"], {
     path: "/cart",
     component: _components_cart_item_cart_item_container__WEBPACK_IMPORTED_MODULE_9__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
@@ -890,6 +890,12 @@ var NavBar = /*#__PURE__*/function (_React$Component) {
         className: "fas fa-search"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "navbar-link"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/cart"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-shopping-cart"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "navbar-link"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fas fa-bars",
         onClick: function onClick() {
@@ -999,9 +1005,13 @@ var ListingIndexItem = function ListingIndexItem(_ref) {
     className: "listing-index-detail-key"
   }, "Box Condition"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "listing-index-detail-value"
-  }, "Good Condition")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Good Condition"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "listing-index-item-button"
-  }, button)));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/sneakers/".concat(sneaker.id)
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "listing-cancel"
+  }, "Cancel")), button));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (ListingIndexItem);
@@ -1025,8 +1035,11 @@ __webpack_require__.r(__webpack_exports__);
 
 var ListingIndex = function ListingIndex(_ref) {
   var listings = _ref.listings;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/sneakers/".concat(listings[0].sneaker_id)
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "listings-index-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/sneakers/".concat(listings[0].sneaker_id),
+    className: "listings-index-x"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "X"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "listing-header"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "BUY NEW"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "US Men Sizes")), listings.map(function (listing) {
@@ -1923,7 +1936,9 @@ var SneakerShow = /*#__PURE__*/function (_React$Component) {
         path: "/sneakers/:sneakerId/listings/",
         render: function render() {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_listings_listings_index__WEBPACK_IMPORTED_MODULE_2__["default"], {
-            listings: Object.values(_this.props.listings)
+            listings: Object.values(_this.props.listings).sort(function (a, b) {
+              return a.size - b.size;
+            })
           });
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
