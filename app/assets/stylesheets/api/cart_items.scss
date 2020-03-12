@@ -1,3 +1,78 @@
 // Place all the styles related to the api/CartItems controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.cart-container{
+  box-sizing: flex-box;
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  height: 650px;
+  border: 1px solid #000;
+}
+
+.cart-left-container{
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid black;
+    padding-bottom: 100px;
+    padding-left: 50px;
+    overflow: scroll;
+}
+
+.cart-right-container{
+    width: 40%;
+  
+}
+
+.cart-image-container{
+    box-sizing: border-box;
+    width: 40%;
+}
+
+.cart-image{
+    width: 80%;
+    height: auto;
+}
+
+.cart-items-container{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    border-top: 1px solid rgb(222, 222, 222);
+    border-bottom: 1px solid rgb(222, 222, 222);
+    margin-bottom: -1px;
+    height: 180px;    
+    align-items: center;
+}
+
+.cart-index-container{
+    width: 100%;;
+}
+
+.cart-item-details{
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.cart-right-container{
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order-detail{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1em;
+    border-top: 1px solid rgb(222, 222, 222);
+    border-bottom: 1px solid rgb(222, 222, 222);
+    margin-bottom: -1px;
+}
+
+.order-details-container{
+    width: 90%;
+}

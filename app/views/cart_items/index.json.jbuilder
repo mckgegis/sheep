@@ -7,5 +7,6 @@
         json.price cart_item.listing.price
         json.retail_price cart_item.listing.retail_price
         json.size cart_item.listing.size
+        json.img url_for(cart_item.listing.sneaker.photo)
     end
 end

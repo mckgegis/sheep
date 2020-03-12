@@ -1,5 +1,6 @@
 import React from 'react'
 import CartItemIndexItem from './cart_item_index_item'
+import { Link } from 'react-router-dom'
 
 class CartItemIndex extends React.Component {
     constructor(props) {
@@ -28,7 +29,7 @@ class CartItemIndex extends React.Component {
 
         let shippingCost = cartItems.length ? 10 : 0;
         let cartDetails = cartItems.length ? (
-            <div>
+            <div className='order-details-container'>
                 <div className="order-detail">
                     <div className="order-detail-key">
                         Ship To
@@ -55,7 +56,7 @@ class CartItemIndex extends React.Component {
                 </div>
                 <div className="order-detail">
                     <div className="order-detail-key">
-                        Shipping
+                        Shipping 
                     </div>
                     <div className="order-detail-value">
                         ${shippingCost}
@@ -71,24 +72,34 @@ class CartItemIndex extends React.Component {
         ) : null
 
 
-            return (
-                <div className='cart-container'>
+        return (
+            <div className='cart-container'>
+                <div className='cart-left-container'>
+                    <h1>
+                        Shopping Cart
+                    </h1>
                     <div className='empty-cart-container'>
                         {emptyCart}
                     </div>
                     <div className='cart-index-container'>
                         {cartItems.map(cartItem => <CartItemIndexItem cartItem={cartItem} removeItem={this.props.removeItem} key={cartItem.id} />)}
                     </div>
-                    <div className='cart-details-container'>
-                        {shippingCost}
-                        {cartDetails}
-                        {disclaimer}
-                    </div>
-
                 </div>
+                <div className='cart-right-container'>
+                    <h1>Order Summary</h1>
+                    {cartDetails}
+                    {disclaimer}
+                    <div className='cart-buttons'>
+                        <Link to='/sneakers'>Shop More</Link>
+                        <a href="https://www.youtube.com/watch?v=FwMnfNMMJWI&feature=emb_title">Checkout</a>
+                    </div>
+                </div>
+
+
+            </div>
             
-            )
-        }
+        )
+    }
 
 }
 

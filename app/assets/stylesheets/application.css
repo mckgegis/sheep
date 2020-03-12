@@ -32,4 +32,15 @@
     top: 125px
 }
 
-textarea { text-transform: uppercase; }
+textarea{ 
+    text-transform: uppercase; 
+    text-align: center;
+    vertical-align: middle;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+
+}
+

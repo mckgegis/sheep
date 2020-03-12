@@ -36,7 +36,7 @@ class SneakerShow extends React.Component {
         return(
             <div className='sneaker-show-container'>
                 <div className='sneaker-show-image-container'>
-                    <img src={window.airmonarchURL} className='sneaker-show-image' />
+                    <img src={sneaker.imageUrl} className='sneaker-show-image' />
                     <h1 className='sneaker-details'>
                         {sneaker.brand} / {sneaker.silhouette} / {sneaker.name}
                     </h1>

@@ -130,13 +130,15 @@
 
 .sneaker-details, .sneaker-show-buttons {
   margin-top: auto;
-  font-size: 1em;
+  font-size: .8em;
   color: #333;
   font-weight: lighter;
 }
 
 .sneaker-details{
   color: #777;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
 .sneaker-right-container-details {

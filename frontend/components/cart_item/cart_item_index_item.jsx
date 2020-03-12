@@ -13,11 +13,11 @@ class CartItemIndexItem extends React.Component {
 
     render() {
         return (
-            <div>
-                <div>
-                    <img src="" alt=""/>
+            <div className="cart-items-container">
+                <div className='cart-image-container'>
+                    <img src={this.props.cartItem.img} className="cart-image"/>
                 </div>
-                <div>
+                <div className='cart-item-details'>
                     {this.props.cartItem.sneakerName}
                     <br/>
                     SKU: {this.props.cartItem.sku}
