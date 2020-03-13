@@ -18,7 +18,7 @@
     display: flex;
     justify-content: center;
     padding-top: 200px;
-    background: url('bkgrd.jpeg') center no-repeat;
+    background: url('https://sheep-seeds.s3-us-west-1.amazonaws.com/bkgrd.jpeg') center no-repeat;
     min-height: 600px;
     width: 100%;
     position: relative;

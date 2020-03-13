@@ -1208,7 +1208,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "session-image-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: window.airmonarchURL,
+        src: "https://sheep-seeds.s3-us-west-1.amazonaws.com/415445102.png",
         className: "session-image"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "session-fields"
@@ -1392,7 +1392,7 @@ var SignUpForm = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "session-image-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: window.airmonarchURL,
+        src: "https://sheep-seeds.s3-us-west-1.amazonaws.com/415445102.png",
         className: "session-image"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "session-fields"

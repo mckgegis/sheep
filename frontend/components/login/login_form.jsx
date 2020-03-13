@@ -46,7 +46,7 @@ class LoginForm extends React.Component {
         return (
             <div className='session-container'>
                 <div className='session-image-container'>
-                    <img src={window.airmonarchURL} className='session-image'/>
+                    <img src="https://sheep-seeds.s3-us-west-1.amazonaws.com/415445102.png" className='session-image'/>
                 </div>
                 <div className='session-fields'>
                     <form onSubmit={this.handleSubmit}>
