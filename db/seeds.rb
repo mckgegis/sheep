@@ -586,7 +586,7 @@ s46 = Sneaker.create({
     release_date: "31/12/2018",
     brand: "Nike",
     silhouette: "Killshot",
-    designer: "Aziz Ansari'",
+    designer: "Aziz Ansari",
     technology: "Rubber"
     })
 
@@ -598,7 +598,7 @@ s47 = Sneaker.create({
     release_date: "21/06/2019",
     brand: "Nike",
     silhouette: "Killshot",
-    designer: "Aziz Ansari'",
+    designer: "Aziz Ansari",
     technology: "Rubber"
     })
 
@@ -610,7 +610,7 @@ s48 = Sneaker.create({
     release_date: "25/02/2017",
     brand: "Nike",
     silhouette: "Killshot",
-    designer: "Aziz Ansari'",
+    designer: "Aziz Ansari",
     technology: "Rubber"
     })
 
@@ -622,7 +622,7 @@ s49 = Sneaker.create({
     release_date: "25/02/2017",
     brand: "Nike",
     silhouette: "Killshot",
-    designer: "Aziz Ansari'",
+    designer: "Aziz Ansari",
     technology: "Rubber"
     })
 
@@ -634,7 +634,7 @@ s50 = Sneaker.create({
     release_date: "25/02/2017",
     brand: "Nike",
     silhouette: "Killshot",
-    designer: "Aziz Ansari'",
+    designer: "Aziz Ansari",
     technology: "Rubber"
     })
 
@@ -646,7 +646,7 @@ s51 = Sneaker.create({
     release_date: "25/02/2017",
     brand: "Nike",
     silhouette: "Killshot",
-    designer: "Aziz Ansari'",
+    designer: "Aziz Ansari",
     technology: "Rubber"
     })
 
@@ -658,7 +658,7 @@ s52 = Sneaker.create({
     release_date: "07/05/2018",
     brand: "Nike",
     silhouette: "Killshot",
-    designer: "Aziz Ansari'",
+    designer: "Aziz Ansari",
     technology: "Rubber"
     })
 

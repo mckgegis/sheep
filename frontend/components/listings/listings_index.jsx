@@ -23,7 +23,7 @@ const ListingIndex = ({ listings }) => (
                             <div className='listing-size'>
                                 <div>{listing.size}M</div>
                             </div>
-                            <div>
+                            <div className='listing-price'>
                                 <div>${listing.price}</div>
                             </div>
                     </Link>

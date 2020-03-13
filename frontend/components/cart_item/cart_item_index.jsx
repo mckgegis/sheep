@@ -51,7 +51,7 @@ class CartItemIndex extends React.Component {
                         Subtotal
                     </div>
                     <div className="order-detail-value">
-                        ${this.props.totalValue + shippingCost}
+                        ${this.props.totalValue}
                     </div>
                 </div>
                 <div className="order-detail">
@@ -60,6 +60,14 @@ class CartItemIndex extends React.Component {
                     </div>
                     <div className="order-detail-value">
                         ${shippingCost}
+                    </div>
+                </div>
+                <div className="order-detail">
+                    <div className="order-detail-key">
+                        Total 
+                    </div>
+                    <div className="order-detail-value">
+                        ${this.props.totalValue + shippingCost}
                     </div>
                 </div>
             </div>
@@ -90,8 +98,8 @@ class CartItemIndex extends React.Component {
                     {cartDetails}
                     {disclaimer}
                     <div className='cart-buttons'>
-                        <Link to='/sneakers'>Shop More</Link>
-                        <a href="https://www.youtube.com/watch?v=FwMnfNMMJWI&feature=emb_title">Checkout</a>
+                        <Link to='/sneakers' className='shop-more'>Shop More</Link>
+                        <a href="https://www.youtube.com/watch?v=FwMnfNMMJWI&feature=emb_title" className='checkout'>Checkout</a>
                     </div>
                 </div>
 

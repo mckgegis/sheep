@@ -35,12 +35,20 @@
     display: flex;
     align-items: center;
     height: 50px;
-    font-size: 16px;
-    font-family: Plain;
     letter-spacing: 1px;
     text-transform: capitalize;
     padding: 8px 24px;
     border-bottom: 1px solid rgb(222, 222, 222);
     text-decoration: none;
-    
+    color: #000;
+    font-size: .8em;
+}
+
+.modal-link:hover{
+  text-decoration: underline;
+
+}
+
+.modal-tern{
+  color: #000;
 }

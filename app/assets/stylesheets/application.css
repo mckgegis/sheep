@@ -36,6 +36,7 @@ textarea{
     text-transform: uppercase; 
     text-align: center;
     vertical-align: middle;
+    padding-top: 30px;
 }
 
 * {
@@ -44,3 +45,5 @@ textarea{
 
 }
 
+button:focus {outline:0;}
+input:focus {outline:0}

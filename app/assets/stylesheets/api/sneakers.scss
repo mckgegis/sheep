@@ -42,6 +42,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
     position: relative;
     font-family: 'Overpass', sans-serif;
@@ -56,6 +57,7 @@
   width: 80%;
   height: auto;
   padding: 20px;
+  padding-top: 0;
 
 }
 
@@ -86,6 +88,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 100px;
 }
 
 .sneaker-show-container {
@@ -157,6 +160,7 @@
 
 .sneaker-name {
   font-size: 1.2em;
+  text-transform: uppercase;
 }
 
 .sneaker-sku {
@@ -184,6 +188,67 @@
   height: 50px;
 }
 
+.sneaker-show-buttons button:hover{
+  text-decoration: underline;
+} 
+
 .sneaker-show-buttons button:first-child {
   border-right: 1px solid #000;
+}
+
+.details-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.details-pair-container{
+  display: flex;
+  width: 75%;
+  justify-content: space-between;
+  border-top: 1px solid rgb(222, 222, 222);
+  border-bottom: 1px solid rgb(222, 222, 222);
+  margin-bottom: -1px;
+  color: rgb(161, 161, 161);
+  height: 25px;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: .8em;
+}
+
+.detail-header{
+  display: flex;
+  justify-content: center;
+
+}
+
+.detail-desciption{
+  text-align: center;
+  width: 70%;
+}
+
+.description-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.sneaker-item-container:hover {
+  outline: 2px solid black;
+}
+
+.detail-icon{
+  padding-left: 5px ;
+}
+
+.load-more-button:hover{
+  text-decoration: underline;
+}
+
+.sneaker-item-name{
+    color: #000;
+
 }

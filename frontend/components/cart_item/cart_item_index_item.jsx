@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 class CartItemIndexItem extends React.Component {
     constructor(props) {
         super(props)
@@ -14,20 +14,26 @@ class CartItemIndexItem extends React.Component {
     render() {
         return (
             <div className="cart-items-container">
-                <div className='cart-image-container'>
-                    <img src={this.props.cartItem.img} className="cart-image"/>
-                </div>
-                <div className='cart-item-details'>
-                    {this.props.cartItem.sneakerName}
-                    <br/>
-                    SKU: {this.props.cartItem.sku}
-                    <br/>
-                    SIZE: {this.props.cartItem.size}
-                    <br/>
-                    ${this.props.cartItem.price}
-                    <br/>
-                    <button className='remove-button' onClick={this.handleClick}>REMOVE</button>
-                </div>
+               
+                    <div className='cart-image-container'>
+                        <Link to={`/sneakers/${this.props.cartItem.sneakerId}`}>
+                            <img src={this.props.cartItem.img} className="cart-image"/>
+                        </Link>
+                    </div>
+                    <div className='cart-item-details'>
+                        <Link to={`/sneakers/${this.props.cartItem.sneakerId}`} className='cart-item-links'>
+                            {this.props.cartItem.sneakerName}
+                            <br/>
+                            SKU: {this.props.cartItem.sku}
+                            <br/>
+                            SIZE: {this.props.cartItem.size}
+                            <br/>
+                            ${this.props.cartItem.price}
+                            <br/>
+                        </Link>
+                        <button className='remove-button' onClick={this.handleClick}>REMOVE</button>
+                    </div>
+               
             </div>
         )
     }

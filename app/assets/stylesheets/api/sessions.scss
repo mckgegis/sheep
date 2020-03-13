@@ -18,7 +18,7 @@
 
 .login-header {
     padding-top: 80px;
-    padding-bottom: 50px;
+    padding-bottom: 70px;
     display: flex;
     justify-content: center;
     padding-left: 80px
@@ -78,6 +78,7 @@
 
 .session-label {
     padding: 20px;
+  
 
 }
 
@@ -96,6 +97,8 @@
     border-left: none ;
     border-right: none ;
     width: 400px;
+    font-size: 1em;
+    // padding-left: 20px;
 }
 
 .demo-button {

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_09_190203) do
+ActiveRecord::Schema.define(version: 2020_03_13_004542) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 2020_03_09_190203) do
     t.string "sku", null: false
     t.text "description", null: false
     t.string "colorway", null: false
-    t.datetime "release_date", null: false
+    t.date "release_date", null: false
     t.string "brand", null: false
     t.string "silhouette", null: false
     t.string "designer", null: false

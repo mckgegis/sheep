@@ -9,6 +9,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_utils'
 import SneakerShowContainer from "../components/sneakers/sneaker_show_container"
 import CartItemContainer from "../components/cart_item/cart_item_container"
 import SearchContainer from "../components/search/search_container"
+import Style from '../components/styles/styles'
 
 const App = () => (
     <div > 
@@ -20,6 +21,7 @@ const App = () => (
         <Route path="/sneakers/:sneakerId" component={SneakerShowContainer} />
         <ProtectedRoute path='/cart' component={CartItemContainer} />
         <Route path='/search' component={SearchContainer} />
+        <Route path='/styles' component={Style} />
     </div>
 );
 

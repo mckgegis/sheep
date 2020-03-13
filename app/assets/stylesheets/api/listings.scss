@@ -72,14 +72,34 @@
     outline: none;
 }
 
+.listing-index-item-button button:hover{
+    text-decoration: underline;
+}
+
+
 .listing-index-item-button button{
     width: 50%;
     box-sizing: border-box;
     border-top: 1px solid #000;
     border-right: 1px solid #000;
     height: 50px;
+    text-transform: uppercase;
 }
 
 .listing-cancel{
     border-right: 1px solid #000;
+}
+
+.listing-index-item:hover{
+    outline: 1px solid black;
+}
+
+.listing-price{
+    color: #000;
+    padding-left: 50px;
+}
+
+.listing-size{
+    color: #000;
+    font-weight: bolder;
 }

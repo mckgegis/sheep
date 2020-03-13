@@ -11,14 +11,14 @@ const Modal = ({ modal, closeModal, currentUser, signout }) => {
     }
     let dakine = currentUser ? (
         <div className='modal-link' onClick={closeModal}>
-            <Link to='/' onClick={signout}>Log Out</Link>
+            <Link to='/' onClick={signout} className='modal-tern'>Log Out</Link>
         </div>
     ) :  (<>
         <div className='modal-link'>
-            <Link to='/login' onClick={closeModal}>Login</Link>
+                <Link to='/login' onClick={closeModal} className='modal-tern'>Login</Link>
         </div>
         <div className='modal-link'>
-            <Link to='/signup' onClick={closeModal}>Sign Up</Link>
+                <Link to='/signup' onClick={closeModal} className='modal-tern'>Sign Up</Link>
         </div>
         </>
     )

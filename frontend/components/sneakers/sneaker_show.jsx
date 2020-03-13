@@ -34,31 +34,96 @@ class SneakerShow extends React.Component {
         let { sneaker } = this.props
 
         return(
-            <div className='sneaker-show-container'>
-                <div className='sneaker-show-image-container'>
-                    <img src={sneaker.imageUrl} className='sneaker-show-image' />
-                    <h1 className='sneaker-details'>
-                        {sneaker.brand} / {sneaker.silhouette} / {sneaker.name}
-                    </h1>
-                </div>
-                <div className='sneaker-show-right-container'>
-                    <Switch>
-                        <Route
-                            path="/sneakers/:sneakerId/listings/:listingId"
-                            render={(props) => <ListingIndexItem props={props} sneaker={this.props.sneaker} listings={this.props.listings} currentUser={this.props.user} addItem={this.props.addItem} />}
-                        />
-                        <Route
-                            path="/sneakers/:sneakerId/listings/"
-                            render={() => <ListingIndex listings={Object.values(this.props.listings).sort(function (a, b) { return (a.size - b.size) })} />} 
-                        />
-                        <Route
-                            path="/sneakers/:sneakerId"
-                            render={() => <Sneaker props={this.props} displayPrice={this.displayPrice()}/>}
-                        />
+            <div>
 
-                    </Switch>
+                <div className='sneaker-show-container'>
+                    <div className='sneaker-show-image-container'>
+                        <img src={sneaker.imageUrl} className='sneaker-show-image' />
+                        <h1 className='sneaker-details'>
+                            {sneaker.brand} / {sneaker.silhouette} / {sneaker.name}
+                        </h1>
+                    </div>
+                    <div className='sneaker-show-right-container'>
+                        <Switch>
+                            <Route
+                                path="/sneakers/:sneakerId/listings/:listingId"
+                                render={(props) => <ListingIndexItem props={props} sneaker={this.props.sneaker} listings={this.props.listings} currentUser={this.props.user} addItem={this.props.addItem} />}
+                            />
+                            <Route
+                                path="/sneakers/:sneakerId/listings/"
+                                render={() => <ListingIndex listings={Object.values(this.props.listings).sort(function (a, b) { return (a.size - b.size) })} />} 
+                            />
+                            <Route
+                                path="/sneakers/:sneakerId"
+                                render={() => <Sneaker props={this.props} displayPrice={this.displayPrice()}/>}
+                            />
+
+                        </Switch>
+                    </div>
                 </div>
-            </div>
+           
+                <div className='details-container'>
+                    <div className='description-container'>
+                        <h5 className='detail-header'>
+                            DETAILS 
+                            <div className='detail-icon'>
+                                <i className="fas fa-chevron-down"></i>
+                            </div>  
+                        </h5>
+                        <div className='detail-desciption'>
+                            {sneaker.description}
+                        </div>
+                    </div>
+                    <div className='details-pair-container'>
+                        <div>
+                            release date
+                        </div>
+                        <div>
+                            {sneaker.release_date}
+                        </div>
+                    </div>
+                    <div className='details-pair-container'>
+                        <div>
+                            Brand
+                        </div>
+                        <div>
+                            {sneaker.brand}
+                        </div>
+                    </div>
+                    <div className='details-pair-container'>
+                        <div>
+                            silhouette
+                        </div>
+                        <div>
+                            {sneaker.silhouette}
+                        </div>
+                    </div>
+                    <div className='details-pair-container'>
+                        <div>
+                            designer
+                        </div>
+                        <div>
+                            {sneaker.designer}
+                        </div>
+                    </div>
+                    <div className='details-pair-container'>
+                        <div>
+                            technology
+                        </div>
+                        <div>
+                            {sneaker.technology}
+                        </div>
+                    </div>
+                    <div className='details-pair-container'>
+                        <div>
+                            colorway
+                        </div>
+                        <div>
+                            {sneaker.colorway}
+                        </div>                    
+                    </div>
+                </div>
+         </div>
         )
     }
 

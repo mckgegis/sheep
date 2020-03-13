@@ -9,6 +9,10 @@ class Search extends React.Component {
        
     }
 
+    componentDidMount(){
+        this.props.clearSneaks()
+    }
+
     update() {
         return(e) => {
             this.props.fetchSneaks(e.currentTarget.value.toUpperCase())
