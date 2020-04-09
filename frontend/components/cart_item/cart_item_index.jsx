@@ -74,8 +74,8 @@ class CartItemIndex extends React.Component {
         ) : null
 
         let disclaimer = cartItems.length ? (
-            <div>
-                Fuck Off
+            <div className='disclaimer'>
+                SHEEP is a Full Stack web application clone of GOAT.com using React, Redux, and Ruby on Rails, so you may not checkout the Cart you’ve assembled, but you can “check out” the code behind the site.
             </div>
         ) : null
 
@@ -99,7 +99,7 @@ class CartItemIndex extends React.Component {
                     {disclaimer}
                     <div className='cart-buttons'>
                         <Link to='/sneakers' className='shop-more'>Shop More</Link>
-                        <a href="https://www.youtube.com/watch?v=FwMnfNMMJWI&feature=emb_title" className='checkout'>Checkout</a>
+                        <a href="https://github.com/mckgegis/sheep" className='checkout'>Checkout</a>
                     </div>
                 </div>
 

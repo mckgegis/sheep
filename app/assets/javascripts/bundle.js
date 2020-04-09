@@ -418,6 +418,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_cart_item_cart_item_container__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/cart_item/cart_item_container */ "./frontend/components/cart_item/cart_item_container.js");
 /* harmony import */ var _components_search_search_container__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/search/search_container */ "./frontend/components/search/search_container.js");
 /* harmony import */ var _components_styles_styles__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/styles/styles */ "./frontend/components/styles/styles.jsx");
+/* harmony import */ var _components_footer_footer__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/footer/footer */ "./frontend/components/footer/footer.jsx");
+
 
 
 
@@ -458,7 +460,7 @@ var App = function App() {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/styles",
     component: _components_styles_styles__WEBPACK_IMPORTED_MODULE_11__["default"]
-  }));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_footer_footer__WEBPACK_IMPORTED_MODULE_12__["default"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
@@ -616,7 +618,9 @@ var CartItemIndex = /*#__PURE__*/function (_React$Component) {
       }, "Total"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "order-detail-value"
       }, "$", this.props.totalValue + shippingCost))) : null;
-      var disclaimer = cartItems.length ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Fuck Off") : null;
+      var disclaimer = cartItems.length ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "disclaimer"
+      }, "SHEEP is a Full Stack web application clone of GOAT.com using React, Redux, and Ruby on Rails, so you may not checkout the Cart you\u2019ve assembled, but you can \u201Ccheck out\u201D the code behind the site.") : null;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "cart-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -639,7 +643,7 @@ var CartItemIndex = /*#__PURE__*/function (_React$Component) {
         to: "/sneakers",
         className: "shop-more"
       }, "Shop More"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "https://www.youtube.com/watch?v=FwMnfNMMJWI&feature=emb_title",
+        href: "https://github.com/mckgegis/sheep",
         className: "checkout"
       }, "Checkout"))));
     }
@@ -731,6 +735,53 @@ var CartItemIndexItem = /*#__PURE__*/function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (CartItemIndexItem);
+
+/***/ }),
+
+/***/ "./frontend/components/footer/footer.jsx":
+/*!***********************************************!*\
+  !*** ./frontend/components/footer/footer.jsx ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var Footer = function Footer() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "footer-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "link-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.linkedin.com/in/ryan-leung-324a45188/",
+    className: "link"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fab fa-linkedin-in"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://github.com/mckgegis",
+    className: "link"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fab fa-github"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://angel.co/u/ryan-leung-16",
+    className: "link"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fab fa-angellist"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "text-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "text"
+  }, "Sheep is a clone of GOAT.com, the global platform for style.  Selling exclusive sneakers, apparell, and accessories from the world\u2019s leading contemporary, avant garde and designer brands. Click the link below to check out the original site."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.goat.com/",
+    className: "goat-link"
+  }, "VISIT GOAT")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Footer);
 
 /***/ }),
 
@@ -2313,7 +2364,7 @@ var cartItemReducer = function cartItemReducer() {
 
   switch (action.type) {
     case _actions_cart_item_action__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_CART_ITEMS"]:
-      return action.items;
+      return Object.assign({}, state, action.items);
 
     case _actions_cart_item_action__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_CART_ITEM"]:
       nextState[action.item.id] = action.item;
@@ -2698,7 +2749,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
- // import { login } from './util/session_api_util'
 
 document.addEventListener("DOMContentLoaded", function () {
   var root = document.getElementById('root');

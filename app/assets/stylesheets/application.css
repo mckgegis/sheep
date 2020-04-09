@@ -23,13 +23,14 @@
     width: 100%;
     position: relative;
     padding: 0;
+    padding-top: 200px;
 }
 
 .splash-text {
     color: white;
     position: absolute;
-    left: 300px;
-    top: 125px
+    left: 20%;
+    top: 30%;
 }
 
 textarea{ 

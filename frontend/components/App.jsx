@@ -10,6 +10,7 @@ import SneakerShowContainer from "../components/sneakers/sneaker_show_container"
 import CartItemContainer from "../components/cart_item/cart_item_container"
 import SearchContainer from "../components/search/search_container"
 import Style from '../components/styles/styles'
+import Footer from '../components/footer/footer'
 
 const App = () => (
     <div > 
@@ -22,6 +23,7 @@ const App = () => (
         <ProtectedRoute path='/cart' component={CartItemContainer} />
         <Route path='/search' component={SearchContainer} />
         <Route path='/styles' component={Style} />
+        <Footer />
     </div>
 );
 
