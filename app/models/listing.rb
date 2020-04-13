@@ -11,11 +11,10 @@
 #  updated_at   :datetime         not null
 #
 class Listing < ApplicationRecord
-    validates :sneaker_id, :price, :size, :retail_price, presence: true
+    validates :itemable_id, :price, :size, :retail_price, presence: true
 
-    belongs_to :sneaker,
-        foreign_key: :sneaker_id,
-        class_name: :Sneaker 
+    belongs_to :itemable,
+        polymorphic: true
 
     has_many :cart_items,
         foreign_key: :listing_id, 

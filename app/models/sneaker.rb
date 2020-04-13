@@ -19,8 +19,7 @@ class Sneaker < ApplicationRecord
       validates :name, :sku, :description, :colorway, :release_date, :brand, :silhouette,  :designer, :technology, presence: true
 
       has_many :listings,
-        foreign_key: :sneaker_id,
-        class_name: :Listing
+        as: :itemable
       
       def self.fetch(maxId) 
         @sneakers = Sneaker

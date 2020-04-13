@@ -715,16 +715,16 @@ var CartItemIndexItem = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "cart-image-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/sneakers/".concat(this.props.cartItem.sneakerId)
+        to: "/sneakers/".concat(this.props.cartItem.itemId)
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: this.props.cartItem.img,
         className: "cart-image"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "cart-item-details"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/sneakers/".concat(this.props.cartItem.sneakerId),
+        to: "/sneakers/".concat(this.props.cartItem.itemId),
         className: "cart-item-links"
-      }, this.props.cartItem.sneakerName, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "SKU: ", this.props.cartItem.sku, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "SIZE: ", this.props.cartItem.size, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "$", this.props.cartItem.price, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }, this.props.cartItem.itemName, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "SKU: ", this.props.cartItem.sku, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "SIZE: ", this.props.cartItem.size, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "$", this.props.cartItem.price, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "remove-button",
         onClick: this.handleClick
       }, "REMOVE")));
@@ -1144,7 +1144,7 @@ var ListingIndex = function ListingIndex(_ref) {
     className: "listing-header"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "BUY NEW"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "US Men Sizes")), listings.map(function (listing) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-      to: "/sneakers/".concat(listing.sneaker_id, "/listings/").concat(listing.id),
+      to: "/sneakers/".concat(listing.itemable_id, "/listings/").concat(listing.id),
       className: "listing-index-item",
       key: listing.id
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2088,6 +2088,7 @@ var SneakerShow = /*#__PURE__*/function (_React$Component) {
   _createClass(SneakerShow, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      debugger;
       this.props.fetchSneaker(this.props.match.params.sneakerId);
     }
   }, {
@@ -2853,10 +2854,10 @@ var removeItem = function removeItem(itemId) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchListings", function() { return fetchListings; });
-var fetchListings = function fetchListings(sneakerId) {
+var fetchListings = function fetchListings(itemId, type) {
   return $.ajax({
     method: "GET",
-    url: "/api/sneakers/".concat(sneakerId, "/listings")
+    url: "/api/".concat(type, "/").concat(itemId, "/listings")
   });
 };
 

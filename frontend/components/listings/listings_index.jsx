@@ -16,7 +16,7 @@ const ListingIndex = ({ listings }) => (
         {
             listings.map(listing => {
                 return(
-                    <Link to={`/sneakers/${listing.sneaker_id}/listings/${listing.id}`}
+                    <Link to={`/sneakers/${listing.itemable_id}/listings/${listing.id}`}
                         className='listing-index-item'
                         key={listing.id}
                         >

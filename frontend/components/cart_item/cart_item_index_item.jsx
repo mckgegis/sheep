@@ -16,13 +16,13 @@ class CartItemIndexItem extends React.Component {
             <div className="cart-items-container">
                
                     <div className='cart-image-container'>
-                        <Link to={`/sneakers/${this.props.cartItem.sneakerId}`}>
+                        <Link to={`/sneakers/${this.props.cartItem.itemId}`}>
                             <img src={this.props.cartItem.img} className="cart-image"/>
                         </Link>
                     </div>
                     <div className='cart-item-details'>
-                        <Link to={`/sneakers/${this.props.cartItem.sneakerId}`} className='cart-item-links'>
-                            {this.props.cartItem.sneakerName}
+                        <Link to={`/sneakers/${this.props.cartItem.itemId}`} className='cart-item-links'>
+                            {this.props.cartItem.itemName}
                             <br/>
                             SKU: {this.props.cartItem.sku}
                             <br/>

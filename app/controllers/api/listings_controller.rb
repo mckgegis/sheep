@@ -1,7 +1,12 @@
 class Api::ListingsController < ApplicationController
 
     def index
-        @listings = Sneaker.find_by(id: params[:sneaker_id]).listings
+        if params[:sneaker_id] 
+            @listings = Sneaker.find_by(id: params[:sneaker_id]).listings
+        else
+            @listings = Apparel.find_by(id: params[:apparel_id]).listings
+        end
+        
         render :index
     end
 
