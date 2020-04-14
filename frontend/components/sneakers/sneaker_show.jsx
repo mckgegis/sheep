@@ -12,7 +12,6 @@ class SneakerShow extends React.Component {
     }
 
     componentDidMount() {
-        debugger
         this.props.fetchSneaker(this.props.match.params.sneakerId)
 
     };

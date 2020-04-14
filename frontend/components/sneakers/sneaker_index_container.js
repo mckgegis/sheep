@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
-import { fetchSneakers, clearSneakers } from '../../actions/sneaker_action'
+import { fetchSneakers, clearSneakers } from '../../actions/sneaker_action' 
+import { clearListings } from '../../actions/listing_action'
 import SneakerIndex from  './sneaker_index'
 
 const mapStateToProps = state => ({
@@ -8,7 +9,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     fetchSneakers: (maxId) => dispatch(fetchSneakers(maxId)),
-    clearSneakers: () => dispatch(clearSneakers())
+    clearSneakers: () => dispatch(clearSneakers()),
+    clearListings: () => dispatch(clearListings())
 })
 
 export default connect (

@@ -23,18 +23,16 @@ class Sneaker < ApplicationRecord
       
       def self.fetch(maxId) 
         @sneakers = Sneaker
-        @sneakers = @sneakers
-                     .where('id > ?', maxId.to_i + Sneaker.first.id - 1)
-                     .order(:id)
-                     .limit(8)
-        @sneakers
+                    .where('id > ?', maxId.to_i + Sneaker.first.id - 1)
+                    .order(:id)
+                    .limit(8)
 
       end
 
       def self.search(name)
-        @sneaks = Sneaker 
-        @sneaks = @sneaks.where('upper(name) LIKE ?', "%#{name}%")
-        @sneaks
+        @sneaks = Sneaker
+                  .where('upper(name) LIKE ?', "%#{name}%") 
+        
       end
 
 

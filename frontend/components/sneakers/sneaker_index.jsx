@@ -13,6 +13,7 @@ class SneakerIndex extends React.Component {
 
     componentDidMount() {
         this.props.clearSneakers()
+        this.props.clearListings()
         this.props.fetchSneakers(this.maxId)
         this.maxId += 8
     }

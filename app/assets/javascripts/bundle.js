@@ -164,16 +164,19 @@ var removeItem = function removeItem(itemId) {
 /*!********************************************!*\
   !*** ./frontend/actions/listing_action.js ***!
   \********************************************/
-/*! exports provided: RECEIVE_LISTINGS, fetchListings */
+/*! exports provided: RECEIVE_LISTINGS, CLEAR_LISTINGS, clearListings, fetchListings */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_LISTINGS", function() { return RECEIVE_LISTINGS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CLEAR_LISTINGS", function() { return CLEAR_LISTINGS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clearListings", function() { return clearListings; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchListings", function() { return fetchListings; });
 /* harmony import */ var _util_listing_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/listing_api_util */ "./frontend/util/listing_api_util.js");
 
 var RECEIVE_LISTINGS = 'RECEIVE_LISTINGS';
+var CLEAR_LISTINGS = "CLEAR_LISTINGS";
 
 var receiveListings = function receiveListings(listings) {
   return {
@@ -182,6 +185,11 @@ var receiveListings = function receiveListings(listings) {
   };
 };
 
+var clearListings = function clearListings() {
+  return {
+    type: CLEAR_LISTINGS
+  };
+};
 var fetchListings = function fetchListings() {
   return function (dispatch) {
     return _util_listing_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchListings"].then(function (listings) {
@@ -1138,7 +1146,7 @@ var ListingIndex = function ListingIndex(_ref) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "listings-index-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/sneakers/".concat(listings[0].sneaker_id),
+    to: "/sneakers/".concat(listings[0].itemable_id),
     className: "listings-index-x"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "X"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "listing-header"
@@ -1871,6 +1879,7 @@ var SneakerIndex = /*#__PURE__*/function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.clearSneakers();
+      this.props.clearListings();
       this.props.fetchSneakers(this.maxId);
       this.maxId += 8;
     }
@@ -1938,7 +1947,9 @@ var SneakerIndex = /*#__PURE__*/function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _actions_sneaker_action__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/sneaker_action */ "./frontend/actions/sneaker_action.js");
-/* harmony import */ var _sneaker_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sneaker_index */ "./frontend/components/sneakers/sneaker_index.jsx");
+/* harmony import */ var _actions_listing_action__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/listing_action */ "./frontend/actions/listing_action.js");
+/* harmony import */ var _sneaker_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./sneaker_index */ "./frontend/components/sneakers/sneaker_index.jsx");
+
 
 
 
@@ -1956,11 +1967,14 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     },
     clearSneakers: function clearSneakers() {
       return dispatch(Object(_actions_sneaker_action__WEBPACK_IMPORTED_MODULE_1__["clearSneakers"])());
+    },
+    clearListings: function clearListings() {
+      return dispatch(Object(_actions_listing_action__WEBPACK_IMPORTED_MODULE_2__["clearListings"])());
     }
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_sneaker_index__WEBPACK_IMPORTED_MODULE_2__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_sneaker_index__WEBPACK_IMPORTED_MODULE_3__["default"]));
 
 /***/ }),
 
@@ -2088,7 +2102,6 @@ var SneakerShow = /*#__PURE__*/function (_React$Component) {
   _createClass(SneakerShow, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      debugger;
       this.props.fetchSneaker(this.props.match.params.sneakerId);
     }
   }, {
@@ -2450,6 +2463,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var listingsReducer = function listingsReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var action = arguments.length > 1 ? arguments[1] : undefined;
@@ -2462,6 +2476,9 @@ var listingsReducer = function listingsReducer() {
 
     case _actions_sneaker_action__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_SNEAKER"]:
       return action.payload.listings;
+
+    case _actions_listing_action__WEBPACK_IMPORTED_MODULE_0__["CLEAR_LISTINGS"]:
+      return {};
 
     default:
       return state;

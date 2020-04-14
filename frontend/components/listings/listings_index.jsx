@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ListingIndex = ({ listings }) => (
     
     <div className='listings-index-container'>
-        <Link to={`/sneakers/${listings[0].sneaker_id}`} className='listings-index-x'>
+        <Link to={`/sneakers/${listings[0].itemable_id}`} className='listings-index-x'>
             <button>
                 <div>X</div>
             </button>

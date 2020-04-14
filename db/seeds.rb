@@ -12,6 +12,7 @@
 Listing.destroy_all
 User.destroy_all
 Sneaker.destroy_all
+Apparel.destroy_all
 
 u1 = User.create({:first_name=>"Leann", :last_name=>"Sipes", :username=>"idella_king", :email=>"alina@rosenbaum.name", :password=>"3bs691"})
 u2 = User.create({:first_name=>"Lucien", :last_name=>"Jast", :username=>"esteban_tremblay", :email=>"eliseo@schmeler.net", :password=>"zjrit2"})
@@ -662,6 +663,34 @@ s52 = Sneaker.create({
     technology: "Rubber"
     })
 
+a1 = Apparel.create({
+    name: "Test1",
+    sku: "test1",
+    brand: 'Coogi',
+    colorway: 'test1'
+    })
+
+a2 = Apparel.create({
+    name: "Test2",
+    sku: "test2",
+    brand: 'Coogi',
+    colorway: 'test2'
+    })
+
+a3 = Apparel.create({
+    name: "Test3",
+    sku: "test3",
+    brand: 'Coogi',
+    colorway: 'test3'
+    })
+
+a4 = Apparel.create({
+    name: "Test4",
+    sku: "test4",
+    brand: 'Coogi',
+    colorway: 'test4'
+    })
+
 listing1 = Listing.create({:price=>225, :retail_price=>201, :size=>9.5, itemable_id: s1.id, itemable_type: 'Sneaker' })
 listing2 = Listing.create({:price=>273, :retail_price=>175, :size=>8, itemable_id: s1.id, itemable_type: 'Sneaker' })
 listing3 = Listing.create({:price=>220, :retail_price=>210, :size=>8.5, itemable_id: s1.id, itemable_type: 'Sneaker' })
@@ -974,9 +1003,25 @@ listing309 = Listing.create({:price=>342, :retail_price=>150, :size=>10, itemabl
 listing310 = Listing.create({:price=>356, :retail_price=>150, :size=>11, itemable_id: s52.id, itemable_type: 'Sneaker' })
 listing311 = Listing.create({:price=>245, :retail_price=>150, :size=>12, itemable_id: s52.id, itemable_type: 'Sneaker' })
 listing312 = Listing.create({:price=>268, :retail_price=>150, :size=>14, itemable_id: s52.id, itemable_type: 'Sneaker' })
-
+listing313 = Listing.create({:price=>400, :retail_price=>600, :size=>'S', itemable_id: a1.id, itemable_type: 'Apparel' })
+listing314 = Listing.create({:price=>400, :retail_price=>600, :size=>'M', itemable_id: a1.id, itemable_type: 'Apparel' })
+listing315 = Listing.create({:price=>400, :retail_price=>600, :size=>'L', itemable_id: a1.id, itemable_type: 'Apparel' })
+listing316 = Listing.create({:price=>400, :retail_price=>600, :size=>'S', itemable_id: a2.id, itemable_type: 'Apparel' })
+listing317 = Listing.create({:price=>400, :retail_price=>600, :size=>'M', itemable_id: a2.id, itemable_type: 'Apparel' })
+listing318 = Listing.create({:price=>400, :retail_price=>600, :size=>'L', itemable_id: a2.id, itemable_type: 'Apparel' })
+listing319 = Listing.create({:price=>400, :retail_price=>600, :size=>'S', itemable_id: a3.id, itemable_type: 'Apparel' })
+listing320 = Listing.create({:price=>400, :retail_price=>600, :size=>'M', itemable_id: a3.id, itemable_type: 'Apparel' })
+listing321 = Listing.create({:price=>400, :retail_price=>600, :size=>'L', itemable_id: a3.id, itemable_type: 'Apparel' })
+listing322 = Listing.create({:price=>400, :retail_price=>600, :size=>'S', itemable_id: a4.id, itemable_type: 'Apparel' })
+listing323 = Listing.create({:price=>400, :retail_price=>600, :size=>'M', itemable_id: a4.id, itemable_type: 'Apparel' })
+listing324 = Listing.create({:price=>400, :retail_price=>600, :size=>'L', itemable_id: a4.id, itemable_type: 'Apparel' })
 dakine = Sneaker.all
+dakine2 = Apparel.all
 
 dakine.each do |sneaker|
     sneaker.photo.attach(io: open("https://sheep-seeds.s3-us-west-1.amazonaws.com/#{sneaker.sku}.png"), filename: "#{sneaker.sku}.png")
+end
+
+dakine2.each do |apparel|
+    apparel.photo.attach(io: open("https://sheep-seeds.s3-us-west-1.amazonaws.com/#{apparel.sku}.png"), filename: "#{apparel.sku}.png")
 end
