@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 class CartItemIndex extends React.Component {
     constructor(props) {
         super(props)
+        
     } 
 
     componentDidMount() {
@@ -22,7 +23,7 @@ class CartItemIndex extends React.Component {
     render() {
         let { cartItems } = this.props;
         if (!cartItems) return null;
-
+        let type
         this.cartTotal(cartItems);
         
         let emptyCart = cartItems.length ? null : (<div>Your Sheep cart is empty</div>);

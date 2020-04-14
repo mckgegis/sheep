@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ListingIndex = ({ listings }) => (
+const ListingIndex = ({ listings, type } ) => (
     
     <div className='listings-index-container'>
-        <Link to={`/sneakers/${listings[0].itemable_id}`} className='listings-index-x'>
+        <Link to={`/${type}/${listings[0].itemable_id}`} className='listings-index-x'>
             <button>
                 <div>X</div>
             </button>
@@ -16,7 +16,7 @@ const ListingIndex = ({ listings }) => (
         {
             listings.map(listing => {
                 return(
-                    <Link to={`/sneakers/${listing.itemable_id}/listings/${listing.id}`}
+                    <Link to={`/${type}/${listing.itemable_id}/listings/${listing.id}`}
                         className='listing-index-item'
                         key={listing.id}
                         >

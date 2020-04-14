@@ -23,6 +23,6 @@ export const fetchApparels = (maxId) => dispatch => (
 )
 
 export const fetchApparel = (apparelId) => dispatch => (
-    ApparelUtil.fetchApparel(apparelId).then(apparel => dispatch(fetchApparel(apparel)))
+    ApparelUtil.fetchApparel(apparelId).then(apparel => dispatch(receiveApparel(apparel)))
 )
 

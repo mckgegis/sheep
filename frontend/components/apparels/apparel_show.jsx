@@ -1,22 +1,22 @@
-import React from 'react' 
-import { Link, Switch, Route } from 'react-router-dom'
+import React from 'react'
+import { Switch, Route } from 'react-router-dom'
 import ListingIndex from '../listings/listings_index'
 import ListingIndexItem from '../listings/listing_index_item'
-import Sneaker from './sneaker'
+import Apparel from './apparel'
 
 
 
-class SneakerShow extends React.Component {
+class ApparelShow extends React.Component {
     constructor(props) {
         super(props)
     }
 
     componentDidMount() {
-        this.props.fetchSneaker(this.props.match.params.sneakerId)
+        this.props.fetchApparel(this.props.match.params.apparelId)
 
     };
 
-    displayPrice () {
+    displayPrice() {
         let values = Object.values(this.props.listings)
         let prices = values.map(listing => listing.price)
         return Math.min(...prices)
@@ -24,109 +24,109 @@ class SneakerShow extends React.Component {
 
     render() {
 
-        if(!this.props.sneaker) {
+        if (!this.props.apparel) {
             return null
-        } 
+        }
 
-        
-       
 
-        let { sneaker } = this.props
 
-        return(
+
+        let { apparel } = this.props
+
+        return (
             <div>
 
                 <div className='sneaker-show-container'>
                     <div className='sneaker-show-image-container'>
-                        <img src={sneaker.imageUrl} className='sneaker-show-image' />
+                        <img src={apparel.imageUrl} className='sneaker-show-image' />
                         <h1 className='sneaker-details'>
-                            {sneaker.brand} / {sneaker.silhouette} / {sneaker.name}
+                            {apparel.brand} / MEN / OUTERWEAR / {apparel.name}
                         </h1>
                     </div>
                     <div className='sneaker-show-right-container'>
                         <Switch>
                             <Route
-                                path="/sneakers/:sneakerId/listings/:listingId"
-                                render={(props) => <ListingIndexItem props={props} product={this.props.sneaker} listings={this.props.listings} currentUser={this.props.user} addItem={this.props.addItem} />}
+                                path="/apparels/:apparelId/listings/:listingId"
+                                render={(props) => <ListingIndexItem props={props} product={this.props.apparel} listings={this.props.listings} currentUser={this.props.user} addItem={this.props.addItem} />}
                             />
                             <Route
-                                path="/sneakers/:sneakerId/listings/"
-                                render={() => <ListingIndex listings={Object.values(this.props.listings).sort(function (a, b) { return (a.size - b.size) })} type="sneakers"/>} 
+                                path="/apparels/:apparelId/listings/"
+                                render={() => <ListingIndex listings={Object.values(this.props.listings).sort(function (a, b) { return (a.size - b.size) })} type="apparels" />}
                             />
                             <Route
-                                path="/sneakers/:sneakerId"
-                                render={() => <Sneaker props={this.props} displayPrice={this.displayPrice()}/>}
+                                path="/apparels/:apparelId"
+                                render={() => <Apparel props={this.props} displayPrice={this.displayPrice()} />}
                             />
 
                         </Switch>
                     </div>
                 </div>
-           
+
                 <div className='details-container'>
                     <div className='description-container'>
                         <h5 className='detail-header'>
-                            DETAILS 
+                            DETAILS
                             <div className='detail-icon'>
                                 <i className="fas fa-chevron-down"></i>
-                            </div>  
+                            </div>
                         </h5>
-                        <div className='detail-desciption'>
-                            {sneaker.description}
-                        </div>
+                        {/* <div className='detail-desciption'>
+                            {apparel.description}
+                        </div> */}
                     </div>
                     <div className='details-pair-container'>
-                        <div>
+                        {/* <div>
                             release date
                         </div>
                         <div>
                             {sneaker.release_date}
-                        </div>
+                        </div> */}
                     </div>
                     <div className='details-pair-container'>
                         <div>
                             Brand
                         </div>
                         <div>
-                            {sneaker.brand}
+                            {apparel.brand}
                         </div>
                     </div>
                     <div className='details-pair-container'>
-                        <div>
+                        {/* <div>
                             silhouette
                         </div>
                         <div>
                             {sneaker.silhouette}
-                        </div>
+                        </div> */}
                     </div>
                     <div className='details-pair-container'>
-                        <div>
+                        {/* <div>
                             designer
                         </div>
                         <div>
                             {sneaker.designer}
-                        </div>
+                        </div> */}
                     </div>
                     <div className='details-pair-container'>
-                        <div>
+                        {/* <div>
                             technology
                         </div>
                         <div>
                             {sneaker.technology}
-                        </div>
+                        </div> */}
                     </div>
                     <div className='details-pair-container'>
                         <div>
                             colorway
                         </div>
                         <div>
-                            {sneaker.colorway}
-                        </div>                    
+                            {apparel.colorway}
+                        </div>
                     </div>
                 </div>
-         </div>
+            </div>
         )
     }
 
 }
 
-export default SneakerShow
+export default ApparelShow

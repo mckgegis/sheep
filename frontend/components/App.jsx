@@ -12,6 +12,7 @@ import SearchContainer from "../components/search/search_container"
 import Style from '../components/styles/styles'
 import Footer from '../components/footer/footer'
 import ApparelIndexContainer from '../components/apparels/apparel_index_container'
+import ApparelShowContainer from '../components/apparels/apparel_show_container'
 
 const App = () => (
     <div > 
@@ -22,6 +23,7 @@ const App = () => (
         <Route exact path="/sneakers" component={SneakerIndexContainer} />
         <Route path="/sneakers/:sneakerId" component={SneakerShowContainer} />
         <Route exact path="/apparels" component={ApparelIndexContainer} />
+        <Route path="/apparels/:apparelId" component={ApparelShowContainer} />
         <ProtectedRoute path='/cart' component={CartItemContainer} />
         <Route path='/search' component={SearchContainer} />
         <Route path='/styles' component={Style} />

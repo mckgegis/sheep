@@ -5,6 +5,8 @@ class CartItemIndexItem extends React.Component {
         super(props)
 
         this.handleClick = this.handleClick.bind(this)
+        this.type = this.props.cartItem.itemType === 'Sneaker' ? 'sneakers' : 'apparels'
+
     }
 
     handleClick () {
@@ -16,12 +18,12 @@ class CartItemIndexItem extends React.Component {
             <div className="cart-items-container">
                
                     <div className='cart-image-container'>
-                        <Link to={`/sneakers/${this.props.cartItem.itemId}`}>
-                            <img src={this.props.cartItem.img} className="cart-image"/>
+                        <Link to={`/${this.type}/${this.props.cartItem.itemId}`}>
+                            <img src={this.props.cartItem.img} className={`${this.type}-cart-image`}/>
                         </Link>
                     </div>
                     <div className='cart-item-details'>
-                        <Link to={`/sneakers/${this.props.cartItem.itemId}`} className='cart-item-links'>
+                        <Link to={`/${this.type}/${this.props.cartItem.itemId}`} className='cart-item-links'>
                             {this.props.cartItem.itemName}
                             <br/>
                             SKU: {this.props.cartItem.sku}

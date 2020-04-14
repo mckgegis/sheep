@@ -9,6 +9,6 @@ export const fetchApparels = (maxId) => (
 export const fetchApparel = (apparelId) => (
     $.ajax({
         method: 'GET',
-        url: `/api/apparels/${apparelId}`,
+        url: `/api/apparels/${apparelId}`
     })
 )

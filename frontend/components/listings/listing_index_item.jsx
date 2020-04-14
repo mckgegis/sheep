@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ListingIndexItem = ({ props, sneaker, listings, addItem, removeItem, currentUser }) => {
-
+const ListingIndexItem = ({ props, product, listings, addItem, removeItem, currentUser }) => {
+    
     const button = currentUser ? (
-       <Link to='/cart' onClick={() => addItem(item)}>
+        <Link to='/cart' onClick={() => addItem(item)}>
            <button>
                 Add to Cart
            </button>
@@ -16,8 +16,10 @@ const ListingIndexItem = ({ props, sneaker, listings, addItem, removeItem, curre
             </button>
         </Link>
     )
-
+    
     const listing = listings[props.match.params.listingId]
+    const type = listing.itemable_type === 'Sneaker' ? 'sneakers' : 'apparels'
+    
     const item = currentUser ? ({
         user_id: currentUser.id,
         listing_id: listing.id
@@ -34,10 +36,10 @@ const ListingIndexItem = ({ props, sneaker, listings, addItem, removeItem, curre
             <div className='listing-index-details-container'>
                 <div className='listing-index-details'>
                     <div className='listing-index-detail-key'>
-                        Sneaker
+                        {listing.itemable_type}
                     </div>
                     <div className='listing-index-detail-value'>
-                        {sneaker.name}
+                        {product.name}
                     </div>
                 </div>
                 <div className='listing-index-details'>
@@ -66,7 +68,7 @@ const ListingIndexItem = ({ props, sneaker, listings, addItem, removeItem, curre
                 </div>
             </div>
                 <div className='listing-index-item-button'>
-                    <Link to={`/sneakers/${sneaker.id}`}>
+                    <Link to={`/${type}/${product.id}`}>
                         <button className='listing-cancel'>Cancel</button>
                     </Link>
                     {button}
