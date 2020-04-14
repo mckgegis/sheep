@@ -6,4 +6,12 @@ class Apparel < ApplicationRecord
 
     has_one_attached :photo
 
+    def self.fetch(maxId) 
+        @apparels = Apparel
+                    .where('id > ?', maxId.to_i + Apparel.first.id - 1)
+                    .order(:id)
+                    .limit(8)
+    end
+
+
 end
