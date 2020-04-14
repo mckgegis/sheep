@@ -11,6 +11,7 @@ import CartItemContainer from "../components/cart_item/cart_item_container"
 import SearchContainer from "../components/search/search_container"
 import Style from '../components/styles/styles'
 import Footer from '../components/footer/footer'
+import ApparelIndexContainer from '../components/apparels/apparel_index_container'
 
 const App = () => (
     <div > 
@@ -20,6 +21,7 @@ const App = () => (
         <AuthRoute path="/signup" component={SignupFormContainer} />
         <Route exact path="/sneakers" component={SneakerIndexContainer} />
         <Route path="/sneakers/:sneakerId" component={SneakerShowContainer} />
+        <Route exact path="/apparels" component={ApparelIndexContainer} />
         <ProtectedRoute path='/cart' component={CartItemContainer} />
         <Route path='/search' component={SearchContainer} />
         <Route path='/styles' component={Style} />

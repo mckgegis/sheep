@@ -7,4 +7,9 @@ class Api::ApparelsController < ApplicationController
         end 
     end
 
+    def index
+        @apparels = Apparel.fetch(params[:maxId])
+        render :index
+    end
+
 end

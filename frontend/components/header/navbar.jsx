@@ -18,7 +18,7 @@ class NavBar extends React.Component {
                         <Link to='/sneakers' className='navbar-link'>Sneakers</Link>
                     </div>
                     <div className='navbar-link'>
-                        <Link to='/sneakers' className='navbar-link'>Apparel</Link>
+                        <Link to='/apparels' className='navbar-link'>Apparel</Link>
                     </div>
                     <div className='navbar-link'>
                         <Link to='/sneakers' className='navbar-link'>Shop All</Link>

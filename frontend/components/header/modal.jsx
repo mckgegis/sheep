@@ -31,7 +31,7 @@ const Modal = ({ modal, closeModal, currentUser, signout }) => {
                         <Link to='/sneakers' className='modal-link' onClick={closeModal}>Sneakers</Link>
                     </div>
                     <div >
-                        <Link to='/sneakers' className='modal-link' onClick={closeModal}>Apparel</Link>
+                        <Link to='/apparels' className='modal-link' onClick={closeModal}>Apparel</Link>
                     </div>
                     <div >
                         <Link to='/sneakers' className='modal-link' onClick={closeModal}>Shop All</Link>
