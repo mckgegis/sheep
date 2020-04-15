@@ -21,3 +21,12 @@
     width: 100%;
     height: auto;
 }
+
+.style-header-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+

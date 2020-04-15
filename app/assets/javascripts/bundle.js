@@ -2809,6 +2809,14 @@ __webpack_require__.r(__webpack_exports__);
 
 var Style = function Style() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "splash"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "style-header-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "style-header"
+  }, "OnFeet Styles"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "style-header-text"
+  }, "Daily inspiration from our community."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Scroll to discover and shop trending styles.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "style-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "style-column"
@@ -2876,7 +2884,7 @@ var Style = function Style() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://sheep-seeds.s3-us-west-1.amazonaws.com/997.jpg",
     className: "style-image"
-  }))));
+  })))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Style);
