@@ -12,4 +12,5 @@ https://sheeeep.herokuapp.com/#/
 
 # Features
 
-Scroll through shoes 
+Scroll through shoes
+![alt text](https://github.com/mckgegis/sheep/blob/master/app/assets/images/sneaker_index.png)
