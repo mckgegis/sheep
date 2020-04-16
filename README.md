@@ -12,13 +12,13 @@ https://sheeeep.herokuapp.com/#/
 
 # Features
 
-Shop shoes
+### Shop shoes
 ![alt text](https://github.com/mckgegis/sheep/blob/master/app/assets/images/sneaker_index.png)
 
-Shop apparel
+### Shop apparel
 ![alt text](https://github.com/mckgegis/sheep/blob/master/app/assets/images/apparel_index.png)
 
-Add products to personal cart
+### Add products to personal cart
 ![alt text](https://github.com/mckgegis/sheep/blob/master/app/assets/images/cart.png)
 
 
