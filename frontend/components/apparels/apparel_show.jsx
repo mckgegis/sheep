@@ -12,7 +12,8 @@ class ApparelShow extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchApparel(this.props.match.params.apparelId)
+        window.scrollTo(0, 0);
+        this.props.fetchApparel(this.props.match.params.apparelId);
 
     };
 

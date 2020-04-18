@@ -860,6 +860,7 @@ var ApparelShow = /*#__PURE__*/function (_React$Component) {
   _createClass(ApparelShow, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      window.scrollTo(0, 0);
       this.props.fetchApparel(this.props.match.params.apparelId);
     }
   }, {
@@ -2626,6 +2627,7 @@ var SneakerShow = /*#__PURE__*/function (_React$Component) {
   _createClass(SneakerShow, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      window.scrollTo(0, 0);
       this.props.fetchSneaker(this.props.match.params.sneakerId);
     }
   }, {
