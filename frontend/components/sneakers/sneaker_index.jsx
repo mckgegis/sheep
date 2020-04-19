@@ -10,8 +10,9 @@ class SneakerIndex extends React.Component {
         this.showMore = this.showMore.bind(this)
         this.state = { show_more: true };
     }
-
+    
     componentDidMount() {
+        window.scrollTo(0, 0);
         this.props.clearSneakers()
         this.props.clearListings()
         this.props.fetchSneakers(this.maxId)

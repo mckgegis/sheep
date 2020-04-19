@@ -9,6 +9,11 @@ class CartItemIndexItem extends React.Component {
 
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0);
+
+    }
+
     handleClick () {
         this.props.removeItem(this.props.cartItem.id)
     }

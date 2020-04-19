@@ -12,6 +12,7 @@ class ApparelIndex extends React.Component {
     }
 
     componentDidMount() {
+        window.scrollTo(0, 0);
         this.props.clearApparels()
         this.props.clearListings()
         this.props.fetchApparels(this.maxId)

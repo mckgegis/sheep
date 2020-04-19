@@ -638,6 +638,7 @@ var ApparelIndex = /*#__PURE__*/function (_React$Component) {
   _createClass(ApparelIndex, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      window.scrollTo(0, 0);
       this.props.clearApparels();
       this.props.clearListings();
       this.props.fetchApparels(this.maxId);
@@ -779,6 +780,11 @@ var ApparelIndexItem = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(ApparelIndexItem, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      window.scrollTo(0, 0);
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1092,6 +1098,7 @@ var CartItemIndex = /*#__PURE__*/function (_React$Component) {
   _createClass(CartItemIndex, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      window.scrollTo(0, 0);
       this.props.fetchCartItems();
     }
   }, {
@@ -1234,6 +1241,11 @@ var CartItemIndexItem = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(CartItemIndexItem, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      window.scrollTo(0, 0);
+    }
+  }, {
     key: "handleClick",
     value: function handleClick() {
       this.props.removeItem(this.props.cartItem.id);
@@ -1598,9 +1610,13 @@ var ListingIndexItem = function ListingIndexItem(_ref) {
     onClick: function onClick() {
       return addItem(item);
     }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Add to Cart")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "add-to-cart"
+  }, "Add to Cart")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/login"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Log In to Purchase"));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "add-to-cart"
+  }, "Log In to Purchase"));
   var listing = listings[props.match.params.listingId];
   var type = listing.itemable_type === 'Sneaker' ? 'sneakers' : 'apparels';
   var item = currentUser ? {
@@ -1750,6 +1766,11 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(LoginForm, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      window.scrollTo(0, 0);
+    }
+  }, {
     key: "update",
     value: function update(field) {
       var _this2 = this;
@@ -1934,6 +1955,11 @@ var SignUpForm = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(SignUpForm, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      window.scrollTo(0, 0);
+    }
+  }, {
     key: "update",
     value: function update(field) {
       var _this2 = this;
@@ -2163,6 +2189,7 @@ var Search = /*#__PURE__*/function (_React$Component) {
   _createClass(Search, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      window.scrollTo(0, 0);
       this.props.clearSneaks();
     }
   }, {
@@ -2403,6 +2430,7 @@ var SneakerIndex = /*#__PURE__*/function (_React$Component) {
   _createClass(SneakerIndex, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      window.scrollTo(0, 0);
       this.props.clearSneakers();
       this.props.clearListings();
       this.props.fetchSneakers(this.maxId);

@@ -40,10 +40,7 @@
     max-height: 900px;
     min-height: 600px;
     padding: 0px 90px;
-    // position: absolute;
-    width: 1000px;
-    // top: 50%;
-    // left: 50%;
+    width: 70%;
     transform: translateX(10%) translateY(15%);
     border: 1px solid black;
     margin-top: 40px;
@@ -64,6 +61,10 @@
 
 }
 
+.session-fields{
+    width: 50%;
+}
+
 .sign-up-fields {
     box-sizing: border-box;
     width: 50%;
@@ -79,7 +80,6 @@
 .session-label {
     padding: 20px;
   
-
 }
 
 .session-container form {
@@ -92,16 +92,15 @@
 
 
 .session-input {
+    border: none;
+    outline: none;
     border-bottom: 1px solid black;
-    border-top: none ;
-    border-left: none ;
-    border-right: none ;
-    width: 400px;
+    width: 100%;
     font-size: 1em;
-    // padding-left: 20px;
 }
 
 .demo-button {
+    border: none;
     cursor: pointer;
     border-top: 1px solid black;
     border-right: 1px solid black;
@@ -117,6 +116,7 @@
 }
 
 .session-button {
+    border: none;
     cursor: pointer;
     border-top: 1px solid black;
     bottom: 0;
@@ -136,7 +136,7 @@
     display: flex;
     bottom: 0;
     position: absolute;
-    width: 45.1%;
+    width: 50%;
 }
 
 .session-errors {

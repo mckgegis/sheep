@@ -23,6 +23,11 @@ class SignUpForm extends React.Component {
 
     };
 
+    componentDidMount() {
+        window.scrollTo(0, 0);
+
+    }
+
     update(field) {
         return (e) => {
             this.setState({

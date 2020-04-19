@@ -5,13 +5,13 @@ const ListingIndexItem = ({ props, product, listings, addItem, removeItem, curre
     
     const button = currentUser ? (
         <Link to='/cart' onClick={() => addItem(item)}>
-           <button>
+           <button className='add-to-cart'>
                 Add to Cart
            </button>
        </Link>
     ) : (
         <Link to='/login'>
-            <button>
+            <button className='add-to-cart'>
                 Log In to Purchase
             </button>
         </Link>
