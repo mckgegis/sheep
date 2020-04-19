@@ -664,31 +664,66 @@ s52 = Sneaker.create({
     })
 
 a1 = Apparel.create({
-    name: "Test1",
-    sku: "test1",
-    brand: 'Coogi',
-    colorway: 'test1'
+    name: "Burberry Ecclesford Jacket",
+    sku: "8021874",
+    brand: "Burberry",
+    colorway: 'Black/Multi-Color'
     })
 
 a2 = Apparel.create({
-    name: "Test2",
-    sku: "test2",
-    brand: 'Coogi',
-    colorway: 'test2'
+    name: "Amiri Tonal Crew Sweatshirt",
+    sku: "Y0W02359TE",
+    brand: 'Amiri',
+    colorway: 'Washed Black'
     })
 
 a3 = Apparel.create({
-    name: "Test3",
-    sku: "test3",
-    brand: 'Coogi',
-    colorway: 'test3'
+    name: "Gucci Oversize Sweatshirt",
+    sku: "469250XJCCG",
+    brand: 'Gucci',
+    colorway: 'Black'
     })
 
 a4 = Apparel.create({
-    name: "Test4",
-    sku: "test4",
-    brand: 'Coogi',
-    colorway: 'test4'
+    name: "Maison Margiela Iridescent Dyed Hoodie",
+    sku: "S30GU0120",
+    brand: 'Maison Margiela',
+    colorway: 'Rainbow'
+    })
+
+a5 = Apparel.create({
+    name: "Burberry Classic Check Print Leggings",
+    sku: "8012450",
+    brand: 'Burberry',
+    colorway: 'Antique Yellow Check'
+    })
+
+a6 = Apparel.create({
+    name: "Givenchy Calligraphy Logo Shorts",
+    sku: "BM50K930AF",
+    brand: 'Givenchy',
+    colorway: 'Black'
+    })
+
+a7 = Apparel.create({
+    name: "Versace Medusa Logo Baseball Cap",
+    sku: "ICAP004",
+    brand: 'Versace',
+    colorway: 'Optical White'
+    })
+
+a8 = Apparel.create({
+    name: "Balenciaga Long Sleeve Crewneck",
+    sku: "547831T1473",
+    brand: 'Balenciaga',
+    colorway: 'Forest Green / White '
+    })
+    
+a9 = Apparel.create({
+    name: "Rick and Morty Long Sleeve'",
+    sku: "RNR0128",
+    brand: 'Rick and Morty',
+    colorway: 'Black'
     })
 
 listing1 = Listing.create({:price=>225, :retail_price=>201, :size=>9.5, itemable_id: s1.id, itemable_type: 'Sneaker' })
@@ -1003,18 +1038,32 @@ listing309 = Listing.create({:price=>342, :retail_price=>150, :size=>10, itemabl
 listing310 = Listing.create({:price=>356, :retail_price=>150, :size=>11, itemable_id: s52.id, itemable_type: 'Sneaker' })
 listing311 = Listing.create({:price=>245, :retail_price=>150, :size=>12, itemable_id: s52.id, itemable_type: 'Sneaker' })
 listing312 = Listing.create({:price=>268, :retail_price=>150, :size=>14, itemable_id: s52.id, itemable_type: 'Sneaker' })
-listing313 = Listing.create({:price=>400, :retail_price=>600, :size=>'S', itemable_id: a1.id, itemable_type: 'Apparel' })
-listing314 = Listing.create({:price=>400, :retail_price=>600, :size=>'M', itemable_id: a1.id, itemable_type: 'Apparel' })
-listing315 = Listing.create({:price=>400, :retail_price=>600, :size=>'L', itemable_id: a1.id, itemable_type: 'Apparel' })
-listing316 = Listing.create({:price=>400, :retail_price=>600, :size=>'S', itemable_id: a2.id, itemable_type: 'Apparel' })
-listing317 = Listing.create({:price=>400, :retail_price=>600, :size=>'M', itemable_id: a2.id, itemable_type: 'Apparel' })
-listing318 = Listing.create({:price=>400, :retail_price=>600, :size=>'L', itemable_id: a2.id, itemable_type: 'Apparel' })
-listing319 = Listing.create({:price=>400, :retail_price=>600, :size=>'S', itemable_id: a3.id, itemable_type: 'Apparel' })
-listing320 = Listing.create({:price=>400, :retail_price=>600, :size=>'M', itemable_id: a3.id, itemable_type: 'Apparel' })
-listing321 = Listing.create({:price=>400, :retail_price=>600, :size=>'L', itemable_id: a3.id, itemable_type: 'Apparel' })
-listing322 = Listing.create({:price=>400, :retail_price=>600, :size=>'S', itemable_id: a4.id, itemable_type: 'Apparel' })
-listing323 = Listing.create({:price=>400, :retail_price=>600, :size=>'M', itemable_id: a4.id, itemable_type: 'Apparel' })
-listing324 = Listing.create({:price=>400, :retail_price=>600, :size=>'L', itemable_id: a4.id, itemable_type: 'Apparel' })
+listing313 = Listing.create({:price=>720, :retail_price=>600, :size=>44, itemable_id: a1.id, itemable_type: 'Apparel' })
+listing314 = Listing.create({:price=>960, :retail_price=>600, :size=>46, itemable_id: a1.id, itemable_type: 'Apparel' })
+listing315 = Listing.create({:price=>720, :retail_price=>600, :size=>48, itemable_id: a1.id, itemable_type: 'Apparel' })
+listing316 = Listing.create({:price=>690, :retail_price=>600, :size=>44, itemable_id: a2.id, itemable_type: 'Apparel' })
+listing317 = Listing.create({:price=>690, :retail_price=>600, :size=>46, itemable_id: a2.id, itemable_type: 'Apparel' })
+listing318 = Listing.create({:price=>690, :retail_price=>600, :size=>48, itemable_id: a2.id, itemable_type: 'Apparel' })
+listing319 = Listing.create({:price=>1400, :retail_price=>600, :size=>44, itemable_id: a3.id, itemable_type: 'Apparel' })
+listing320 = Listing.create({:price=>1400, :retail_price=>600, :size=>46, itemable_id: a3.id, itemable_type: 'Apparel' })
+listing321 = Listing.create({:price=>1400, :retail_price=>600, :size=>48, itemable_id: a3.id, itemable_type: 'Apparel' })
+listing322 = Listing.create({:price=>929, :retail_price=>600, :size=>44, itemable_id: a4.id, itemable_type: 'Apparel' })
+listing323 = Listing.create({:price=>929, :retail_price=>600, :size=>46, itemable_id: a4.id, itemable_type: 'Apparel' })
+listing324 = Listing.create({:price=>929, :retail_price=>600, :size=>48, itemable_id: a4.id, itemable_type: 'Apparel' })
+listing325 = Listing.create({:price=>450, :retail_price=>600, :size=>32, itemable_id: a5.id, itemable_type: 'Apparel' })
+listing326 = Listing.create({:price=>450, :retail_price=>600, :size=>34, itemable_id: a5.id, itemable_type: 'Apparel' })
+listing327 = Listing.create({:price=>450, :retail_price=>600, :size=>36, itemable_id: a5.id, itemable_type: 'Apparel' })
+listing328 = Listing.create({:price=>680, :retail_price=>600, :size=>32, itemable_id: a6.id, itemable_type: 'Apparel' })
+listing329 = Listing.create({:price=>680, :retail_price=>600, :size=>34, itemable_id: a6.id, itemable_type: 'Apparel' })
+listing330 = Listing.create({:price=>680, :retail_price=>600, :size=>36, itemable_id: a6.id, itemable_type: 'Apparel' })
+listing331 = Listing.create({:price=>395, :retail_price=>600, :size=>32, itemable_id: a7.id, itemable_type: 'Apparel' })
+listing332 = Listing.create({:price=>1190, :retail_price=>600, :size=>44, itemable_id: a8.id, itemable_type: 'Apparel' })
+listing333 = Listing.create({:price=>1190, :retail_price=>600, :size=>46, itemable_id: a8.id, itemable_type: 'Apparel' })
+listing334 = Listing.create({:price=>1190, :retail_price=>600, :size=>48, itemable_id: a8.id, itemable_type: 'Apparel' })
+listing335 = Listing.create({:price=>50, :retail_price=>60, :size=>44, itemable_id: a9.id, itemable_type: 'Apparel' })
+listing336 = Listing.create({:price=>50, :retail_price=>60, :size=>46, itemable_id: a9.id, itemable_type: 'Apparel' })
+listing337 = Listing.create({:price=>50, :retail_price=>60, :size=>48, itemable_id: a9.id, itemable_type: 'Apparel' })
+
 dakine = Sneaker.all
 dakine2 = Apparel.all
 
