@@ -780,11 +780,6 @@ var ApparelIndexItem = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(ApparelIndexItem, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      window.scrollTo(0, 0);
-    }
-  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
