@@ -71,17 +71,7 @@ class ApparelShow extends React.Component {
                                 <i className="fas fa-chevron-down"></i>
                             </div>
                         </h5>
-                        {/* <div className='detail-desciption'>
-                            {apparel.description}
-                        </div> */}
-                    </div>
-                    <div className='details-pair-container'>
-                        {/* <div>
-                            release date
-                        </div>
-                        <div>
-                            {sneaker.release_date}
-                        </div> */}
+                      
                     </div>
                     <div className='details-pair-container'>
                         <div>
@@ -91,30 +81,8 @@ class ApparelShow extends React.Component {
                             {apparel.brand}
                         </div>
                     </div>
-                    <div className='details-pair-container'>
-                        {/* <div>
-                            silhouette
-                        </div>
-                        <div>
-                            {sneaker.silhouette}
-                        </div> */}
-                    </div>
-                    <div className='details-pair-container'>
-                        {/* <div>
-                            designer
-                        </div>
-                        <div>
-                            {sneaker.designer}
-                        </div> */}
-                    </div>
-                    <div className='details-pair-container'>
-                        {/* <div>
-                            technology
-                        </div>
-                        <div>
-                            {sneaker.technology}
-                        </div> */}
-                    </div>
+                
+                   
                     <div className='details-pair-container'>
                         <div>
                             colorway
