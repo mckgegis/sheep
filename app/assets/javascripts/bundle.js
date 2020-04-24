@@ -2826,6 +2826,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Style = function Style() {
+  window.scrollTo(0, 0);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "splash"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

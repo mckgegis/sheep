@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Style = () => {
-
+    window.scrollTo(0, 0);
     return(
         <div className='splash'>
             <div className='style-header-container'>
