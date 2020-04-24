@@ -18,8 +18,14 @@
 }
 
 .style-image{
-    width: 100%;
+    width: 85%;
     height: auto;
+}
+
+.style-image:hover{
+    transition: transform .5s ease;
+
+    transform: scale(1.1);
 }
 
 .style-header-container{

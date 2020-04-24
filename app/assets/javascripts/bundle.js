@@ -2797,7 +2797,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var Splash = function Splash() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/sneakers/256"
+    to: "/sneakers/45"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "splash-image-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
@@ -2838,66 +2838,66 @@ var Style = function Style() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "style-column"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/sneakers/221"
+    to: "/sneakers/13"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://sheep-seeds.s3-us-west-1.amazonaws.com/waverunnerstyle.jpg",
     className: "style-image"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/sneakers/225"
+    to: "/sneakers/17"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://sheep-seeds.s3-us-west-1.amazonaws.com/yeezystyle.jpg",
     className: "style-image"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/sneakers/223"
+    to: "/sneakers/15"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://sheep-seeds.s3-us-west-1.amazonaws.com/inertiastyle.jpg",
     className: "style-image"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/sneakers/218"
+    to: "/sneakers/10"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://sheep-seeds.s3-us-west-1.amazonaws.com/atmoselephantstyle.jpg",
     className: "style-image"
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "style-column"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/sneakers/243"
+    to: "/sneakers/35"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://sheep-seeds.s3-us-west-1.amazonaws.com/nb8.jpg",
     className: "style-image"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/sneakers/239"
+    to: "/sneakers/31"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://sheep-seeds.s3-us-west-1.amazonaws.com/990v5style.jpeg",
     className: "style-image"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/sneakers/251"
+    to: "/sneakers/43"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://sheep-seeds.s3-us-west-1.amazonaws.com/m2kb.jpg",
     className: "style-image"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/sneakers/213"
+    to: "/sneakers/1"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://sheep-seeds.s3-us-west-1.amazonaws.com/monarchstyle.jpg",
     className: "style-image"
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "style-column"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/sneakers/247"
+    to: "/sneakers/39"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://sheep-seeds.s3-us-west-1.amazonaws.com/lightbone.jpg",
     className: "style-image"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/sneakers/210"
+    to: "/sneakers/2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://sheep-seeds.s3-us-west-1.amazonaws.com/nbr.jpg",
     className: "style-image"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/sneakers/246"
+    to: "/sneakers/38"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://sheep-seeds.s3-us-west-1.amazonaws.com/m2kw.jpg",
     className: "style-image"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/sneakers/240"
+    to: "/sneakers/32"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://sheep-seeds.s3-us-west-1.amazonaws.com/997.jpg",
     className: "style-image"
