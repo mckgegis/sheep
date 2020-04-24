@@ -2796,6 +2796,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Splash = function Splash() {
+  window.scrollTo(0, 0);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/sneakers/45"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
