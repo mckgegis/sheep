@@ -232,7 +232,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchListings", function() { return fetchListings; });
 /* harmony import */ var _util_listing_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/listing_api_util */ "./frontend/util/listing_api_util.js");
 
-var RECEIVE_LISTINGS = 'RECEIVE_LISTINGS';
+var RECEIVE_LISTINGS = "RECEIVE_LISTINGS";
 var CLEAR_LISTINGS = "CLEAR_LISTINGS";
 
 var receiveListings = function receiveListings(listings) {
@@ -272,8 +272,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "closeModal", function() { return closeModal; });
 /* harmony import */ var _util_session_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/session_api_util */ "./frontend/util/session_api_util.js");
 
-var OPEN_MODAL = 'OPEN_MODAL';
-var CLOSE_MODAL = 'CLOSE_MODAL';
+var OPEN_MODAL = "OPEN_MODAL";
+var CLOSE_MODAL = "CLOSE_MODAL";
 var openModal = function openModal(modal) {
   return {
     type: OPEN_MODAL,
@@ -346,9 +346,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "signup", function() { return signup; });
 /* harmony import */ var _util_session_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/session_api_util */ "./frontend/util/session_api_util.js");
 
-var RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
+var RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 var RECEIVE_LOGOUT = "RECEIVE_LOGOUT";
-var RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
+var RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
 var CLEAR_SESSION_ERRORS = "CLEAR_SESSION_ERRORS";
 
 var receiveCurrentUser = function receiveCurrentUser(currentUser) {
@@ -928,7 +928,10 @@ var ApparelShow = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "description-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-        className: "detail-header"
+        className: "detail-header",
+        onClick: function onClick() {
+          return window.scrollTo(0, 675);
+        }
       }, "DETAILS", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "detail-icon"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -1223,7 +1226,7 @@ var CartItemIndexItem = /*#__PURE__*/function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(CartItemIndexItem).call(this, props));
     _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
-    _this.type = _this.props.cartItem.itemType === 'Sneaker' ? 'sneakers' : 'apparels';
+    _this.type = _this.props.cartItem.itemType === "Sneaker" ? "sneakers" : "apparels";
     return _this;
   }
 
@@ -1305,7 +1308,7 @@ var Footer = function Footer() {
     className: "text-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "text"
-  }, "Sheep is a clone of GOAT.com, the global platform for style.  Selling exclusive sneakers, apparell, and accessories from the world\u2019s leading contemporary, avant garde and designer brands. Click the link below to check out the original site."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, "Sheep is a clone of GOAT.com, the global platform for style. Selling exclusive sneakers, apparell, and accessories from the world\u2019s leading contemporary, avant garde and designer brands. Click the link below to check out the original site."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://www.goat.com/",
     className: "goat-link"
   }, "VISIT GOAT")));
@@ -1605,7 +1608,7 @@ var ListingIndexItem = function ListingIndexItem(_ref) {
     className: "add-to-cart"
   }, "Log In to Purchase"));
   var listing = listings[props.match.params.listingId];
-  var type = listing.itemable_type === 'Sneaker' ? 'sneakers' : 'apparels';
+  var type = listing.itemable_type === "Sneaker" ? "sneakers" : "apparels";
   var item = currentUser ? {
     user_id: currentUser.id,
     listing_id: listing.id
@@ -1744,8 +1747,8 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
       password: ""
     };
     _this.demoUser = {
-      username: 'ryanisdagoat',
-      password: 'truuuu'
+      username: "ryanisdagoat",
+      password: "truuuu"
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     _this.handleDemo = _this.handleDemo.bind(_assertThisInitialized(_this));
@@ -1810,14 +1813,14 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
         className: "login-header"
       }, "Log In"), !errors.length ? "" : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "session-errors"
-      }, errors.join(' ')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      }, errors.join(" ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "session-label"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "session-input",
         type: "text",
         placeholder: "Username",
         value: this.state.username,
-        onChange: this.update('username')
+        onChange: this.update("username")
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "session-label"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -1825,7 +1828,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
         type: "password",
         placeholder: "Password",
         value: this.state.password,
-        onChange: this.update('password')
+        onChange: this.update("password")
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "session-submit-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -1933,8 +1936,8 @@ var SignUpForm = /*#__PURE__*/function (_React$Component) {
       password: ""
     };
     _this.demoUser = {
-      username: 'ryanisdagoat',
-      password: 'truuuu'
+      username: "ryanisdagoat",
+      password: "truuuu"
     };
     _this.handleDemo = _this.handleDemo.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
@@ -2006,7 +2009,7 @@ var SignUpForm = /*#__PURE__*/function (_React$Component) {
         type: "text",
         placeholder: "First Name",
         value: this.state.first_name,
-        onChange: this.update('first_name')
+        onChange: this.update("first_name")
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "session-label"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -2014,7 +2017,7 @@ var SignUpForm = /*#__PURE__*/function (_React$Component) {
         type: "text",
         placeholder: "Last Name",
         value: this.state.last_name,
-        onChange: this.update('last_name')
+        onChange: this.update("last_name")
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "session-label"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -2022,7 +2025,7 @@ var SignUpForm = /*#__PURE__*/function (_React$Component) {
         type: "text",
         placeholder: "Username",
         value: this.state.username,
-        onChange: this.update('username')
+        onChange: this.update("username")
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "session-label"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -2030,7 +2033,7 @@ var SignUpForm = /*#__PURE__*/function (_React$Component) {
         type: "text",
         placeholder: "Email",
         value: this.state.email,
-        onChange: this.update('email')
+        onChange: this.update("email")
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "session-label"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -2038,7 +2041,7 @@ var SignUpForm = /*#__PURE__*/function (_React$Component) {
         type: "password",
         placeholder: "Password",
         value: this.state.password,
-        onChange: this.update('password')
+        onChange: this.update("password")
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "session-submit-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -2709,7 +2712,10 @@ var SneakerShow = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "description-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-        className: "detail-header"
+        className: "detail-header",
+        onClick: function onClick() {
+          return window.scroll(0, 675);
+        }
       }, "DETAILS", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "detail-icon"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -2797,13 +2803,28 @@ __webpack_require__.r(__webpack_exports__);
 
 var Splash = function Splash() {
   window.scrollTo(0, 0);
+  var sources = ['https://sheep-seeds.s3-us-west-1.amazonaws.com/bkgrd1.png', 'https://sheep-seeds.s3-us-west-1.amazonaws.com/bkgrd2.png', 'https://sheep-seeds.s3-us-west-1.amazonaws.com/bkgrd3.png'];
+  var index = 0;
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    var interval = setInterval(function () {
+      if (index === sources.length) {
+        index = 0;
+      }
+
+      document.getElementById("splash-img").src = sources[index];
+      index++;
+    }, 3000);
+    return function () {
+      return clearInterval(interval);
+    };
+  }, []);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/sneakers/45"
+    to: "/sneakers/"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "splash-image-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-    className: "splash-text"
-  }, "KILLSHOT X APP ACADEMY")));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    id: "splash-img"
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Splash);
@@ -3370,7 +3391,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  var root = document.getElementById('root');
+  var root = document.getElementById("root");
   var store;
 
   if (window.currentUser) {
@@ -3439,8 +3460,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchApparel", function() { return fetchApparel; });
 var fetchApparels = function fetchApparels(maxId) {
   return $.ajax({
-    method: 'GET',
-    url: '/api/apparels',
+    method: "GET",
+    url: "/api/apparels",
     data: {
       maxId: maxId
     }
@@ -3448,7 +3469,7 @@ var fetchApparels = function fetchApparels(maxId) {
 };
 var fetchApparel = function fetchApparel(apparelId) {
   return $.ajax({
-    method: 'GET',
+    method: "GET",
     url: "/api/apparels/".concat(apparelId)
   });
 };
@@ -3470,13 +3491,13 @@ __webpack_require__.r(__webpack_exports__);
 var fetchCartItems = function fetchCartItems() {
   return $.ajax({
     method: "GET",
-    url: '/cart_items'
+    url: "/cart_items"
   });
 };
 var addItem = function addItem(item) {
   return $.ajax({
-    method: 'POST',
-    url: '/cart_items',
+    method: "POST",
+    url: "/cart_items",
     data: {
       item: item
     }
@@ -3484,7 +3505,7 @@ var addItem = function addItem(item) {
 };
 var removeItem = function removeItem(itemId) {
   return $.ajax({
-    method: 'DELETE',
+    method: "DELETE",
     url: "/cart_items/".concat(itemId)
   });
 };
@@ -3584,8 +3605,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchSneaks", function() { return fetchSneaks; });
 var fetchSneaks = function fetchSneaks(search) {
   return $.ajax({
-    method: 'GET',
-    url: '/search',
+    method: "GET",
+    url: "/search",
     data: {
       search: search
     }
@@ -3608,8 +3629,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
 var signup = function signup(user) {
   return $.ajax({
-    method: 'POST',
-    url: '/api/users',
+    method: "POST",
+    url: "/api/users",
     data: {
       user: user
     }
@@ -3617,8 +3638,8 @@ var signup = function signup(user) {
 };
 var login = function login(user) {
   return $.ajax({
-    method: 'POST',
-    url: '/api/session',
+    method: "POST",
+    url: "/api/session",
     data: {
       user: user
     }
@@ -3626,8 +3647,8 @@ var login = function login(user) {
 };
 var logout = function logout() {
   return $.ajax({
-    method: 'DELETE',
-    url: '/api/session'
+    method: "DELETE",
+    url: "/api/session"
   });
 };
 
@@ -3646,8 +3667,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchSneaker", function() { return fetchSneaker; });
 var fetchSneakers = function fetchSneakers(maxId) {
   return $.ajax({
-    method: 'GET',
-    url: '/api/sneakers',
+    method: "GET",
+    url: "/api/sneakers",
     data: {
       maxId: maxId
     }
@@ -3655,7 +3676,7 @@ var fetchSneakers = function fetchSneakers(maxId) {
 };
 var fetchSneaker = function fetchSneaker(sneakerId) {
   return $.ajax({
-    method: 'GET',
+    method: "GET",
     url: "/api/sneakers/".concat(sneakerId)
   });
 };

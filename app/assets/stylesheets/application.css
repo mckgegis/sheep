@@ -15,23 +15,22 @@
  */
 
 .splash-image-container {
-    display: flex;
-    justify-content: center;
-    padding-top: 200px;
-    background: url('https://sheep-seeds.s3-us-west-1.amazonaws.com/bkgrd.jpeg') center no-repeat;
-    min-height: 600px;
     width: 100%;
     position: relative;
-    padding: 0;
-    padding-top: 200px;
+    transform: translateY(100px);
 }
 
-.splash-text {
+#splash-img {
+    width: 100%;
+    height: auto;
+}
+
+/* .splash-text {
     color: white;
     position: absolute;
     left: 20%;
     top: 30%;
-}
+} */
 
 textarea{ 
     text-transform: uppercase; 

@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useEffect} from "react";
 import { Link } from "react-router-dom";
+
 
 const Splash = () => {
   window.scrollTo(0, 0);
+  let sources = ['https://sheep-seeds.s3-us-west-1.amazonaws.com/bkgrd1.png', 'https://sheep-seeds.s3-us-west-1.amazonaws.com/bkgrd2.png', 'https://sheep-seeds.s3-us-west-1.amazonaws.com/bkgrd3.png']
+  let index = 0
+  useEffect(() => {
+    const interval = setInterval(function () {
+      if (index === sources.length) {
+        index = 0
+      }
+      document.getElementById("splash-img").src = sources[index];
+      index++;
+    }, 3000)
+    return () => clearInterval(interval);
+  }, [])
+  
   return (
-    <Link to="/sneakers/45">
+    <Link to="/sneakers/">
       <div className="splash-image-container">
-        <h2 className="splash-text">KILLSHOT X APP ACADEMY</h2>
+        <img id="splash-img"></img>
       </div>
     </Link>
   );

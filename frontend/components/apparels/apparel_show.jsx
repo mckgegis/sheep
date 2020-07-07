@@ -79,7 +79,7 @@ class ApparelShow extends React.Component {
 
         <div className="details-container">
           <div className="description-container">
-            <h5 className="detail-header">
+            <h5 className="detail-header" onClick={()=> window.scrollTo(0, 675)}>
               DETAILS
               <div className="detail-icon">
                 <i className="fas fa-chevron-down"></i>
