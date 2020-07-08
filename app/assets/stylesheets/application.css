@@ -13,15 +13,23 @@
  *= require_tree .
  *= require_self
  */
+body{
+    margin: 0;
+}
 
 .splash-image-container {
     width: 100%;
     position: relative;
+    height: 600px;
     transform: translateY(100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(238, 197, 144, 0.459);
 }
 
 #splash-img {
-    width: 100%;
+    width: 60%;
     height: auto;
 }
 

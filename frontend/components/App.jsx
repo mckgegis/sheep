@@ -27,7 +27,7 @@ const App = () => (
     <ProtectedRoute path="/cart" component={CartItemContainer} />
     <Route path="/search" component={SearchContainer} />
     <Route path="/styles" component={Style} />
-    <Footer />
+    {/* <Footer /> */}
   </div>
 );
 

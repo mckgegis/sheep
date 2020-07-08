@@ -536,7 +536,7 @@ var App = function App() {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/styles",
     component: _components_styles_styles__WEBPACK_IMPORTED_MODULE_11__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_footer_footer__WEBPACK_IMPORTED_MODULE_12__["default"], null));
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
@@ -2803,7 +2803,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var Splash = function Splash() {
   window.scrollTo(0, 0);
-  var sources = ['https://sheep-seeds.s3-us-west-1.amazonaws.com/bkgrd1.png', 'https://sheep-seeds.s3-us-west-1.amazonaws.com/bkgrd2.png', 'https://sheep-seeds.s3-us-west-1.amazonaws.com/bkgrd3.png'];
+  var sources = ["https://sheep-seeds.s3-us-west-1.amazonaws.com/bkgrd1.png", 'https://sheep-seeds.s3-us-west-1.amazonaws.com/bkgrd2.png', 'https://sheep-seeds.s3-us-west-1.amazonaws.com/bkgrd3.png', "https://sheep-seeds.s3-us-west-1.amazonaws.com/bkgrd4.png", 'https://sheep-seeds.s3-us-west-1.amazonaws.com/bkgrd5.png'];
   var index = 0;
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     var interval = setInterval(function () {
