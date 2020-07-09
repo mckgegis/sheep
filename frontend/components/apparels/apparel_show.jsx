@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import ListingIndex from "../listings/listings_index";
 import ListingIndexItem from "../listings/listing_index_item";
 import Apparel from "./apparel";
+import ReviewIndex from "../reviews/review_index"
 
 class ApparelShow extends React.Component {
   constructor(props) {
@@ -29,6 +30,8 @@ class ApparelShow extends React.Component {
 
     return (
       <div>
+        {console.log(this.props)}
+}
         <div className="sneaker-show-container">
           <div className="sneaker-show-image-container">
             <img src={apparel.imageUrl} className="sneaker-show-image" />
@@ -96,6 +99,7 @@ class ApparelShow extends React.Component {
             <div>{apparel.colorway}</div>
           </div>
         </div>
+        <ReviewIndex reviews={Object.values(this.props.reviews)} types="apparel"/>
       </div>
     );
   }

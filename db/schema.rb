@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_14_023400) do
+ActiveRecord::Schema.define(version: 2020_07_08_225109) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,6 +64,16 @@ ActiveRecord::Schema.define(version: 2020_04_14_023400) do
     t.string "itemable_type"
     t.bigint "itemable_id"
     t.index ["itemable_type", "itemable_id"], name: "index_listings_on_itemable_type_and_itemable_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string "reviewable_type"
+    t.bigint "reviewable_id"
+    t.integer "user_id", null: false
+    t.text "body", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["reviewable_type", "reviewable_id"], name: "index_reviews_on_reviewable_type_and_reviewable_id"
   end
 
   create_table "sneakers", force: :cascade do |t|

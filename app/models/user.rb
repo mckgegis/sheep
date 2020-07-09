@@ -23,6 +23,10 @@ class User < ApplicationRecord
     has_many :cart_items,
         foreign_key: :user_id,
         class_name: :CartItem
+    
+    has_many :reviews, 
+        foreign_key: :user_id,
+        class_name: :Review
 
     def self.find_by_credentials(user_params)
         user = User.find_by(username: user_params[:username])

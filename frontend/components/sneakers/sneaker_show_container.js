@@ -7,6 +7,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     sneaker: state.entities.sneakers[ownProps.match.params.sneakerId],
     listings: state.entities.listings,
+    reviews: state.entities.reviews,
     user: state.entities.users[state.session.id]
   };
 };

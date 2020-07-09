@@ -2,13 +2,14 @@
 #
 # Table name: listings
 #
-#  id           :bigint           not null, primary key
-#  sneaker_id   :integer          not null
-#  price        :integer          not null
-#  size         :float            not null
-#  retail_price :integer          not null
-#  created_at   :datetime         not null
-#  updated_at   :datetime         not null
+#  id            :bigint           not null, primary key
+#  price         :integer          not null
+#  size          :float            not null
+#  retail_price  :integer          not null
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#  itemable_type :string
+#  itemable_id   :bigint
 #
 class Listing < ApplicationRecord
     validates :itemable_id, :price, :size, :retail_price, presence: true

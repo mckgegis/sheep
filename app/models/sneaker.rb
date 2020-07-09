@@ -5,9 +5,9 @@
 #  id           :bigint           not null, primary key
 #  name         :string           not null
 #  sku          :string           not null
-#  description  :string           not null
+#  description  :text             not null
 #  colorway     :string           not null
-#  release_date :datetime         not null
+#  release_date :date             not null
 #  brand        :string           not null
 #  silhouette   :string           not null
 #  designer     :string           not null
@@ -20,6 +20,9 @@ class Sneaker < ApplicationRecord
 
       has_many :listings,
         as: :itemable
+
+      has_many :reviews,
+        as: :reviewable
       
       def self.fetch(maxId) 
         @sneakers = Sneaker

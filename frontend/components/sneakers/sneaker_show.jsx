@@ -3,6 +3,7 @@ import { Link, Switch, Route } from "react-router-dom";
 import ListingIndex from "../listings/listings_index";
 import ListingIndexItem from "../listings/listing_index_item";
 import Sneaker from "./sneaker";
+import ReviewIndex from "../reviews/review_container"
 
 class SneakerShow extends React.Component {
   constructor(props) {
@@ -112,6 +113,7 @@ class SneakerShow extends React.Component {
             <div>{sneaker.colorway}</div>
           </div>
         </div>
+        <ReviewIndex />
       </div>
     );
   }
