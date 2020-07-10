@@ -31,7 +31,6 @@ const ListingIndexItem = ({
 
   return (
     <div className="listing-index-container">
-      {console.log(props)}
       <div className="listing-index-header-container">
         <h3>Lowest Price</h3>
         <h3>${listing.price}</h3>

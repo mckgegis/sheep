@@ -13,6 +13,7 @@ class ReviewIndex extends React.Component {
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleClick = this.handleClick.bind(this)
     }
 
     handleChange() {
@@ -23,13 +24,17 @@ class ReviewIndex extends React.Component {
         }
     }
 
-    handleSubmit(e) {
-        this.props.addReview(this.state).then(review => {
-            this.setState({
+    handleSubmit() {
+        this.props.addReview(this.state)
+        this.setState({
                 body: ""
             })
-        })
-        
+    }
+
+    handleClick(id, user_id) {
+        if (this.props.user.id === user_id) {
+            this.props.removeRev(this.props.type, this.props.itemID, id)
+        }
     }
 
     componentWillUnmount(){
@@ -48,6 +53,7 @@ class ReviewIndex extends React.Component {
                             <div>{review.username}</div>
                             <div>reviews on {review.created_at}</div>
                             <div>{review.body}</div>
+                            <button onClick={(e) => this.handleClick(review.id, review.user_id)}>DELETE</button>
 
                         </div>
                     )

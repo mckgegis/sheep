@@ -30,7 +30,6 @@ class ApparelShow extends React.Component {
 
     return (
       <div>
-        {console.log(this.props)}
 }
         <div className="sneaker-show-container">
           <div className="sneaker-show-image-container">

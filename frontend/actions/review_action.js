@@ -10,14 +10,14 @@ const recieveReviews = reviews => ({
     reviews
 })
 
-const recieveReview = reviews => ({
+const recieveReview = review => ({
     type: RECIEVE_REVIEW,
-    reviews
+    review
 })
 
-const removeReview = reviewID => ({
+const removeReview = (reviewID) => ({
     type: REMOVE_REVIEW,
-    reviewID
+    id: reviewID
 })
 
 export const clearReviews = () => ({
@@ -29,13 +29,15 @@ export const fetchReviews = (reviewable_type, itemId) => dispatch =>
         dispatch(recieveReviews(reviews))
     );
 
-export const addReview = (review) => dispatch =>
+export const addReview = (review) => dispatch => {
     ReviewApiUtil.addReview(review).then(review =>
         dispatch(recieveReview(review))
-    );
+    )
+}
+;
 
-export const removeRev = reviewID => dispatch =>
-    ReviewApiUtil.removeReview(reviewID).then(() =>
+export const removeRev = (type, itemID, reviewID) => dispatch =>
+    ReviewApiUtil.removeReview(type, itemID, reviewID).then(() =>
         dispatch(removeReview(reviewID))
     );
 

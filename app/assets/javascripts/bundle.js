@@ -319,17 +319,17 @@ var recieveReviews = function recieveReviews(reviews) {
   };
 };
 
-var recieveReview = function recieveReview(reviews) {
+var recieveReview = function recieveReview(review) {
   return {
     type: RECIEVE_REVIEW,
-    reviews: reviews
+    review: review
   };
 };
 
 var removeReview = function removeReview(reviewID) {
   return {
     type: REMOVE_REVIEW,
-    reviewID: reviewID
+    id: reviewID
   };
 };
 
@@ -347,14 +347,14 @@ var fetchReviews = function fetchReviews(reviewable_type, itemId) {
 };
 var addReview = function addReview(review) {
   return function (dispatch) {
-    return _util_review_api_util__WEBPACK_IMPORTED_MODULE_0__["addReview"](review).then(function (review) {
+    _util_review_api_util__WEBPACK_IMPORTED_MODULE_0__["addReview"](review).then(function (review) {
       return dispatch(recieveReview(review));
     });
   };
 };
-var removeRev = function removeRev(reviewID) {
+var removeRev = function removeRev(type, itemID, reviewID) {
   return function (dispatch) {
-    return _util_review_api_util__WEBPACK_IMPORTED_MODULE_0__["removeReview"](reviewID).then(function () {
+    return _util_review_api_util__WEBPACK_IMPORTED_MODULE_0__["removeReview"](type, itemID, reviewID).then(function () {
       return dispatch(removeReview(reviewID));
     });
   };
@@ -959,7 +959,7 @@ var ApparelShow = /*#__PURE__*/function (_React$Component) {
       }
 
       var apparel = this.props.apparel;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, console.log(this.props), "}", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "}", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "sneaker-show-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "sneaker-show-image-container"
@@ -1695,7 +1695,7 @@ var ListingIndexItem = function ListingIndexItem(_ref) {
   } : {};
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "listing-index-container"
-  }, console.log(props), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "listing-index-header-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Lowest Price"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "$", listing.price)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "listing-index-details-container"
@@ -2209,8 +2209,8 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     addReview: function addReview(review) {
       return dispatch(Object(_actions_review_action__WEBPACK_IMPORTED_MODULE_1__["addReview"])(review));
     },
-    removeRev: function removeRev(reviewID) {
-      return dispatch(Object(_actions_review_action__WEBPACK_IMPORTED_MODULE_1__["removeRev"])(reviewID));
+    removeRev: function removeRev(type, itemID, reviewID) {
+      return dispatch(Object(_actions_review_action__WEBPACK_IMPORTED_MODULE_1__["removeRev"])(type, itemID, reviewID));
     },
     clearReviews: function clearReviews() {
       return dispatch(Object(_actions_review_action__WEBPACK_IMPORTED_MODULE_1__["clearReviews"])());
@@ -2271,6 +2271,7 @@ var ReviewIndex = /*#__PURE__*/function (_React$Component) {
     };
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -2287,14 +2288,18 @@ var ReviewIndex = /*#__PURE__*/function (_React$Component) {
     }
   }, {
     key: "handleSubmit",
-    value: function handleSubmit(e) {
-      var _this3 = this;
-
-      this.props.addReview(this.state).then(function (review) {
-        _this3.setState({
-          body: ""
-        });
+    value: function handleSubmit() {
+      this.props.addReview(this.state);
+      this.setState({
+        body: ""
       });
+    }
+  }, {
+    key: "handleClick",
+    value: function handleClick(id, user_id) {
+      if (this.props.user.id === user_id) {
+        this.props.removeRev(this.props.type, this.props.itemID, id);
+      }
     }
   }, {
     key: "componentWillUnmount",
@@ -2304,6 +2309,8 @@ var ReviewIndex = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this3 = this;
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "reviews-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Reviews"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -2316,7 +2323,11 @@ var ReviewIndex = /*#__PURE__*/function (_React$Component) {
       }), this.props.reviews.map(function (review, i) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           key: i
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, review.username), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "reviews on ", review.created_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, review.body));
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, review.username), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "reviews on ", review.created_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, review.body), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          onClick: function onClick(e) {
+            return _this3.handleClick(review.id, review.user_id);
+          }
+        }, "DELETE"));
       }));
     }
   }]);
@@ -3408,10 +3419,11 @@ var reviewReducer = function reviewReducer() {
       return Object.assign({}, state, action.reviews);
 
     case _actions_review_action__WEBPACK_IMPORTED_MODULE_0__["RECIEVE_REVIEW"]:
-      return Object.assign({}, state, action.reviews);
+      nextState[action.review.id] = action.review;
+      return nextState;
 
     case _actions_review_action__WEBPACK_IMPORTED_MODULE_0__["REMOVE_REVIEW"]:
-      delete nextState[action.review.id];
+      delete nextState[action.id];
       return nextState;
 
     case _actions_review_action__WEBPACK_IMPORTED_MODULE_0__["CLEAR_REVIEWS"]:
