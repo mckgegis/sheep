@@ -13,6 +13,7 @@ class SneakerShow extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0);
     this.props.fetchSneaker(this.props.match.params.sneakerId);
+    this.props.fetchReviews("sneakers" ,this.props.match.params.sneakerId)
   }
 
   displayPrice() {
@@ -113,7 +114,7 @@ class SneakerShow extends React.Component {
             <div>{sneaker.colorway}</div>
           </div>
         </div>
-        <ReviewIndex />
+        <ReviewIndex type="sneakers" itemID={this.props.match.params.sneakerId}/>
       </div>
     );
   }

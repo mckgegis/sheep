@@ -1,13 +1,13 @@
-export const fetchReviews = (itemID, type) => 
+export const fetchReviews = (reviewable_type, itemID) => 
     $.ajax({
         method: "GET",
-        url: `api/${type}/${itemID}/reviews`
+        url: `api/${reviewable_type}/${itemID}/reviews`
     })
 
-export const addReview = (review, type, itemID) => 
+export const addReview = (review) => 
     $.ajax({
         method: "POST",
-        url: `api/${type}/${itemID}/reviews`,
+        url: `api/${review.reviewable_type}/${review.reviewable_id}/reviews`,
         data: { review }
     })
 

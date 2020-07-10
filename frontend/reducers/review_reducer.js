@@ -1,7 +1,8 @@
 import {
     RECIEVE_REVIEWS,
     RECIEVE_REVIEW, 
-    REMOVE_REVIEW
+    REMOVE_REVIEW,
+    CLEAR_REVIEWS
 } from '../actions/review_action'
 
 const reviewReducer = (state = {}, action) => {
@@ -11,11 +12,12 @@ const reviewReducer = (state = {}, action) => {
         case RECIEVE_REVIEWS:
             return Object.assign({}, state, action.reviews);
         case RECIEVE_REVIEW:
-            nextState[action.review.id] = action.review;
-            return nextState;
+            return Object.assign({}, state, action.reviews);
         case REMOVE_REVIEW:
             delete nextState[action.review.id]
             return nextState;
+        case CLEAR_REVIEWS:
+            return {}
         default:
             return state;
     };
