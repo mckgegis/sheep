@@ -3521,7 +3521,7 @@ var Splash = function Splash() {
     }, 3000);
     setTimeout(function () {
       setModal(true);
-    }, 10000);
+    }, 12000);
     return function () {
       return clearInterval(interval);
     };
