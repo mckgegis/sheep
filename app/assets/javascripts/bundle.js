@@ -3519,11 +3519,12 @@ var Splash = function Splash() {
       otherref.current.className = "splash-image-container ".concat(color[index]);
       index++;
     }, 3000);
-    setTimeout(function () {
+    var timeout = setTimeout(function () {
       setModal(true);
     }, 12000);
     return function () {
-      return clearInterval(interval);
+      clearInterval(interval);
+      clearTimeout(timeout);
     };
   }, []);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, modal ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_login_login_modal_container__WEBPACK_IMPORTED_MODULE_2__["default"], {
