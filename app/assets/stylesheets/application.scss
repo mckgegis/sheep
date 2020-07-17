@@ -13,21 +13,41 @@
  *= require_tree .
  *= require_self
  */
+
+ :root {
+  --shadow-l: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
 body{
     margin: 0;
 }
 
 .splash-image-container {
     width: 100%;
-    position: relative;
+    position: absolute;
     height: 600px;
     transform: translateY(100px);
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(238, 197, 144, 0.459);
+    /* background-color: rgba(238, 197, 144, 0.459); */
 }
 
+.brown {
+    background-color: rgba(238, 197, 144, 0.459);
+}
+.black {
+    background-color:  rgba(77, 83, 112, 0.158);
+}
+.white {
+    background-color: rgba(241, 179, 99, 0.438);
+}
+.orange {
+    background-color: rgba(197, 72, 72, 0.295);
+}
+.yellow {
+    background-color: rgba(144, 219, 238, 0.192);
+}
 #splash-img {
     width: 60%;
     height: auto;
@@ -40,12 +60,6 @@ body{
     top: 30%;
 } */
 
-textarea{ 
-    text-transform: uppercase; 
-    text-align: center;
-    vertical-align: middle;
-    padding-top: 30px;
-}
 
 * {
     font-family: 'Montserrat', sans-serif;
@@ -55,3 +69,4 @@ textarea{
 
 button:focus {outline:0;}
 input:focus {outline:0}
+

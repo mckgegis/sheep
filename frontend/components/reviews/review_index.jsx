@@ -1,4 +1,5 @@
 import React from 'react'
+import ReviewRating from './review_rating_container'
 
 class ReviewIndex extends React.Component {
     constructor(props) {
@@ -7,28 +8,9 @@ class ReviewIndex extends React.Component {
             body: "",
             reviewable_type: this.props.type,
             reviewable_id: this.props.itemID,
-            user_id: this.props.user.id,
-            username: this.props.user.username
-
         }
-        this.handleChange = this.handleChange.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
+
         this.handleClick = this.handleClick.bind(this)
-    }
-
-    handleChange() {
-        return e => {
-            this.setState({
-                body: e.target.value
-            })
-        }
-    }
-
-    handleSubmit() {
-        this.props.addReview(this.state)
-        this.setState({
-                body: ""
-            })
     }
 
     handleClick(id, user_id) {
@@ -43,23 +25,54 @@ class ReviewIndex extends React.Component {
 
     render() {
         return (
-            <div className='reviews-container'>
-                <h1>Reviews</h1>
-                <input type="text" value={this.state.body} onChange={this.handleChange(this.value)} />
-                <input type="submit" onClick={this.handleSubmit}/>
-                {this.props.reviews.map((review, i) => {
-                    return(
-                        <div key={i}>
-                            <div>{review.username}</div>
-                            <div>reviews on {review.created_at}</div>
-                            <div>{review.body}</div>
-                            <button onClick={(e) => this.handleClick(review.id, review.user_id)}>DELETE</button>
-
-                        </div>
-                    )
-                })}
-            </div >
-        )
+          <div className="reviews-container">
+            <h1>Reviews</h1>        
+            <ReviewRating reviewable_id={this.state.reviewable_id} reviewable_type={this.state.reviewable_type} user={this.props.user}/> 
+            {this.props.reviews.map((review, i) => {
+              return (
+                <div key={i} className="review-container">
+                  <div className="review-author">{review.username}</div>
+                  <div className="review-date">
+                    reviewed on {review.created_at.slice(0, 10)}
+                  </div>
+                  <div
+                    className={`rating medium star-icon direction-ltr value-${review.rating} color-positve label-hidden`}
+                  >
+                    <div className="star-container">
+                      <div className="star">
+                        <i className="star-empty"></i>
+                        <i className="star-filled"></i>
+                      </div>
+                      <div className="star">
+                        <i className="star-empty"></i>
+                        <i className="star-filled"></i>
+                      </div>
+                      <div className="star">
+                        <i className="star-empty"></i>
+                        <i className="star-filled"></i>
+                      </div>
+                      <div className="star">
+                        <i className="star-empty"></i>
+                        <i className="star-filled"></i>
+                      </div>
+                      <div className="star">
+                        <i className="star-empty"></i>
+                        <i className="star-filled"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="review-body">{review.body}</div>
+                  <button
+                    className="review-delete-button"
+                    onClick={e => this.handleClick(review.id, review.user_id)}
+                  >
+                    DELETE
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+        );
     }
   
 

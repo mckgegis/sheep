@@ -13,7 +13,8 @@ end
 json.reviews do
     @sneaker.reviews.each do |review|
         json.set! review.id do
-            json.extract! review, :id, :reviewable_id, :reviewable_type, :user_id, :body
+            json.extract! review, :id, :reviewable_id, :reviewable_type, :user_id, :rating, :body
+            json.username review.user.username
         end
     end
 end

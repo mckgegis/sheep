@@ -21,13 +21,12 @@ const App = () => (
     <AuthRoute path="/login" component={LoginFormContainer} />
     <AuthRoute path="/signup" component={SignupFormContainer} />
     <Route exact path="/sneakers" component={SneakerIndexContainer} />
-    <Route path="/sneakers/:sneakerId" component={SneakerShowContainer} />
+    <ProtectedRoute path="/sneakers/:sneakerId" component={SneakerShowContainer} />
     <Route exact path="/apparels" component={ApparelIndexContainer} />
-    <Route path="/apparels/:apparelId" component={ApparelShowContainer} />
+    <ProtectedRoute path="/apparels/:apparelId" component={ApparelShowContainer} />
     <ProtectedRoute path="/cart" component={CartItemContainer} />
     <Route path="/search" component={SearchContainer} />
     <Route path="/styles" component={Style} />
-    {/* <Footer /> */}
   </div>
 );
 

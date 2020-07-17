@@ -19,6 +19,10 @@ class Apparel < ApplicationRecord
     has_many :reviews,
         as: :reviewable
 
+    has_many :reviewers,
+        source: :user,
+        through: :reviews
+
     has_one_attached :photo
 
     def self.fetch(maxId) 

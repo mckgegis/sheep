@@ -23,6 +23,10 @@ class Sneaker < ApplicationRecord
 
       has_many :reviews,
         as: :reviewable
+
+      has_many :reviewers,
+        source: :user,
+        through: :reviews
       
       def self.fetch(maxId) 
         @sneakers = Sneaker

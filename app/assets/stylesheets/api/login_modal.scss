@@ -1,0 +1,44 @@
+.login-modal-container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-session-fields{
+  width: max-content;
+  padding: 1em;
+  border-radius:8px;
+  box-shadow: var(--shadow-l);
+}
+
+.modal-session-input{
+  border-radius: 6px;
+  outline: none;
+  border: 2px solid lightgrey;
+}
+
+.modal-session-input:focus{
+  outline: none;
+  border: 2px solid  rgba(246, 211, 147, 0.534);
+}
+
+.modal-button{
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  margin: 5px;
+}
+
+.modal-button:hover{
+  background-color: rgba(246, 211, 147, 0.534);
+;
+}
+
+.modal-header{
+  place-self: center;
+}
+
+.modal-signup-link:visited{
+  color: inherit;
+}

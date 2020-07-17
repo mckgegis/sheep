@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import ListingIndex from "../listings/listings_index";
 import ListingIndexItem from "../listings/listing_index_item";
 import Apparel from "./apparel";
-import ReviewIndex from "../reviews/review_index"
+import ReviewIndex from "../reviews/review_container"
 
 class ApparelShow extends React.Component {
   constructor(props) {
@@ -13,6 +13,8 @@ class ApparelShow extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0);
     this.props.fetchApparel(this.props.match.params.apparelId);
+    this.props.fetchReviews("apparels", this.props.match.params.apparelId)
+
   }
 
   displayPrice() {
@@ -98,7 +100,11 @@ class ApparelShow extends React.Component {
             <div>{apparel.colorway}</div>
           </div>
         </div>
-        <ReviewIndex reviews={Object.values(this.props.reviews)} types="apparel"/>
+        <ReviewIndex
+          type="apparels"
+          itemID={this.props.match.params.apparelId}
+          user={this.props.user}
+        />
       </div>
     );
   }

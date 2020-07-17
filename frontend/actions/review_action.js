@@ -29,12 +29,10 @@ export const fetchReviews = (reviewable_type, itemId) => dispatch =>
         dispatch(recieveReviews(reviews))
     );
 
-export const addReview = (review) => dispatch => {
+export const addReview = review => dispatch => 
     ReviewApiUtil.addReview(review).then(review =>
         dispatch(recieveReview(review))
-    )
-}
-;
+    );
 
 export const removeRev = (type, itemID, reviewID) => dispatch =>
     ReviewApiUtil.removeReview(type, itemID, reviewID).then(() =>

@@ -11,7 +11,7 @@
 #  updated_at      :datetime         not null
 #
 class Review < ApplicationRecord
-  validates :reviewable_id, :user_id, :body, presence: true
+  validates :reviewable_id, :user_id, :body, :rating, presence: true
 
   belongs_to :reviewable, polymorphic: true
   

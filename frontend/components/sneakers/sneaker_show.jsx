@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import ListingIndex from "../listings/listings_index";
 import ListingIndexItem from "../listings/listing_index_item";
 import Sneaker from "./sneaker";
@@ -114,7 +114,12 @@ class SneakerShow extends React.Component {
             <div>{sneaker.colorway}</div>
           </div>
         </div>
-        <ReviewIndex type="sneakers" itemID={this.props.match.params.sneakerId}/>
+       
+        <ReviewIndex
+          type="sneakers"
+          itemID={this.props.match.params.sneakerId}
+          user={this.props.user}
+        />
       </div>
     );
   }
