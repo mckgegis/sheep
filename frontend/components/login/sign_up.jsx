@@ -14,7 +14,7 @@ class SignUpForm extends React.Component {
     };
 
     this.demoUser = {
-      username: "ryanisdagoat",
+      username: "ryanisagoat",
       password: "truuuu"
     };
 
@@ -125,3 +125,4 @@ class SignUpForm extends React.Component {
 }
 
 export default SignUpForm;
+

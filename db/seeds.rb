@@ -36,7 +36,7 @@ u19 = User.create({:first_name=>"Rosaline", :last_name=>"Koch", :username=>"tyro
 u20 = User.create({:first_name=>"Rolando", :last_name=>"Macejkovic", :username=>"barrett_wilderman", :email=>"dannie.aufderhar@spinkamoen.net", :password=>"6jk9yq"})
 u21 = User.create({:first_name=>"Kerry", :last_name=>"Abshire", :username=>"lili_franecki", :email=>"aiko@macgyver.biz", :password=>"2xr4be"})
 u22 = User.create({:first_name=>"Allegra", :last_name=>"Kub", :username=>"margarito_lind", :email=>"chester@graham.name", :password=>"wv54pk"})
-u23 = User.create({:first_name=>"Ryan", :last_name=>"Leung", :username=>"ryanisdagoat", :email=>"john@herman.biz", :password=>"truuuu"})
+u23 = User.create({:first_name=>"Ryan", :last_name=>"Leung", :username=>"ryanisagoat", :email=>"john@herman.biz", :password=>"truuuu"})
 u24 = User.create({:first_name=>"Lindsay", :last_name=>"Legros", :username=>"rasheeda", :email=>"jonathon_schuppe@auer.org", :password=>"vtji21"})
 u25 = User.create({:first_name=>"Dominique", :last_name=>"Buckridge", :username=>"eliseo_mann", :email=>"elly@kelerreichert.io", :password=>"jyfc2h"})
 u25 = User.create({:first_name=>"Nathan", :last_name=>"Mendes", :username=>"uwu", :email=>"uwu@uwu.io", :password=>"password"})

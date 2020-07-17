@@ -117,6 +117,10 @@
     box-sizing: inherit;
 }
 
+.demo-button:hover {
+    text-decoration: underline;
+}
+
 .session-button {
     border: none;
     cursor: pointer;
@@ -133,6 +137,12 @@
     box-sizing: inherit;
 
 }
+
+.session-button:hover{
+    text-decoration: underline;
+}
+
+
 
 .session-submit-container {
     display: flex;

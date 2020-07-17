@@ -591,14 +591,14 @@ var App = function App() {
     exact: true,
     path: "/sneakers",
     component: _components_sneakers_sneaker_index_container__WEBPACK_IMPORTED_MODULE_5__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_utils__WEBPACK_IMPORTED_MODULE_7__["ProtectedRoute"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/sneakers/:sneakerId",
     component: _components_sneakers_sneaker_show_container__WEBPACK_IMPORTED_MODULE_8__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
     path: "/apparels",
     component: _components_apparels_apparel_index_container__WEBPACK_IMPORTED_MODULE_13__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_utils__WEBPACK_IMPORTED_MODULE_7__["ProtectedRoute"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/apparels/:apparelId",
     component: _components_apparels_apparel_show_container__WEBPACK_IMPORTED_MODULE_14__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_utils__WEBPACK_IMPORTED_MODULE_7__["ProtectedRoute"], {
@@ -1833,7 +1833,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
       password: ""
     };
     _this.demoUser = {
-      username: "ryanisdagoat",
+      username: "ryanisagoat",
       password: "truuuu"
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
@@ -2020,7 +2020,7 @@ var LoginModal = /*#__PURE__*/function (_React$Component) {
       password: ""
     };
     _this.demoUser = {
-      username: "ryanisdagoat",
+      username: "ryanisagoat",
       password: "truuuu"
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
@@ -2040,14 +2040,22 @@ var LoginModal = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "handleSubmit",
     value: function handleSubmit(e) {
+      var _this3 = this;
+
       e.preventDefault();
-      this.props.login(this.state).then(this.props.setModal(false));
+      this.props.login(this.state).then(function () {
+        return _this3.props.setModal(false);
+      });
     }
   }, {
     key: "handleDemo",
     value: function handleDemo(e) {
+      var _this4 = this;
+
       e.preventDefault();
-      this.props.login(this.demoUser).then(this.props.setModal(false));
+      this.props.login(this.demoUser).then(function () {
+        return _this4.props.setModal(false);
+      });
     }
   }, {
     key: "componentWillUnmount",
@@ -2070,33 +2078,31 @@ var LoginModal = /*#__PURE__*/function (_React$Component) {
         className: "modal-header"
       }, "Log In"), !errors.length ? "" : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "modal-session-errors"
-      }, errors.join(" ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        className: "modal-session-label"
-      }, "Username", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, errors.join(" ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "modal-session-input",
         type: "text",
         value: this.state.username,
-        onChange: this.update("username")
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        className: "modal-session-label"
-      }, "Password", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        onChange: this.update("username"),
+        placeholder: "Username"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "modal-session-input",
         type: "password",
         value: this.state.password,
-        onChange: this.update("password")
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        onChange: this.update("password"),
+        placeholder: "Password"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-session-submit-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "modal-button",
         onClick: this.handleDemo
       }, "Demo User"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "modal-button"
-      }, "Log In"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "modal-button"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      }, "Log In"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "modal-signup-text"
+      }, "Looking to ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/signup",
         className: "modal-signup-link"
-      }, "Sign Up"))))));
+      }, "create an account"), "?"))));
     }
   }]);
 
@@ -2197,7 +2203,7 @@ var SignUpForm = /*#__PURE__*/function (_React$Component) {
       password: ""
     };
     _this.demoUser = {
-      username: "ryanisdagoat",
+      username: "ryanisagoat",
       password: "truuuu"
     };
     _this.handleDemo = _this.handleDemo.bind(_assertThisInitialized(_this));
@@ -2471,11 +2477,11 @@ var ReviewIndex = /*#__PURE__*/function (_React$Component) {
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "reviews-container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Reviews"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_review_rating_container__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Reviews"), this.props.user ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_review_rating_container__WEBPACK_IMPORTED_MODULE_1__["default"], {
         reviewable_id: this.state.reviewable_id,
         reviewable_type: this.state.reviewable_type,
         user: this.props.user
-      }), this.props.reviews.map(function (review, i) {
+      }) : null, this.props.reviews.map(function (review, i) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           key: i,
           className: "review-container"
@@ -2622,7 +2628,7 @@ var ReviewRating = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      return this.state.add_review ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return this.props.user.id ? this.state.add_review ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "ratings"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "ratings-left"
@@ -2720,7 +2726,7 @@ var ReviewRating = /*#__PURE__*/function (_React$Component) {
           });
         },
         className: "review-add-button"
-      }, "Add a Review");
+      }, "Add a Review") : null;
     }
   }]);
 
@@ -3515,7 +3521,7 @@ var Splash = function Splash() {
     }, 3000);
     setTimeout(function () {
       setModal(true);
-    }, 2000);
+    }, 10000);
     return function () {
       return clearInterval(interval);
     };

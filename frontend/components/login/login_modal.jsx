@@ -11,7 +11,7 @@ class LoginModal extends React.Component {
         };
 
         this.demoUser = {
-            username: "ryanisdagoat",
+            username: "ryanisagoat",
             password: "truuuu"
         };
 
@@ -29,12 +29,12 @@ class LoginModal extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.login(this.state).then(this.props.setModal(false));
+        this.props.login(this.state).then(() => this.props.setModal(false));
     }
 
     handleDemo(e) {
         e.preventDefault();
-        this.props.login(this.demoUser).then(this.props.setModal(false));
+        this.props.login(this.demoUser).then(() => this.props.setModal(false));
     }
 
     componentWillUnmount() {
@@ -55,25 +55,24 @@ class LoginModal extends React.Component {
                         ) : (
                                 <p className="modal-session-errors">{errors.join(" ")}</p>
                             )}
-                        <label className="modal-session-label">Username
-                            <br />
                             <input
                                 className="modal-session-input"
                                 type="text"
                                 value={this.state.username}
                                 onChange={this.update("username")}
+                                placeholder="Username"
                             />
-                        </label>
-                        <br />
-                        <label className="modal-session-label">Password
-                            <br />                       
+                            <br/> 
+                            <br/>                   
                             <input
                                 className="modal-session-input"
                                 type="password"
                                 value={this.state.password}
                                 onChange={this.update("password")}
+                                placeholder="Password"
                             />
-                        </label>
+                            <br/>
+                            <br/>
                         <div className="modal-session-submit-container">
                             <button className="modal-button" onClick={this.handleDemo}>
                                 Demo User
@@ -81,8 +80,8 @@ class LoginModal extends React.Component {
                             <br />
                             <button className="modal-button">Log In</button>
                             <br/>
-                            <button className="modal-button"><Link to="/signup" className="modal-signup-link">Sign Up</Link></button>
                         </div>
+                        <div className="modal-signup-text">Looking to <Link to="/signup" className="modal-signup-link">create an account</Link>?</div>
                     </form>
                 </div>
             </div >

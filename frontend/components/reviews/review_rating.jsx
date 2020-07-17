@@ -37,7 +37,7 @@ class ReviewRating extends React.Component {
   }
 
   render() {
-      return this.state.add_review ? 
+      return this.props.user.id ? this.state.add_review ? 
         <div className="ratings">
           <div className="ratings-left">
             <div className="rating-author">{this.state.username}</div>
@@ -85,7 +85,7 @@ class ReviewRating extends React.Component {
           </div>
 
         </div>
-        : <button onClick={() => this.setState({add_review: true})} className="review-add-button">Add a Review</button>
+        : <button onClick={() => this.setState({add_review: true})} className="review-add-button">Add a Review</button> : null
   }
 }
 

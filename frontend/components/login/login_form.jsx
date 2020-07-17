@@ -11,7 +11,7 @@ class LoginForm extends React.Component {
     };
 
     this.demoUser = {
-      username: "ryanisdagoat",
+      username: "ryanisagoat",
       password: "truuuu"
     };
 

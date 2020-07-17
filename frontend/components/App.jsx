@@ -21,9 +21,9 @@ const App = () => (
     <AuthRoute path="/login" component={LoginFormContainer} />
     <AuthRoute path="/signup" component={SignupFormContainer} />
     <Route exact path="/sneakers" component={SneakerIndexContainer} />
-    <ProtectedRoute path="/sneakers/:sneakerId" component={SneakerShowContainer} />
+    <Route path="/sneakers/:sneakerId" component={SneakerShowContainer} />
     <Route exact path="/apparels" component={ApparelIndexContainer} />
-    <ProtectedRoute path="/apparels/:apparelId" component={ApparelShowContainer} />
+    <Route path="/apparels/:apparelId" component={ApparelShowContainer} />
     <ProtectedRoute path="/cart" component={CartItemContainer} />
     <Route path="/search" component={SearchContainer} />
     <Route path="/styles" component={Style} />

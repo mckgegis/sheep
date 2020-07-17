@@ -3,19 +3,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(255, 255, 255, 0.603);
+  position: absolute;
+  width: 100vw;
+  z-index: 1;
 }
 
 .modal-session-fields{
-  width: max-content;
+  width: 250px;
+  height: 300px;
   padding: 1em;
   border-radius:8px;
   box-shadow: var(--shadow-l);
+  background-color: white;
 }
 
 .modal-session-input{
   border-radius: 6px;
   outline: none;
   border: 2px solid lightgrey;
+  padding: 10px;
+  width: 100%;
 }
 
 .modal-session-input:focus{
@@ -23,22 +31,39 @@
   border: 2px solid  rgba(246, 211, 147, 0.534);
 }
 
+.modal-session-errors{
+  color: red;
+}
+
 .modal-button{
   border: none;
   outline: none;
   border-radius: 6px;
-  margin: 5px;
+  width: 45%;
+  padding: 10px;
+  background-color: rgba(246, 211, 147, 0.534);
 }
 
 .modal-button:hover{
-  background-color: rgba(246, 211, 147, 0.534);
-;
+  text-decoration: underline;
 }
 
 .modal-header{
   place-self: center;
 }
 
-.modal-signup-link:visited{
-  color: inherit;
+
+.modal-session-submit-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-signup-text{
+  font-size: .8em;
+  padding: 10px;
+}
+
+.modal-signup-link{
+    color: blue;
+  
 }

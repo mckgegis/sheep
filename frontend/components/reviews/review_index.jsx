@@ -27,7 +27,7 @@ class ReviewIndex extends React.Component {
         return (
           <div className="reviews-container">
             <h1>Reviews</h1>        
-            <ReviewRating reviewable_id={this.state.reviewable_id} reviewable_type={this.state.reviewable_type} user={this.props.user}/> 
+            {this.props.user ? <ReviewRating reviewable_id={this.state.reviewable_id} reviewable_type={this.state.reviewable_type} user={this.props.user} /> : null}
             {this.props.reviews.map((review, i) => {
               return (
                 <div key={i} className="review-container">
