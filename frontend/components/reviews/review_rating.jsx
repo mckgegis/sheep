@@ -46,23 +46,23 @@ class ReviewRating extends React.Component {
             <div className={`rating value-${this.state.rating} medium star-icon color-ok direction-ltr`}>
               <div className="star-container">
                 
-                <div className="star" onClick={() => this.dakine = this.dakine === true ? false : true} onMouseEnter={() => this.dakine ? this.handleEnter(1) : null}>
+                <div className="star" onClick={() => this.dakine = this.dakine === true ? false : true} onMouseEnter={() => this.dakine ? this.handleEnter(1) : null} onMouseLeave={() => this.dakine ? this.handleEnter(0) : null}>
                   <i className="star-empty"></i>
                   <i className="star-filled"></i>
                 </div>
-                <div className="star" onClick={() => this.dakine = this.dakine === true ? false : true} onMouseEnter={() => this.dakine ? this.handleEnter(2) : null}>
+                <div className="star" onClick={() => this.dakine = this.dakine === true ? false : true} onMouseEnter={() => this.dakine ? this.handleEnter(2) : null} onMouseLeave={() => this.dakine ? this.handleEnter(0) : null}>
                   <i className="star-empty"></i>
                   <i className="star-filled"></i>
                 </div>
-                <div className="star" onClick={() => this.dakine = this.dakine === true ? false : true} onMouseEnter={() => this.dakine ? this.handleEnter(3) : null}>
+                <div className="star" onClick={() => this.dakine = this.dakine === true ? false : true} onMouseEnter={() => this.dakine ? this.handleEnter(3) : null} onMouseLeave={() => this.dakine ? this.handleEnter(0) : null}>
                   <i className="star-empty"></i>
                   <i className="star-filled"></i>
                 </div>
-                <div className="star" onClick={() => this.dakine = this.dakine === true ? false : true} onMouseEnter={() => this.dakine ? this.handleEnter(4) : null}>
+                <div className="star" onClick={() => this.dakine = this.dakine === true ? false : true} onMouseEnter={() => this.dakine ? this.handleEnter(4) : null} onMouseLeave={() => this.dakine ? this.handleEnter(0) : null}>
                   <i className="star-empty"></i>
                   <i className="star-filled"></i>
                 </div>
-                <div className="star" onClick={() => this.dakine = this.dakine === true ? false : true} onMouseEnter={() => this.dakine ? this.handleEnter(5) : null}>
+                <div className="star" onClick={() => this.dakine = this.dakine === true ? false : true} onMouseEnter={() => this.dakine ? this.handleEnter(5) : null} onMouseLeave={() => this.dakine ? this.handleEnter(0) : null}>
                   <i className="star-empty"></i>
                   <i className="star-filled"></i>
                 </div>

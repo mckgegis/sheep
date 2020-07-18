@@ -1,6 +1,6 @@
 .style-container {
     width: 85%;
-    height: 1500px;
+    // height: 1500px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -17,15 +17,28 @@
     justify-content: space-between;
 }
 
-.style-image{
+.style-image-odd{
     width: 85%;
     height: auto;
+    padding-bottom: 100px;
 }
 
-.style-image:hover{
-    transition: transform .5s ease;
+.style-image-even{
+    width: 85%;
+    height: auto;
+    padding-bottom: 150px;
+}
 
-    transform: scale(1.1);
+.style-image-odd:hover{
+    transition: transform .5s ease-in-out;
+
+    transform: scale(1.15);
+}
+
+.style-image-even:hover{
+    transition: transform .5s ease-in-out;
+
+    transform: scale(1.15);
 }
 
 .style-header-container{

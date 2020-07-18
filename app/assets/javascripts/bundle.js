@@ -2647,6 +2647,9 @@ var ReviewRating = /*#__PURE__*/function (_React$Component) {
         },
         onMouseEnter: function onMouseEnter() {
           return _this2.dakine ? _this2.handleEnter(1) : null;
+        },
+        onMouseLeave: function onMouseLeave() {
+          return _this2.dakine ? _this2.handleEnter(0) : null;
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "star-empty"
@@ -2659,6 +2662,9 @@ var ReviewRating = /*#__PURE__*/function (_React$Component) {
         },
         onMouseEnter: function onMouseEnter() {
           return _this2.dakine ? _this2.handleEnter(2) : null;
+        },
+        onMouseLeave: function onMouseLeave() {
+          return _this2.dakine ? _this2.handleEnter(0) : null;
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "star-empty"
@@ -2671,6 +2677,9 @@ var ReviewRating = /*#__PURE__*/function (_React$Component) {
         },
         onMouseEnter: function onMouseEnter() {
           return _this2.dakine ? _this2.handleEnter(3) : null;
+        },
+        onMouseLeave: function onMouseLeave() {
+          return _this2.dakine ? _this2.handleEnter(0) : null;
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "star-empty"
@@ -2683,6 +2692,9 @@ var ReviewRating = /*#__PURE__*/function (_React$Component) {
         },
         onMouseEnter: function onMouseEnter() {
           return _this2.dakine ? _this2.handleEnter(4) : null;
+        },
+        onMouseLeave: function onMouseLeave() {
+          return _this2.dakine ? _this2.handleEnter(0) : null;
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "star-empty"
@@ -2695,6 +2707,9 @@ var ReviewRating = /*#__PURE__*/function (_React$Component) {
         },
         onMouseEnter: function onMouseEnter() {
           return _this2.dakine ? _this2.handleEnter(5) : null;
+        },
+        onMouseLeave: function onMouseLeave() {
+          return _this2.dakine ? _this2.handleEnter(0) : null;
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "star-empty"
@@ -3577,66 +3592,66 @@ var Style = function Style() {
     to: "/sneakers/13"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://sheep-seeds.s3-us-west-1.amazonaws.com/waverunnerstyle.jpg",
-    className: "style-image"
+    className: "style-image-odd"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/sneakers/17"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://sheep-seeds.s3-us-west-1.amazonaws.com/yeezystyle.jpg",
-    className: "style-image"
+    className: "style-image-odd"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/sneakers/15"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://sheep-seeds.s3-us-west-1.amazonaws.com/inertiastyle.jpg",
-    className: "style-image"
+    className: "style-image-odd"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/sneakers/10"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://sheep-seeds.s3-us-west-1.amazonaws.com/atmoselephantstyle.jpg",
-    className: "style-image"
+    className: "style-image-odd"
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "style-column"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/sneakers/35"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://sheep-seeds.s3-us-west-1.amazonaws.com/nb8.jpg",
-    className: "style-image"
+    className: "style-image-even"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/sneakers/31"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://sheep-seeds.s3-us-west-1.amazonaws.com/990v5style.jpeg",
-    className: "style-image"
+    className: "style-image-even"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/sneakers/43"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://sheep-seeds.s3-us-west-1.amazonaws.com/m2kb.jpg",
-    className: "style-image"
+    className: "style-image-even"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/sneakers/1"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://sheep-seeds.s3-us-west-1.amazonaws.com/monarchstyle.jpg",
-    className: "style-image"
+    className: "style-image-even"
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "style-column"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/sneakers/39"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://sheep-seeds.s3-us-west-1.amazonaws.com/lightbone.jpg",
-    className: "style-image"
+    className: "style-image-odd"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/sneakers/2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://sheep-seeds.s3-us-west-1.amazonaws.com/nbr.jpg",
-    className: "style-image"
+    className: "style-image-odd"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/sneakers/38"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://sheep-seeds.s3-us-west-1.amazonaws.com/m2kw.jpg",
-    className: "style-image"
+    className: "style-image-odd"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/sneakers/32"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://sheep-seeds.s3-us-west-1.amazonaws.com/997.jpg",
-    className: "style-image"
+    className: "style-image-odd"
   })))));
 };
 
