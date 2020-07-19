@@ -23,7 +23,7 @@ const Splash = () => {
 
      const timeout = setTimeout(() => {
       setModal(true)
-    }, 12000);
+    }, 5000);
 
     return () => {clearInterval(interval); clearTimeout(timeout)};
   }, [])
