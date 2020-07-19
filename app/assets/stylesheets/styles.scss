@@ -35,17 +35,25 @@
     padding-bottom: 145px;
 }
 
-.style-image-odd:hover{
+.style-image-1:hover{
     transition: transform .5s ease-in-out;
 
     transform: scale(1.15);
 }
 
-.style-image-even:hover{
+.style-image-2:hover{
     transition: transform .5s ease-in-out;
 
     transform: scale(1.15);
 }
+
+.style-image-3:hover{
+    transition: transform .5s ease-in-out;
+
+    transform: scale(1.15);
+}
+
+
 
 .style-header-container{
     display: flex;
