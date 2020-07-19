@@ -17,25 +17,25 @@ const Style = () => {
           <Link to="/sneakers/13">
             <img
               src="https://sheep-seeds.s3-us-west-1.amazonaws.com/waverunnerstyle.jpg"
-              className="style-image-odd"
+              className="style-image-1"
             />
           </Link>
           <Link to="/sneakers/17">
             <img
               src="https://sheep-seeds.s3-us-west-1.amazonaws.com/yeezystyle.jpg"
-              className="style-image-odd"
+              className="style-image-1"
             />
           </Link>
           <Link to="/sneakers/15">
             <img
               src="https://sheep-seeds.s3-us-west-1.amazonaws.com/inertiastyle.jpg"
-              className="style-image-odd"
+              className="style-image-1"
             />
           </Link>
           <Link to="/sneakers/10">
             <img
               src="https://sheep-seeds.s3-us-west-1.amazonaws.com/atmoselephantstyle.jpg"
-              className="style-image-odd"
+              className="style-image-1"
             />
           </Link>
         </div>
@@ -43,25 +43,25 @@ const Style = () => {
           <Link to="/sneakers/35">
             <img
               src="https://sheep-seeds.s3-us-west-1.amazonaws.com/nb8.jpg"
-              className="style-image-even"
+              className="style-image-2"
             />
           </Link>
           <Link to="/sneakers/31">
             <img
               src="https://sheep-seeds.s3-us-west-1.amazonaws.com/990v5style.jpeg"
-              className="style-image-even"
+              className="style-image-2"
             />
           </Link>
           <Link to="/sneakers/43">
             <img
               src="https://sheep-seeds.s3-us-west-1.amazonaws.com/m2kb.jpg"
-              className="style-image-even"
+              className="style-image-2"
             />
           </Link>
           <Link to="/sneakers/1">
             <img
               src="https://sheep-seeds.s3-us-west-1.amazonaws.com/monarchstyle.jpg"
-              className="style-image-even"
+              className="style-image-2"
             />
           </Link>
         </div>
@@ -69,25 +69,25 @@ const Style = () => {
           <Link to="/sneakers/39">
             <img
               src="https://sheep-seeds.s3-us-west-1.amazonaws.com/lightbone.jpg"
-              className="style-image-odd"
+              className="style-image-3"
             />
           </Link>
           <Link to="/sneakers/2">
             <img
               src="https://sheep-seeds.s3-us-west-1.amazonaws.com/nbr.jpg"
-              className="style-image-odd"
+              className="style-image-3"
             />
           </Link>
           <Link to="/sneakers/38">
             <img
               src="https://sheep-seeds.s3-us-west-1.amazonaws.com/m2kw.jpg"
-              className="style-image-odd"
+              className="style-image-3"
             />
           </Link>
           <Link to="/sneakers/32">
             <img
               src="https://sheep-seeds.s3-us-west-1.amazonaws.com/997.jpg"
-              className="style-image-odd"
+              className="style-image-3"
             />
           </Link>
         </div>
