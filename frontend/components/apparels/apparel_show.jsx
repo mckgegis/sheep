@@ -8,7 +8,12 @@ import ReviewIndex from "../reviews/review_container"
 class ApparelShow extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      detail: true
+    }
+    this.handleDetail = this.handleDetail.bind(this);
   }
+  
 
   componentDidMount() {
     window.scrollTo(0, 0);
@@ -23,6 +28,17 @@ class ApparelShow extends React.Component {
     return Math.min(...prices);
   }
 
+
+  handleDetail() {
+    if (this.state.detail) {
+      window.scroll(0, 675);
+      this.setState({ detail: false })
+    } else {
+      window.scroll(0, 0);
+      this.setState({ detail: true })
+    }
+  }
+
   render() {
     if (!this.props.apparel) {
       return null;
@@ -32,7 +48,6 @@ class ApparelShow extends React.Component {
 
     return (
       <div>
-}
         <div className="sneaker-show-container">
           <div className="sneaker-show-image-container">
             <img src={apparel.imageUrl} className="sneaker-show-image" />
@@ -83,10 +98,10 @@ class ApparelShow extends React.Component {
 
         <div className="details-container">
           <div className="description-container">
-            <h5 className="detail-header" onClick={()=> window.scrollTo(0, 675)}>
+            <h5 className="detail-header" onClick={this.handleDetail}>
               DETAILS
               <div className="detail-icon">
-                <i className="fas fa-chevron-down"></i>
+                {this.state.detail ? <i className="fas fa-chevron-down"></i> : <i className="fas fa-chevron-up"></i>}
               </div>
             </h5>
           </div>

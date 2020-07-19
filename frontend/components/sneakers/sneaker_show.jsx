@@ -8,6 +8,10 @@ import ReviewIndex from "../reviews/review_container"
 class SneakerShow extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      detail: true
+    }
+    this.handleDetail = this.handleDetail.bind(this);
   }
 
   componentDidMount() {
@@ -20,6 +24,16 @@ class SneakerShow extends React.Component {
     let values = Object.values(this.props.listings);
     let prices = values.map(listing => listing.price);
     return Math.min(...prices);
+  }
+
+  handleDetail() {
+    if(this.state.detail) {
+      window.scroll(0, 675);
+      this.setState({detail: false })
+    } else {
+      window.scroll(0,0);
+      this.setState({detail: true})
+    }
   }
 
   render() {
@@ -81,10 +95,11 @@ class SneakerShow extends React.Component {
 
         <div className="details-container">
           <div className="description-container">
-            <h5 className="detail-header" onClick={() => window.scroll(0, 675)}>
+            <h5 className="detail-header" onClick={this.handleDetail}>
               DETAILS
               <div className="detail-icon">
-                <i className="fas fa-chevron-down"></i>
+                {this.state.detail ? <i className="fas fa-chevron-down"></i> : <i className="fas fa-chevron-up"></i>}
+                
               </div>
             </h5>
             <div className="detail-desciption">{sneaker.description}</div>
