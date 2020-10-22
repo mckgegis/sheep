@@ -1,6 +1,6 @@
 # Sheep
 
-Full-stack web application clone of goat.com useing ruby on rails in the backend and react/redux in the frontend.
+Full-stack web application clone of goat.com using ruby on rails on the backend and react/redux on the frontend.
 
 # Live Site
 
