@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import SneakerIndexItem from "./sneaker_index_item";
+import { css } from "@emotion/core";
+import ClipLoader from "react-spinners/ClipLoader";
 
 class SneakerIndex extends React.Component {
   constructor(props) {
@@ -15,8 +17,10 @@ class SneakerIndex extends React.Component {
     window.scrollTo(0, 0);
     this.props.clearSneakers();
     this.props.clearListings();
+    // window.setTimeout(() => {
     this.props.fetchSneakers(this.maxId);
     this.maxId += 8;
+    // }, 300)
   }
 
   componentWillUnmount() {
@@ -31,13 +35,15 @@ class SneakerIndex extends React.Component {
     this.maxId += 8;
   }
   render() {
-    const loadMore = this.state.show_more ? (
+    const loadMore = this.state.show_more && this.props.sneakers.length ? (
       <button className="load-more-button" onClick={this.showMore}>
         See More
       </button>
     ) : null;
-    return (
-      <div className="sneaker-container">
+    
+    if (this.props.sneakers.length) {
+      return (
+        <div className="sneaker-container">
         <h1 className="sneaker-index-header">Shop All</h1>
         <div className="sneaker-index-container">
           <ul className="sneaker-index-items-container">
@@ -52,7 +58,15 @@ class SneakerIndex extends React.Component {
         </div>
         <div className="load-more-container">{loadMore}</div>
       </div>
-    );
+      )}
+      else {
+        return (
+          <div className='loading-bkgrd'>
+            {/* <img class='loading' src='/assets/loading.png' alt=""/>  */}
+            <ClipLoader />
+          </div>
+        )
+      }
   }
 }
 

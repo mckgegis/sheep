@@ -31,7 +31,7 @@ class ApparelIndex extends React.Component {
     this.maxId += 8;
   }
   render() {
-    const loadMore = this.state.show_more ? (
+    const loadMore = this.state.show_more && this.props.apparels.length ? (
       <button className="load-more-button" onClick={this.showMore}>
         See More
       </button>
